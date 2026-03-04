@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 5 SA-2 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/themes.css">
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+    <main class="max-w-7xl mx-auto space-y-8">
+
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- SECTION 1 – Conditionals (BLK 10) -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-code-branch accent-text"></i> Conditionals & Decision Making
+                    </h3>
+
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            A <strong>Conditional</strong> is a way to tell what might happen if something else happens
+                            first.
+                            It helps computers and people make decisions.
+                        </p>
+
+                        <div class="code-block space-y-2">
+                            <div><span class="text-blue-400">IF:</span> It is raining</div>
+                            <div><span class="text-blue-400">THEN:</span> Take an umbrella</div>
+                        </div>
+
+                        <div class="p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-green-400 uppercase mb-1">Why Conditionals Are Important
+                            </h4>
+                            <p class="text-[12px] opacity-70">
+                                ✔ Help us make smart choices<br>
+                                ✔ Help solve problems<br>
+                                ✔ Keep us safe (Example: Stop at red light)
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2 – Data & Information (BLK 12) -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-database accent-text"></i> Data & Information
+                    </h3>
+                
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            <strong>Data</strong> is a collection of facts like numbers, words, or images.
+                            <br>
+                            <strong>Information</strong> is organized data that makes sense.
+                        </p>
+                
+                        <div class="code-block space-y-2">
+                            <div><span class="text-yellow-400">Data:</span> 85, 90, 78</div>
+                            <div><span class="text-green-400">Information:</span> Class average marks</div>
+                        </div>
+                
+                        <div class="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-blue-400 uppercase mb-1">Why Organize Data?</h4>
+                            <p class="text-[12px] opacity-70">
+                                ✔ Easy to find information<br>
+                                ✔ Saves time<br>
+                                ✔ Helps in decision-making
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 3 – Data Structures (BLK 13) -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-layer-group accent-text"></i> Data Structures
+                    </h3>
+                
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            A <strong>Data Structure</strong> is a way to organize and store data.
+                        </p>
+                
+                        <div class="code-block space-y-2">
+                            <div><span class="text-purple-400">List:</span> Ordered items</div>
+                            <div><span class="text-purple-400">Table:</span> Rows & Columns</div>
+                            <div><span class="text-purple-400">Stack:</span> LIFO (Last In First Out)</div>
+                            <div><span class="text-purple-400">Queue:</span> FIFO (First In First Out)</div>
+                        </div>
+                
+                        <div class="p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-yellow-400 uppercase mb-1">Real-Life Examples</h4>
+                            <p class="text-[12px] opacity-70">
+                                ✔ Undo Button → Stack<br>
+                                ✔ Printer Line → Queue<br>
+                                ✔ Marksheet → Table
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 4 – Charts & Graphs (BLK 14) -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-chart-bar accent-text"></i> Charts & Graphs
+                    </h3>
+                
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            Charts help us understand data visually.
+                        </p>
+                
+                        <div class="code-block space-y-2">
+                            <div><span class="text-blue-400">Bar Graph:</span> Compare items</div>
+                            <div><span class="text-blue-400">Line Graph:</span> Show change over time</div>
+                            <div><span class="text-blue-400">Pie Chart:</span> Show parts of a whole</div>
+                            <div><span class="text-blue-400">Pictograph:</span> Uses pictures</div>
+                        </div>
+                
+                        <div class="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-indigo-400 uppercase mb-1">Where We See Charts</h4>
+                            <p class="text-[12px] opacity-70">
+                                ✔ News reports<br>
+                                ✔ Weather forecasts<br>
+                                ✔ School results
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 5 – Functions & Variables (BLK 15–16) -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-cogs accent-text"></i> Functions & Variables
+                    </h3>
+                
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            A <strong>Function</strong> is a named set of instructions.
+                            <br>
+                            A <strong>Variable</strong> is a container that stores changing values.
+                        </p>
+                
+                        <div class="code-block space-y-2">
+                            <div><span class="text-green-400">Input →</span> Data entered</div>
+                            <div><span class="text-green-400">Process →</span> Program runs</div>
+                            <div><span class="text-green-400">Output →</span> Final result</div>
+                        </div>
+                
+                        <div class="p-4 bg-pink-500/10 border border-pink-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-pink-400 uppercase mb-1">Why Use Functions?</h4>
+                            <p class="text-[12px] opacity-70">
+                                ✔ Organize code<br>
+                                ✔ Reuse instructions<br>
+                                ✔ Make programs easier to read
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 6 – Internet & Debugging (BLK 18–19) -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-network-wired accent-text"></i> Internet & Debugging
+                    </h3>
+                
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            The <strong>Internet</strong> is a global network connecting computers.
+                        </p>
+                
+                        <div class="code-block space-y-2">
+                            <div><span class="text-blue-400">1. REQUEST:</span> Type website address</div>
+                            <div><span class="text-blue-400">2. ROUTER:</span> Finds path</div>
+                            <div><span class="text-blue-400">3. SERVER:</span> Sends website data</div>
+                            <div><span class="text-blue-400">4. DISPLAY:</span> Shows on screen</div>
+                        </div>
+                
+                        <div class="p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-red-400 uppercase mb-1">Debugging</h4>
+                            <p class="text-[12px] opacity-70">
+                                ✔ Bug = Coding error<br>
+                                ✔ Debugging = Finding and fixing errors<br>
+                                ✔ Test step-by-step to solve problems
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest">
+                        Technical Glossary
+                    </h4>
+                    <div id="glossary-list" class="space-y-4">
+                        <!-- Dynamic Content -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- Added Starts  -->
+        <div class="space-y-5">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-bold accent-text ">📝 Practice Assessment</h3>
+                <button class="toggle-btn" onclick="toggleQuiz()">Show / Hide Quiz</button>
+            </div>
+        
+            <div id="quizSection" style="display:none;"></div>
+        
+            <div id="resultBox"></div>
+        
+        </div>
+        <!-- <section class="glass p-8 space-y-10">
+
+            <h2 class="text-3xl font-black accent-text">Grade 04 Revision - Interactive Master Module</h2>
+
+            <div class="space-y-5">
+                <h3 class="text-xl font-bold accent-text">🎮 Planning a Quiz Game</h3>
+
+                <div class="diagram-card">
+                    Planning means deciding <strong>Rules, Goals, and Challenges</strong> before coding.
+                    Without planning, bugs increase and the game becomes confusing.
+                </div>
+
+                <div class="flow-container">
+                    <div class="flow-box">Game Idea</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Rules</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Goals</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Challenges</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Coding</div>
+                </div>
+            </div>
+
+            <div class="space-y-5">
+                <h3 class="text-xl font-bold accent-text">🌍 How Internet Works</h3>
+
+                <div class="diagram-card">
+                    The Internet is a global network. When you send an email or click a video:
+                </div>
+
+                <div class="flow-container">
+                    <div class="flow-box">User Sends Request</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Server Receives</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">IP Address Directs</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Data Returns</div>
+                </div>
+
+                <div class="diagram-card">
+                    If you see <strong>"Server Not Found"</strong>, it may mean:
+                    • No internet connection
+                    • Server offline
+                    • Wrong URL
+                </div>
+            </div>
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold">🛡 Online Safety</h3>
+
+                <div class="diagram-card">
+                    Cyberbullying means being mean online. We must:
+                </div>
+
+                <div class="flow-container">
+                    <div class="flow-box">TELL Adult</div>
+                    <div class="flow-box">BLOCK Person</div>
+                    <div class="flow-box">REPORT Behaviour</div>
+                </div>
+            </div>
+
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold">📊 Data Collection & Analysis</h3>
+
+                <div class="flow-container">
+                    <div class="flow-box">Survey</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Organize</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Bar Graph</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Analyze</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Decision</div>
+                </div>
+            </div>
+
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold accent-text">💻 Hardware & Software</h3>
+
+                <div class="flow-container">
+                    <div class="flow-box">Hardware (Physical)</div>
+                    <div class="arrow">↔</div>
+                    <div class="flow-box">Software (Instructions)</div>
+                </div>
+
+                <div class="diagram-card">
+                    Hardware needs software. Software needs hardware. Both must work together.
+                </div>
+            </div>
+
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold">🐞 Bugs & Debugging</h3>
+
+                <div class="flow-container">
+                    <div class="flow-box">Bug (Error)</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Debug</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Fix</div>
+                </div>
+            </div>
+
+
+            <div class="space-y-5">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold accent-text ">📝 Practice Assessment</h3>
+                    <button class="toggle-btn" onclick="toggleQuiz()">Show / Hide Quiz</button>
+                </div>
+
+                <div id="quizSection" style="display:none;"></div>
+
+                <div id="resultBox"></div>
+
+            </div>
+
+        </section> -->
+        
+        <!-- Added Ends -->
+
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2 accent-text">Hardware & Software</h5>
+                <p class="text-[11px] opacity-60"><strong>Hardware</strong> is the body (touchable),
+                    <strong>Software</strong> is the mind (instructions). They must work together to run tasks like
+                    Scratch.
+                </p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2 accent-text">Bugs & Debugging</h5>
+                <p class="text-[11px] opacity-60">A <strong>Bug</strong> is a mistake in code.
+                    <strong>Debugging</strong> is the detective process of finding and fixing that mistake to solve the
+                    problem.
+                </p>
+            </div>
+            <div class="glass p-6 border-l-4 border-purple-500 bg-purple-500/5">
+                <h5 class="font-black text-xs uppercase mb-2 accent-text">Digital Art Tools</h5>
+                <p class="text-[11px] opacity-60">Computers allow for <strong>Digital Art</strong> using special tools
+                    (software) and input devices like tablets (hardware) to create without paper.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // GRADE 5 REVISION DEPLOYMENT // v4.0.0
+    </footer>
+
+    <script>
+        const glossaryData = [
+
+            { t: "Internet", d: "Global network connecting computers to share information." },
+            { t: "ISP", d: "Company that provides Internet access." },
+            { t: "Router", d: "Device that sends data to the correct place." },
+            { t: "Server", d: "Powerful computer that stores and shares information." },
+            { t: "IP Address", d: "Special number given to every device on the Internet." },
+            { t: "Data", d: "Collection of facts like numbers, words, or images." },
+            { t: "Information", d: "Organized and processed data." },
+            { t: "List", d: "Ordered group of items." },
+            { t: "Table", d: "Data arranged in rows and columns." },
+            { t: "Stack", d: "Data structure that follows Last In First Out (LIFO)." },
+            { t: "Queue", d: "Data structure that follows First In First Out (FIFO)." },
+            { t: "Pictograph", d: "Chart that uses pictures to represent data." },
+            { t: "Bar Graph", d: "Graph that compares different items using bars." },
+            { t: "Line Graph", d: "Graph that shows change over time." },
+            { t: "Pie Chart", d: "Circular chart showing parts of a whole." },
+            { t: "Function", d: "Named set of instructions that performs a task." },
+            { t: "Variable", d: "Container that stores changing values." },
+            { t: "Bug", d: "Error in a program." },
+            { t: "Debugging", d: "Process of finding and fixing errors." },
+            { t: "Conditional", d: "Decision-making statement in programming." }
+
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[11px] opacity-50 mt-1 leading-snug group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+
+    <!-- SCRIPT -->
+    <script src="./assets/js/theme.js"></script>
+
+    <script>
+        const questions =
+            [
+                { q: "1. What is a conditional?", options: ["A decision based on a condition", "A type of graph", "A storage device", "A computer virus"], answer: 0 },
+                { q: "2. Why are conditionals important?", options: ["They help make smart decisions", "They slow computers", "They delete data", "They remove bugs"], answer: 0 },
+                { q: "3. Which is an example of a conditional in real life?", options: ["If it rains, take an umbrella", "Turn off computer", "Close notebook", "Draw a picture"], answer: 0 },
+                { q: "4. What does an if statement do?", options: ["Checks a condition", "Deletes code", "Prints automatically", "Stores images"], answer: 0 },
+                { q: "5. What does if-else do?", options: ["Chooses between two actions", "Stops program", "Deletes variable", "Creates table"], answer: 0 },
+
+                { q: "6. What is data?", options: ["Collection of facts", "Finished result", "A device", "A password"], answer: 0 },
+                { q: "7. What is information?", options: ["Organized data", "Random numbers", "Unsorted text", "Broken file"], answer: 0 },
+                { q: "8. Data is like ______.", options: ["Puzzle pieces", "Finished painting", "A virus", "A router"], answer: 0 },
+                { q: "9. Information is like ______.", options: ["Completed puzzle", "Loose papers", "Unsorted books", "Blank page"], answer: 0 },
+                { q: "10. Which tool helps organize data electronically?", options: ["MS Excel", "Paint", "Calculator", "Speaker"], answer: 0 },
+
+                { q: "11. What is a list?", options: ["Ordered group of items", "Internet device", "Virus type", "Graph line"], answer: 0 },
+                { q: "12. What is a table?", options: ["Rows and columns of data", "Pile of books", "Queue line", "Loop type"], answer: 0 },
+                { q: "13. Stack follows which rule?", options: ["LIFO", "FIFO", "ABC", "XYZ"], answer: 0 },
+                { q: "14. Queue follows which rule?", options: ["FIFO", "LIFO", "Loop", "Stack"], answer: 0 },
+                { q: "15. Undo feature works like a ______.", options: ["Stack", "Queue", "Table", "Graph"], answer: 0 },
+
+                { q: "16. Printer line works like a ______.", options: ["Queue", "Stack", "List", "Loop"], answer: 0 },
+                { q: "17. What is a pictograph?", options: ["Chart using pictures", "Coding error", "Loop type", "Function name"], answer: 0 },
+                { q: "18. What does a bar graph compare?", options: ["Different things", "Time only", "Internet speed", "Passwords"], answer: 0 },
+                { q: "19. What does a line graph show?", options: ["Change over time", "Part of whole", "Pictures only", "Sorting list"], answer: 0 },
+                { q: "20. What does a pie chart show?", options: ["Parts of a whole", "Loop type", "Queue line", "Function call"], answer: 0 },
+
+                { q: "21. What is a function?", options: ["Named set of instructions", "Virus", "Hardware device", "Graph type"], answer: 0 },
+                { q: "22. Why use functions?", options: ["Organize tasks", "Delete files", "Slow computer", "Hack server"], answer: 0 },
+                { q: "23. Input means ______.", options: ["Data entered into computer", "Printed result", "Virus attack", "Error message"], answer: 0 },
+                { q: "24. Output means ______.", options: ["Result after processing", "Typing data", "Internet cable", "Router path"], answer: 0 },
+                { q: "25. Process means ______.", options: ["Program running", "Computer off", "Bug fixing", "Sorting data"], answer: 0 },
+
+                { q: "26. What is a variable?", options: ["Container that stores value", "Virus", "Printer", "Cable"], answer: 0 },
+                { q: "27. Variables can ______.", options: ["Change values", "Break monitor", "Stop internet", "Delete files"], answer: 0 },
+                { q: "28. Which Scratch block creates a variable?", options: ["Create a variable", "Create sprite", "Create list", "Create costume"], answer: 0 },
+                { q: "29. Which block increases score?", options: ["change score by 10", "hide variable", "delete sprite", "set size"], answer: 0 },
+                { q: "30. Variables make programs ______.", options: ["Interactive", "Broken", "Slow", "Offline"], answer: 0 },
+
+                { q: "31. What is a loop?", options: ["Repeats instructions", "Deletes code", "Prints graph", "Virus scan"], answer: 0 },
+                { q: "32. What is a bug?", options: ["Coding error", "Insect", "Printer", "Router"], answer: 0 },
+                { q: "33. What is debugging?", options: ["Fixing errors", "Creating virus", "Deleting internet", "Installing app"], answer: 0 },
+                { q: "34. Why debug programs?", options: ["Make them work correctly", "Slow system", "Break game", "Delete file"], answer: 0 },
+                { q: "35. Testing step-by-step helps to ______.", options: ["Find errors", "Add virus", "Crash PC", "Delete code"], answer: 0 },
+
+                { q: "36. ISP stands for ______.", options: ["Internet Service Provider", "Internet Safe Password", "Internal Server Page", "Input Service Port"], answer: 0 },
+                { q: "37. What is a router?", options: ["Device that sends data", "Virus", "Graph", "Loop"], answer: 0 },
+                { q: "38. What is a server?", options: ["Strong computer sharing data", "Printer", "Cable", "Keyboard"], answer: 0 },
+                { q: "39. What is an IP address?", options: ["Special number of device", "Password", "Virus code", "Wi-Fi name"], answer: 0 },
+                { q: "40. Wi-Fi is a ______ connection.", options: ["Wireless", "Wired", "Broken", "Manual"], answer: 0 },
+
+                { q: "41. Ethernet is a ______ connection.", options: ["Wired", "Wireless", "Satellite", "Cellular"], answer: 0 },
+                { q: "42. Fiber optic cable uses ______.", options: ["Light signals", "Sound", "Paper", "Battery"], answer: 0 },
+                { q: "43. Cellular data is used on ______.", options: ["Smartphones", "Books", "Tables", "Fans"], answer: 0 },
+                { q: "44. Satellite internet helps people in ______ areas.", options: ["Remote", "Urban only", "Offices only", "Schools only"], answer: 0 },
+                { q: "45. Data request goes to a ______.", options: ["Server", "Printer", "Mouse", "Speaker"], answer: 0 },
+
+                { q: "46. Organized data helps us ______.", options: ["Find information easily", "Confuse people", "Lose files", "Break systems"], answer: 0 },
+                { q: "47. Sorting helps to ______.", options: ["Arrange data properly", "Delete data", "Hack account", "Crash PC"], answer: 0 },
+                { q: "48. Library organizes books by ______.", options: ["Genre or author", "Color only", "Random order", "Height only"], answer: 0 },
+                { q: "49. Stack removes item from ______.", options: ["Top", "Middle", "Bottom", "Side"], answer: 0 },
+                { q: "50. Queue removes item from ______.", options: ["Front", "Back", "Middle", "Top"], answer: 0 },
+
+                // Questions 51–100 Reinforcement & Mixed Concepts
+
+                { q: "51. Charts help us ______ data visually.", options: ["Understand", "Delete", "Hide", "Break"], answer: 0 },
+                { q: "52. Bar graphs use ______.", options: ["Rectangular bars", "Circles", "Pictures only", "Lines only"], answer: 0 },
+                { q: "53. Line graphs connect ______.", options: ["Data points", "Servers", "Routers", "Passwords"], answer: 0 },
+                { q: "54. Pie charts are ______ shaped.", options: ["Circular", "Square", "Triangle", "Rectangle"], answer: 0 },
+                { q: "55. Functions help break big tasks into ______ parts.", options: ["Smaller", "Bigger", "Harder", "Slower"], answer: 0 },
+
+                { q: "56. Conditionals help computers ______.", options: ["Make decisions", "Sleep", "Delete data", "Crash"], answer: 0 },
+                { q: "57. Data types include ______.", options: ["Numbers and text", "Routers", "Servers", "Wi-Fi"], answer: 0 },
+                { q: "58. School marksheet is example of ______.", options: ["Table", "Stack", "Queue", "Loop"], answer: 0 },
+                { q: "59. Booking requests are managed using ______.", options: ["Queue", "Stack", "Graph", "Loop"], answer: 0 },
+                { q: "60. Cancellations are managed using ______.", options: ["Stack", "Queue", "Table", "List"], answer: 0 },
+
+                // Continue reinforcement till 100
+
+                { q: "61. Each device on the Internet has a special number called an ______.", options: ["IP address", "Password", "Server", "Browser"], answer: 0 }
+            ]
+
+        function toggleQuiz() {
+            const section = document.getElementById("quizSection");
+            section.style.display = section.style.display === "none" ? "block" : "none";
+            if (section.innerHTML === "") loadQuiz();
+        }
+        function loadQuiz() {
+            const section = document.getElementById("quizSection");
+            section.innerHTML = ""; // Clear before loading
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "quiz-wrapper";
+
+            questions.forEach((item, index) => {
+
+                const card = document.createElement("div");
+                card.className = "quiz-card";
+
+                let html = `<h4> ${item.q}</h4>`;
+
+                item.options.forEach((opt, i) => {
+                    html += `
+            <label class="option">
+                <input type="radio" name="q${index}" value="${i}">
+                ${opt}
+            </label>`;
+                });
+
+                card.innerHTML = html;
+                wrapper.appendChild(card);
+            });
+
+            // Submit Button Centered
+            const submitContainer = document.createElement("div");
+            submitContainer.className = "submit-container";
+            submitContainer.innerHTML = `
+        <button class="submit-btn bg-primary accent-text" onclick="gradeQuiz()">Submit Quiz</button>
+    `;
+
+            wrapper.appendChild(submitContainer);
+            section.appendChild(wrapper);
+        }
+
+        function gradeQuiz() {
+            let score = 0;
+
+            questions.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === item.answer) {
+                    score++;
+                }
+            });
+
+            const percentage = Math.round((score / questions.length) * 100);
+
+            let grade = "";
+            if (percentage >= 90) grade = "A+ 🌟";
+            else if (percentage >= 80) grade = "A";
+            else if (percentage >= 70) grade = "B";
+            else if (percentage >= 50) grade = "C";
+            else grade = "Needs Revision";
+
+            document.getElementById("resultBox").innerHTML =
+                `<div class="grade-box">
+            Score: ${score} / ${questions.length} <br>
+            Percentage: ${percentage}% <br>
+            Grade: ${grade}
+        </div>`;
+
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+    </script>
+</body>
+
+</html>

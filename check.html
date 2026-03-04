@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Call Picker</title>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #7f8c8d;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        button {
+            background: #00b894;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.1s, background 0.2s;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        button:hover {
+            background: #00a383;
+        }
+
+        #result-container {
+            margin-top: 25px;
+            padding: 15px;
+            border-top: 2px dashed #eee;
+        }
+
+        #roll-display {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #6c5ce7;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>Opportunity Picker</h2>
+
+        <label for="strength">Enter Class Strength:</label>
+        <input type="number" id="strength" placeholder="e.g. 31" min="1">
+
+        <br>
+
+        <button onclick="pickRollNo()">Generate Roll No.</button>
+
+        <div id="result-container">
+            <span style="color: #636e72;">Selected Student</span>
+            <span id="roll-display"> <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+            </span>
+        </div>
+    </div>
+
+    <script>
+        function pickRollNo() {
+            const strengthInput = document.getElementById('strength');
+            const display = document.getElementById('roll-display');
+            const max = parseInt(strengthInput.value);
+
+            if (isNaN(max) || max <= 0) {
+                alert("Please enter a valid class strength!");
+                return;
+            }
+
+            // Add a small "shuffling" animation effect
+            let counter = 0;
+            const interval = setInterval(() => {
+                display.innerText = Math.floor(Math.random() * max) + 1;
+                counter++;
+                if (counter > 10) {
+                    clearInterval(interval);
+                    // Final selection
+                    const finalPick = Math.floor(Math.random() * max) + 1;
+                    display.innerText = finalPick;
+                    display.style.color = "#d63031"; // Highlight the final winner
+                    setTimeout(() => { display.style.color = "#6c5ce7"; }, 1000);
+                }
+            }, 50);
+        }
+    </script>
+
+</body>
+
+</html>

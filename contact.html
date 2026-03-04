@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | UshiVerse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ================= THEME ================= */
+        :root {
+            --primary: #ec4899;
+            --text: #0f172a;
+            --bg: radial-gradient(circle at top left, #e2e8f0, #f8fafc);
+            --glass-bg: rgba(255, 255, 255, .7);
+            --glass-border: rgba(0, 0, 0, .1);
+        }
+
+        .dark {
+            --text: #f8fafc;
+            --bg: radial-gradient(circle at top left, #0f172a, #020617);
+            --glass-bg: rgba(15, 23, 42, .85);
+            --glass-border: rgba(255, 255, 255, .08);
+        }
+
+        /* ================= BASE ================= */
+        body {
+            font-family: Inter, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .developer-font {
+            font-family: "Fira Code", monospace;
+        }
+
+        .accent {
+            color: var(--primary);
+        }
+
+        /* ================= GLASS ================= */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+        }
+
+        /* ================= THEME DOTS ================= */
+        .theme-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: transform .2s ease, border-color .2s ease;
+        }
+
+        .theme-dot:hover {
+            transform: scale(1.2);
+        }
+
+        .theme-dot.active {
+            border-color: white;
+        }
+
+        /* ================= CARDS ================= */
+        .card {
+            transition: .3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: color-mix(in srgb, var(--primary) 12%, transparent);
+        }
+
+        /* ================= SCROLL ================= */
+        ::-webkit-scrollbar {
+            width: 8px
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px
+        }
+    </style>
+</head>
+
+<body class="px-4 py-20">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500" data-theme="#ef4444"></div>
+    </div>
+
+    <main class="max-w-6xl mx-auto space-y-10 py-12">
+
+        <!-- HEADER -->
+        <section class="glass p-10 text-center border-b-4" style="border-color:var(--primary)">
+            <h1 class="text-5xl font-black mb-4">
+                Contact <span class="accent">UshiVerse</span>
+            </h1>
+            <p class="opacity-70 max-w-2xl mx-auto text-lg">
+                Reach out for academic guidance, student support, or collaboration.
+            </p>
+        </section>
+
+        <!-- CONTACT GRID -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <a href="https://wa.me/919929114267" target="_blank" class="glass p-6 text-center card">
+                <i class="fab fa-whatsapp text-4xl text-emerald-500 mb-3"></i>
+                <h4 class="font-bold uppercase text-sm">WhatsApp</h4>
+                <p class="text-xs opacity-50">9929114267</p>
+            </a>
+
+            <a href="mailto:usman.qureshi@ssssdungarputr.attalimschools.org" class="glass p-6 text-center card">
+                <i class="fas fa-envelope text-4xl text-blue-400 mb-3"></i>
+                <h4 class="font-bold uppercase text-sm">Email</h4>
+                <p class="text-xs opacity-50 break-all">
+                    usman.qureshi@ssssdungarputr.attalimschools.org
+                </p>
+            </a>
+
+            <a href="https://youtube.com/@ushiverse" target="_blank" class="glass p-6 text-center card">
+                <i class="fab fa-youtube text-4xl text-red-500 mb-3"></i>
+                <h4 class="font-bold uppercase text-sm">YouTube</h4>
+                <p class="text-xs opacity-50">Lectures & Tutorials</p>
+            </a>
+
+            <a href="https://instagram.com/ushiverse" target="_blank" class="glass p-6 text-center card">
+                <i class="fab fa-instagram text-4xl text-pink-500 mb-3"></i>
+                <h4 class="font-bold uppercase text-sm">Instagram</h4>
+                <p class="text-xs opacity-50">Updates & Highlights</p>
+            </a>
+
+            <a href="tel:+919929114267" class="glass p-6 text-center card">
+                <i class="fas fa-phone-alt text-4xl text-yellow-400 mb-3"></i>
+                <h4 class="font-bold uppercase text-sm">Direct Call</h4>
+                <p class="text-xs opacity-50">Instant Support</p>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="mt-20 text-center opacity-40 text-xs developer-font tracking-widest">
+        USHIVERSE // COMMUNICATION MODULE
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const root = document.documentElement;
+        const toggle = id => document.getElementById(id);
+
+        toggle("themeToggle").onclick = () => {
+            root.classList.toggle("dark");
+            localStorage.ushiverseDark = root.classList.contains("dark");
+        };
+
+        toggle("settingsToggle").onclick = () => {
+            toggle("themePanel").classList.toggle("hidden");
+        };
+
+        document.querySelectorAll(".theme-dot").forEach(dot => {
+            dot.onclick = () => {
+                root.style.setProperty("--primary", dot.dataset.theme);
+                localStorage.ushiverseColor = dot.dataset.theme;
+            };
+        });
+
+        if (localStorage.ushiverseDark === "false") root.classList.remove("dark");
+        if (localStorage.ushiverseColor)
+            root.style.setProperty("--primary", localStorage.ushiverseColor);
+    </script>
+</body>
+
+</html>

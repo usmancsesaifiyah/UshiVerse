@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Class 2 SA-2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary: #3b82f6;
+            --glass-bg: rgba(15, 23, 42, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-blur: blur(16px);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #0f172a, #020617);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .developer-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+        }
+
+        .accent-text {
+            color: var(--primary);
+        }
+
+        .step-node {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .step-node::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+            opacity: 0.3;
+        }
+
+        .step-circle {
+            position: absolute;
+            left: -5px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+    </style>
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="accent-text">.edu</span></span>
+            </a>
+            <div class="flex gap-4">
+                <a href="../index.html" class="glass p-2 px-4 text-sm font-bold hover:bg-white/10 transition">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto space-y-8">
+        <a href="../index.html" class="flex items-center gap-2 opacity-50 hover:opacity-100 transition text-sm">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
+
+        <div class="glass p-8">
+            <header class="mb-10">
+                <div class="text-xs font-bold uppercase tracking-widest accent-text">Academic Module • Grade 2</div>
+                <h1 class="text-4xl font-black mt-2">Summative Assessment 2: Computer Science</h1>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <h4 class="developer-font text-xs uppercase font-bold accent-text border-b border-white/10 pb-2">
+                        Core Study Topics</h4>
+
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 font-bold text-lg"><i class="fas fa-bolt accent-text"></i>
+                            Events & Trigger Logic</div>
+                        <p class="text-sm opacity-80 leading-relaxed">Events are signals or triggers that make something
+                            happen.</p>
+                        <div class="glass bg-white/5 p-4 rounded-xl border-dashed border border-white/10">
+                            <p class="text-xs font-mono mb-2 accent-text">// ScratchJr Logic Example</p>
+                            <div class="flex gap-2">
+                                <div class="bg-yellow-500 text-black px-2 py-1 text-[10px] rounded font-bold">Green Flag
+                                </div>
+                                <i class="fas fa-arrow-right mt-1 opacity-50"></i>
+                                <div class="bg-blue-500 text-white px-2 py-1 text-[10px] rounded font-bold">Move Right
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 font-bold text-lg"><i
+                                class="fas fa-shield-alt accent-text"></i> Online Safety & Footprints</div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="glass bg-green-500/10 p-3 rounded-lg border border-green-500/20">
+                                <span class="text-xs font-bold text-green-400">GOOD FOOTPRINT</span>
+                                <p class="text-[11px] opacity-70 mt-1">Being kind and sharing safely.</p>
+                            </div>
+                            <div class="glass bg-red-500/10 p-3 rounded-lg border border-red-500/20">
+                                <span class="text-xs font-bold text-red-400">BAD FOOTPRINT</span>
+                                <p class="text-[11px] opacity-70 mt-1">Sharing personal info.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 font-bold text-lg"><i class="fas fa-tools accent-text"></i>
+                            The Debugging Process</div>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="step-node">
+                                <div class="step-circle"></div><span
+                                    class="text-xs font-bold uppercase accent-text">Step 1: Find</span>
+                                <p class="text-sm opacity-80">Identify the error.</p>
+                            </div>
+                            <div class="step-node">
+                                <div class="step-circle"></div><span
+                                    class="text-xs font-bold uppercase accent-text">Step 2: Fix</span>
+                                <p class="text-sm opacity-80">Correct the mistake.</p>
+                            </div>
+                            <div class="step-node">
+                                <div class="step-circle"></div><span
+                                    class="text-xs font-bold uppercase accent-text">Step 3: Test</span>
+                                <p class="text-sm opacity-80">Check if it's working.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="developer-font text-xs uppercase font-bold accent-text border-b border-white/10 pb-2">
+                        Technical Glossary</h4>
+
+                    <div id="glossary-container" class="grid grid-cols-1 gap-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-white/5 space-y-4">
+                <h4 class="developer-font text-xs uppercase font-bold accent-text text-center mb-6">Block-Based
+                    Fundamentals</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="glass p-5 border-l-4 border-blue-500 bg-blue-500/5">
+                        <h5 class="font-bold mb-3 text-sm flex items-center gap-2"><i class="fas fa-desktop"></i>
+                            Hardware</h5>
+                        <ul class="text-[10px] opacity-70 space-y-1 font-bold uppercase tracking-tight">
+                            <li>CPU: Brain of the computer</li>
+                            <li>Monitor: Shows pictures</li>
+                        </ul>
+                    </div>
+                    <div class="glass p-5 border-l-4 border-emerald-500 bg-emerald-500/5">
+                        <h5 class="font-bold mb-3 text-sm flex items-center gap-2"><i class="fas fa-code"></i> Code</h5>
+                        <ul class="text-[10px] opacity-70 space-y-1 font-bold uppercase tracking-tight">
+                            <li>Code: Instructions</li>
+                            <li>Sequencing: Steps in order</li>
+                        </ul>
+                    </div>
+                    <div class="glass p-5 border-l-4 border-purple-500 bg-purple-500/5">
+                        <h5 class="font-bold mb-3 text-sm flex items-center gap-2"><i class="fas fa-redo"></i> Loops
+                        </h5>
+                        <ul class="text-[10px] opacity-70 space-y-1 font-bold uppercase tracking-tight">
+                            <li>Pattern: Repeats</li>
+                            <li>Loop: Repeat actions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-xs tracking-widest">
+        SYSTEM DEPLOYMENT V3.0 // GRADE 2 ACADEMIC REPOSITORY
+    </footer>
+
+    <script>
+        const vocabData = [
+            { t: "Distracted", d: "To stop paying attention to something." },
+            { t: "Bug / Error", d: "A problem or mistake in a code." },
+            { t: "Debug", d: "The process of finding and fixing mistakes." },
+            { t: "Digital Footprints", d: "Marks that show where you've been on the internet." },
+            { t: "Personal Info", d: "Special info like your full name or address." },
+            { t: "Event", d: "Something that happens that triggers an action." },
+            { t: "Command", d: "An instruction to make something happen." },
+            { t: "Sequencing", d: "Putting steps in the right order." }
+        ];
+
+        const container = document.getElementById('glossary-container');
+
+        container.innerHTML = vocabData.map(item => `
+            <div class="glass bg-white/5 p-4 rounded-xl group hover:border-blue-500 transition-all">
+                <div class="flex justify-between items-center">
+                    <span class="font-bold accent-text uppercase text-xs tracking-widest">${item.t}</span>
+                    <i class="fas fa-info-circle opacity-20 group-hover:opacity-100 transition"></i>
+                </div>
+                <p class="text-sm opacity-70 mt-1 leading-relaxed">${item.d}</p>
+            </div>
+        `).join('');
+    </script>
+</body>
+
+</html>

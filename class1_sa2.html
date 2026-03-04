@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Class 1 SA-2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/themes.css">
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Header Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+
+    <main class="max-w-5xl mx-auto space-y-8">
+        <!-- Back Button -->
+        <a href="index.html" class="flex items-center gap-2 opacity-50 hover:opacity-100 transition text-sm">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
+
+        <!-- Main Content Card -->
+        <div class="glass p-8">
+            <header class="mb-10">
+                <div class="text-xs font-bold uppercase tracking-widest accent-text">
+                    Academic Module • Computer Science
+                </div>
+                <h1 class="text-4xl font-black mt-2">Class 1 - Summative Assessment 2</h1>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- LEFT COLUMN: IMPORTANT NOTES -->
+                <div class="space-y-6">
+                    <h4 class="developer-font text-xs uppercase font-bold accent-text border-b border-white/10 pb-2">
+                        Core Study Topics</h4>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span><strong>Patterns & Loops:</strong> A pattern is something that repeats in the same
+                                order (colors, shapes, sounds). A loop lets a computer repeat steps without being told
+                                every time.</span>
+                        </li>
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span><strong>ScratchJr Events:</strong> Events are triggers like clicking the Green Flag or
+                                "Start on Bump" that tell characters when to start moving or talking.</span>
+                        </li>
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span><strong>Digital Storytelling:</strong> Stories have three main parts: Beginning,
+                                Middle, and End. Breaking stories into "scenes" helps us organize them better.</span>
+                        </li>
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span><strong>ScratchJr Skills:</strong> We learned to add Sprites (characters), change
+                                backdrops, and send messages between characters to make a story flow.</span>
+                        </li>
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span><strong>Pattern Examples:</strong> Shapes, figures, colors, letters (A D A D), sounds,
+                                and actions (Stop, Squat, Jump, Jump).</span>
+                        </li>
+                    </ul>
+
+                    <ul class="space-y-4">
+
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span>
+                                <strong>Pattern:</strong> A pattern is something that repeats again and again in the
+                                same order.
+                                Examples include colors (🔴🔵🔴🔵), letters (A D A D A D), and actions (Jump, Clap,
+                                Jump, Clap).
+                                Patterns help us predict what comes next.
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span>
+                                <strong>Loop:</strong> A loop means doing the same steps again and again.
+                                In programming, loops save time because we do not need to write the same instruction
+                                many times.
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span>
+                                <strong>Trigger & Event:</strong> A trigger is a signal that makes something happen.
+                                An event happens because of a trigger.
+                                Example: Clicking the Green Flag in ScratchJr starts actions.
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span>
+                                <strong>Bug & Debugging:</strong> A bug is a mistake in a program.
+                                Debugging means finding and fixing the mistake so the program works correctly.
+                            </span>
+                        </li>
+
+                        <li class="flex gap-3 text-sm opacity-90">
+                            <i class="fas fa-bookmark accent-text mt-1"></i>
+                            <span>
+                                <strong>Digital Storytelling:</strong> Stories can be told using pictures, sounds, and
+                                digital tools.
+                                Every story has three main parts — Beginning, Middle, and End.
+                                ScratchJr helps us create digital stories using characters (sprites) and scenes
+                                (backdrops).
+                            </span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+                <div class="space-y-2">
+                    <h4 class="developer-font text-xs uppercase font-bold accent-text border-b border-white/10 pb-2">
+                        Technical Glossary - Grade 01
+                    </h4>
+
+                    <div class="grid grid-cols-1 gap-3">
+
+
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Loop</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                Doing the same steps again and again.
+                                In programming, a loop helps repeat steps without telling the computer every time.
+                                The Repeat block in ScratchJr helps repeat actions easily.
+                            </p>
+                        </div>
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Trigger</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                A signal that makes something happen.
+                            </p>
+                        </div>
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Event</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                Something that happens because of a trigger.
+                                Events like clicking the Green Flag or clicking on a character make things happen.
+                                Action is triggered when the Green Flag is clicked or when using the Start on Bump
+                                block.
+                                Events are important because they help make things happen in real life and on computers.
+                            </p>
+                        </div>
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Bug</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                A problem in a program that stops it from working properly.
+                            </p>
+                        </div>
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Debugging</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                Finding and fixing problems in a program.
+                            </p>
+                        </div>
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Fix</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                To make something work again.
+                            </p>
+                        </div>
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Instructions</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                Steps or commands that show how to do something or make a character move.
+                                Events are like instructions that tell characters what to do.
+                            </p>
+                        </div>
+
+                        <div class="glass bg-white/5 p-1 rounded-xl">
+                            <span class="font-bold accent-text uppercase text-xs">Digital Storytelling</span>
+                            <p class="text-sm opacity-70 mt-1">
+                                Stories can be told using pictures, sounds, and digital tools.
+                                Every story has three main parts: Beginning, Middle, and End.
+                                Breaking stories into scenes helps us understand each part better.
+                                We used ScratchJr to create fun stories by adding sprites (characters), backdrops,
+                                movements, sounds, and
+                                messages between characters.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+            <div class="mt-12 pt-8 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="glass p-4 border-l-4 border-blue-500 hover:bg-white/5 transition">
+                    <h5 class="font-bold mb-2 text-sm">ScratchJr Basics</h5>
+                    <p class="text-[10px] opacity-60 uppercase font-bold tracking-tighter">Green Flag • Sprites •
+                        Backdrops • Message blocks</p>
+                </div>
+                <div class="glass p-4 border-l-4 border-emerald-500 hover:bg-white/5 transition">
+                    <h5 class="font-bold mb-2 text-sm">Logic & Order</h5>
+                    <p class="text-[10px] opacity-60 uppercase font-bold tracking-tighter">Beginning • Middle • End •
+                        Sequencing</p>
+                </div>
+                <div class="glass p-4 border-l-4 border-purple-500 hover:bg-white/5 transition">
+                    <h5 class="font-bold mb-2 text-sm">Debugging Steps</h5>
+                    <p class="text-[10px] opacity-60 uppercase font-bold tracking-tighter">Find the Bug • Fix the Code •
+                        Test again</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Added Starts  -->
+
+        <div class="container">
+
+
+
+
+            <div class="card ">
+                <h2 class="submit-btn bg-primary accent-text">Interactive Sequence Practice</h2>
+
+                <div id="sequenceSteps"
+                    style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0;">
+                </div>
+
+                <div style="position:relative;height:80px;background:#e5e7eb;border-radius:10px;overflow:hidden;">
+                    <div id="sequenceBall" style="
+                        position:absolute;
+                        left:0;
+                        top:30px;
+                        width:20px;
+                        height:20px;
+                        border-radius:50%;
+                        background:var(--accent-color);
+                        transition:0.5s;">
+                    </div>
+                </div>
+
+                <p id="sequenceMessage" style="margin-top:15px;font-weight:bold;"></p>
+                <button class="submit-btn bg-primary accent-text" onclick="resetSequence()">Reset</button>
+            </div>
+            <div id="grade1Container">
+
+                <div style="text-align:center;margin-top:40px;">
+                    <button onclick="toggleQuiz1()" class="submit-btn bg-primary accent-text">
+                        Show Quiz
+                    </button>
+                </div>
+
+                <div id="quizWrapper1" style="display:none;margin-top:30px;">
+                    <div id="quizSection1"></div>
+                    <div id="resultBox1"></div>
+                </div>
+
+            </div>
+
+            <div style="margin-top:40px;padding:20px;border:2px dashed #4f46e5;border-radius:12px;">
+                <h3 class="accent-text">Pattern Practice</h3>
+
+                <p>Complete the Pattern:</p>
+                <p id="patternText">A D A D A _</p>
+
+                <button class="submit-btn bg-primary accent-text" onclick="showPatternAnswer()">Show Answer</button>
+
+                <button class="submit-btn bg-primary accent-text" onclick="resetPattern()" style="margin-left:10px;">
+                    Reset
+                </button>
+            </div>
+
+
+
+        </div>
+
+        <!-- Added Ends     -->
+    </main>
+
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-xs tracking-widest">
+        SYSTEM DEPLOYMENT V3.0 // ACADEMIC REPOSITORY
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const root = document.documentElement;
+        const toggle = id => document.getElementById(id);
+
+        toggle("themeToggle").onclick = () => {
+            root.classList.toggle("dark");
+            localStorage.ushiverseDark = root.classList.contains("dark");
+        };
+
+        toggle("settingsToggle").onclick = () => {
+            toggle("themePanel").classList.toggle("hidden");
+        };
+
+        document.querySelectorAll(".theme-dot").forEach(dot => {
+            dot.onclick = () => {
+                root.style.setProperty("--primary", dot.dataset.theme);
+                localStorage.ushiverseColor = dot.dataset.theme;
+            };
+        });
+
+        if (localStorage.ushiverseDark === "false") root.classList.remove("dark");
+        if (localStorage.ushiverseColor)
+            root.style.setProperty("--primary", localStorage.ushiverseColor);
+    </script>
+
+
+    <script>
+
+
+        /* ===============================
+            GRADE 1 - 30 QUESTIONS
+        ================================ */
+
+        const questions1 = [
+
+            { q: "A pattern is something that ______.", options: ["Repeats", "Stops", "Breaks", "Runs"], answer: 0 },
+            { q: "A D A D A ?", options: ["B", "D", "C", "A"], answer: 1 },
+            { q: "Loop means ______.", options: ["Sleep", "Repeat steps", "Eat", "Stop"], answer: 1 },
+            { q: "Trigger is a ______.", options: ["Signal", "Color", "Bug", "Game"], answer: 0 },
+            { q: "Event happens because of a ______.", options: ["Trigger", "Mouse", "Screen", "Cable"], answer: 0 },
+            { q: "Bug means a ______ in program.", options: ["Problem", "Game", "Picture", "Sound"], answer: 0 },
+            { q: "Debugging means ______.", options: ["Fixing mistakes", "Sleeping", "Drawing", "Playing"], answer: 0 },
+            { q: "Fix means to ______.", options: ["Repair", "Break", "Hide", "Erase"], answer: 0 },
+            { q: "Instructions are ______.", options: ["Steps", "Colors", "Mistakes", "Games"], answer: 0 },
+            { q: "Story has how many main parts?", options: ["1", "2", "3", "4"], answer: 2 },
+            { q: "First part of story is ______.", options: ["Beginning", "End", "Middle", "Stop"], answer: 0 },
+            { q: "Last part of story is ______.", options: ["End", "Start", "Middle", "None"], answer: 0 },
+            { q: "ScratchJr helps us create ______.", options: ["Stories", "Cars", "Food", "Shoes"], answer: 0 },
+            { q: "Sprites are ______.", options: ["Characters", "Chairs", "Tables", "Bags"], answer: 0 },
+            { q: "Backdrop means ______.", options: ["Background", "Bug", "Loop", "Game"], answer: 0 },
+            { q: "Repeat block helps to ______.", options: ["Repeat actions", "Delete code", "Sleep", "Hide"], answer: 0 },
+            { q: "Clicking green flag is an ______.", options: ["Event", "Bug", "Loop", "Sound"], answer: 0 },
+            { q: "Pattern in colors: Red Blue Red ?", options: ["Blue", "Green", "Yellow", "Red"], answer: 0 },
+            { q: "Stop Jump Stop Jump ?", options: ["Stop", "Jump", "Run", "Clap"], answer: 0 },
+            { q: "Sequence means steps in ______ order.", options: ["Correct", "Wrong", "Random", "Fast"], answer: 0 },
+            { q: "Loop saves ______.", options: ["Time", "Water", "Food", "Paper"], answer: 0 },
+            { q: "Digital storytelling uses ______.", options: ["Pictures & sound", "Only chalk", "Only book", "Only paper"], answer: 0 },
+            { q: "Middle of story comes after ______.", options: ["Beginning", "End", "Nothing", "Bug"], answer: 0 },
+            { q: "Pattern in letters: A B A B ?", options: ["A", "C", "D", "B"], answer: 0 },
+            { q: "Jump Clap Jump ?", options: ["Clap", "Run", "Stop", "Walk"], answer: 0 },
+            { q: "Bug stops program from working ______.", options: ["Properly", "Well", "Smooth", "Fast"], answer: 0 },
+            { q: "Event makes something ______.", options: ["Happen", "Sleep", "Hide", "Break"], answer: 0 },
+            { q: "Instructions tell computer what to ______.", options: ["Do", "Sleep", "Hide", "Run away"], answer: 0 },
+            { q: "Pattern helps us ______ what comes next.", options: ["Predict", "Forget", "Hide", "Stop"], answer: 0 },
+            { q: "Debugging makes program work ______.", options: ["Correctly", "Wrong", "Slow", "Bad"], answer: 0 },
+
+            // New Added
+            { q: "A __________ is something that repeats again and again.", options: ["Pattern", "Bug", "Sprite", "Event"], answer: 0 },
+            { q: "A __________ is used in programming to repeat steps.", options: ["Loop", "Bug", "Trigger", "Sound"], answer: 0 },
+            { q: "A __________ is a signal that makes something happen.", options: ["Trigger", "Backdrop", "Game", "Color"], answer: 0 },
+            { q: "An __________ happens because of a trigger.", options: ["Event", "Pattern", "Loop", "Bug"], answer: 0 },
+            { q: "We learned to create projects in __________.", options: ["ScratchJr", "Paint", "Word", "Excel"], answer: 0 },
+            { q: "We can add characters called __________ in ScratchJr.", options: ["Sprites", "Tables", "Chairs", "Books"], answer: 0 },
+            { q: "The background of a scene is called __________.", options: ["Backdrop", "Bug", "Loop", "Trigger"], answer: 0 },
+            { q: "The __________ block helps repeat actions.", options: ["Repeat", "Stop", "Sound", "Hide"], answer: 0 },
+            { q: "When we click the __________, the sprite starts moving.", options: ["Green Flag", "Bug", "Loop", "Sound"], answer: 0 },
+            { q: "The __________ block starts action when two sprites touch.", options: ["Start on Bump", "Repeat", "Stop", "Sound"], answer: 0 },
+            { q: "A __________ is a problem in a program.", options: ["Bug", "Pattern", "Sprite", "Loop"], answer: 0 },
+            { q: "__________ means fixing problems in a program.", options: ["Debugging", "Sleeping", "Drawing", "Playing"], answer: 0 },
+            { q: "To make something work again, we __________ it.", options: ["Fix", "Break", "Hide", "Delete"], answer: 0 },
+            { q: "__________ are steps that show how to do something.", options: ["Instructions", "Pictures", "Sounds", "Games"], answer: 0 },
+            { q: "__________ means telling a story using digital tools.", options: ["Digital storytelling", "Drawing", "Typing", "Gaming"], answer: 0 },
+            { q: "Stories can be told using __________ and sounds.", options: ["Pictures", "Chalk", "Paper", "Tables"], answer: 0 },
+            { q: "Computers follow __________ to complete tasks.", options: ["Instructions", "Bugs", "Mistakes", "Errors"], answer: 0 },
+            { q: "Events help make things happen both in real life and on the __________.", options: ["Computer", "Chair", "Road", "Book"], answer: 0 },
+            { q: "The Repeat block helps repeat __________ again and again.", options: ["Actions", "Bugs", "Errors", "Backdrops"], answer: 0 },
+            { q: "__________ like clicking the Green Flag make things happen in ScratchJr.", options: ["Events", "Bugs", "Patterns", "Loops"], answer: 0 },
+            { q: "If sprite moves wrong direction, what should you do?", options: ["Remove loop", "Fix movement instruction", "Add sound", "Change backdrop"], answer: 1 },
+            { q: "Debugging requires:", options: ["Guessing randomly", "Careful checking", "Deleting whole project", "Ignoring errors"], answer: 1 },
+            { q: "If Repeat block repeats too many times, what should you do?", options: ["Increase repeats", "Decrease repeat number", "Add bug", "Remove sprite"], answer: 1 },
+            { q: "A fix means:", options: ["Making program worse", "Making something work again", "Adding more bugs", "Removing instructions"], answer: 1 },
+            { q: "Events are important because they:", options: ["Delete backgrounds", "Make something happen", "Add more bugs", "Stop instructions"], answer: 1 },
+            { q: "A traffic light changes when the timer finishes. The timer acts as:", options: ["Pattern", "Event", "Trigger", "Debug"], answer: 2 },
+            { q: "Which situation best explains a loop in real life?", options: ["Eating lunch once", "Brushing teeth every morning", "Reading one page", "Switching off the fan"], answer: 1 },
+            { q: "If character keeps moving forever, what might be the issue?", options: ["Missing stop block", "Bug in background", "No sprite", "No pattern"], answer: 0 },
+            { q: "Instructions are important because they:", options: ["Confuse computer", "Tell computer what to do", "Stop loops", "Remove bugs automatically"], answer: 1 },
+            { q: "Breaking story into scenes helps to:", options: ["Make it confusing", "Understand each part clearly", "Add bugs", "Stop action"], answer: 1 },
+            { q: "Write the correct first step for this story: Alan says Hello to Alex.", options: ["Add sprite Alan", "Delete sprite", "Add bug", "Stop project"], answer: 0 },
+            { q: "After conversation, backdrop changed. Which block is used?", options: ["Change Backdrop", "Repeat", "Stop", "Hide"], answer: 0 },
+            { q: "To show message 'Happy Friendship Day', we use:", options: ["Say block", "Stop block", "Repeat block", "Hide block"], answer: 0 }
+            // New Added
+        ];
+
+
+        function toggleQuiz1() {
+
+            const wrapper = document.getElementById("quizWrapper1");
+            const btn = document.querySelector("#grade1Container button");
+
+            if (wrapper.style.display === "none") {
+                wrapper.style.display = "block";
+                btn.innerText = "Hide Quiz";
+                loadQuiz1();
+            } else {
+                wrapper.style.display = "none";
+                btn.innerText = "Show Quiz";
+            }
+
+        }
+
+        function loadQuiz1() {
+
+            let section = document.getElementById("quizSection1");
+            section.innerHTML = "";
+
+            questions1.forEach((item, index) => {
+
+                let card = document.createElement("div");
+                card.style.padding = "15px";
+                card.style.marginBottom = "15px";
+                card.style.border = "1px solid #4f46e5";
+                card.style.borderRadius = "10px";
+
+                let html = `<h4>${index + 1}. ${item.q}</h4>`;
+
+                item.options.forEach((opt, i) => {
+                    html += `
+<label style="display:block;margin:5px 0;">
+<input type="radio" name="q1${index}" value="${i}">
+${opt}
+</label>`;
+                });
+
+                card.innerHTML = html;
+                section.appendChild(card);
+
+            });
+
+            section.innerHTML += `
+<div style="text-align:center;margin-top:20px;">
+<button onclick="gradeQuiz1()" class="submit-btn bg-primary accent-text">Submit</button>
+</div>`;
+        }
+
+        function gradeQuiz1() {
+
+            let score = 0;
+
+            questions1.forEach(function (item, index) {
+
+                const selected = document.querySelector('input[name="q1' + index + '"]:checked');
+
+                if (selected && parseInt(selected.value) === item.answer) {
+                    score++;
+                }
+
+            });
+
+            let percent = Math.round((score / questions1.length) * 100);
+            let grade = "";
+
+            if (percent >= 90) grade = "A+ 🌟";
+            else if (percent >= 75) grade = "A";
+            else if (percent >= 60) grade = "B";
+            else grade = "Needs Practice";
+
+            document.getElementById("resultBox1").innerHTML =
+                '<div style="padding:20px;border:2px solid #4f46e5;border-radius:12px;text-align:center;">' +
+                '<h3>Score: ' + score + '/' + questions1.length + '</h3>' +
+                '<h3>' + percent + '%</h3>' +
+                '<h2>' + grade + '</h2>' +
+                '</div>';
+        }
+    </script>
+
+    <script>
+
+        function showPatternAnswer() {
+            document.getElementById("patternText").innerText = "A D A D A D";
+        }
+
+        function resetPattern() {
+            document.getElementById("patternText").innerText = "A D A D A _";
+        }
+        const correctSequence = [
+            "Wake Up",
+            "Brush Teeth",
+            "Eat Breakfast",
+            "Go to School"
+        ];
+
+        let userSequence = [];
+
+        function loadSequence() {
+            const container = document.getElementById("sequenceSteps");
+            container.innerHTML = "";
+
+            const shuffled = [...correctSequence].sort(() => Math.random() - 0.5);
+
+            shuffled.forEach(step => {
+                const btn = document.createElement("button");
+                btn.className = "btn-theme";
+                btn.innerText = step;
+                btn.onclick = () => selectStep(step, btn);
+                container.appendChild(btn);
+            });
+        }
+
+        function selectStep(step, btn) {
+            userSequence.push(step);
+            btn.disabled = true;
+            btn.style.opacity = 0.6;
+
+            animateBall(userSequence.length);
+
+            if (userSequence.length === correctSequence.length) {
+                checkSequence();
+            }
+        }
+
+        function animateBall(stepNumber) {
+            const ball = document.getElementById("sequenceBall");
+            const width = document.querySelector(".card").offsetWidth - 60;
+            const moveDistance = (width / 4) * stepNumber;
+            ball.style.left = moveDistance + "px";
+        }
+
+        function checkSequence() {
+            const message = document.getElementById("sequenceMessage");
+            if (JSON.stringify(userSequence) === JSON.stringify(correctSequence)) {
+                message.innerHTML = "✅ Correct Sequence! Great Job!";
+                message.style.color = "green";
+            } else {
+                message.innerHTML = "❌ Wrong Order. Try Again!";
+                message.style.color = "red";
+            }
+        }
+
+        function resetSequence() {
+            userSequence = [];
+            document.getElementById("sequenceBall").style.left = "0px";
+            document.getElementById("sequenceMessage").innerHTML = "";
+            loadSequence();
+        }
+
+        loadSequence();
+    </script>
+</body>
+
+</html>

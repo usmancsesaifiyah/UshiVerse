@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700&display=swap');
+
+/* ================= THEME VARIABLES ================= */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700&display=swap');
+
+/* ================= THEME VARIABLES ================= */
+
+:root {
+    --primary: #3b82f6;
+
+    /* Light */
+    --text: #0f172a;
+    --bg: radial-gradient(circle at top left, #e2e8f0, #f8fafc);
+
+    --card-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.08);
+
+
+    --bg-light: #f9fafb;
+    --bg-dark: #111827;
+    --text-light: #111827;
+    --text-dark: #ffffff;
+}
+
+.dark {
+    /* Dark */
+    --text: #f8fafc;
+    --bg: radial-gradient(circle at top left, #0f172a, #020617);
+
+    --card-bg: #1e293b;
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode #userPassword {
+    background: #ffffff !important;
+    color: var(--accent-color) !important;
+}
+
+/* ================= BASE ================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* ================= CARD THEME ================= */
+
+.card-theme {
+    background: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    transition: 0.3s ease;
+}
+
+/* ================= CODE BLOCK ================= */
+
+.code-block {
+    background: rgba(0, 0, 0, 0.7);
+    border-left: 4px solid var(--primary);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-family: "Fira Code", monospace;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.developer-font {
+    font-family: "Fira Code", monospace;
+}
+
+.accent {
+    color: var(--primary);
+}
+
+.accent-text {
+    color: var(--primary);
+}
+
+/* Grade 3 Starts  */
+/* Accent Background */
+.accent-bg {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Button Style */
+.btn-theme {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-theme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Grade 3 Ends */
+
+
+/* Grade 4 Starts  */
+.flow-box {
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid var(--theme-color);
+    font-size: 13px;
+    min-width: 140px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.flow-box:hover {
+    background: var(--theme-color);
+    color: var(--text);
+    transform: scale(1.05);
+}
+
+.flow-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 22px;
+    opacity: 0.6;
+}
+
+.section-card {
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--theme-color);
+}
+
+.increment-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.counter {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.inc-btn {
+    background: var(--theme-color);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.icon-display {
+    font-size: 26px;
+    margin: 5px;
+}
+
+.arrow {
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.diagram-card {
+    padding: 15px;
+    border-left: 4px solid var(--theme-color);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.toggle-btn {
+    background: var(--theme-color);
+    color: var(--primary);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.question-card {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+}
+
+.option {
+    margin-top: 6px;
+}
+
+.grade-box {
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Changed */
+.quiz-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quiz-card {
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    transition: 0.3s ease;
+}
+
+.quiz-card:hover {
+    transform: translateY(-4px);
+    border: 1px solid var(--theme-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-card h4 {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.option {
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.option input {
+    margin-right: 8px;
+}
+
+.submit-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-btn {
+    background: var(--text);
+    /* color: wheat; */
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.grade-box {
+    margin-top: 25px;
+    padding: 18px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--theme-color);
+}
+
+/* Grade 4 Ends */
+
+/* ================= GLASS ================= */
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+}
+
+/* ================= UI ================= */
+
+.theme-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.theme-dot:hover {
+    transform: scale(1.2);
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+
+/* Network Diagrams Simulation */
+@keyframes movePacket {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 1;
+    }
+}
+
+
+/* :root {
+    --primary: #3b82f6;
+    --text: #0f172a;
+    --bg: radial-gradient(circle at top left, #e2e8f0, #f8fafc);
+    --glass-bg: rgba(255, 255, 255, .7);
+    --glass-border: rgba(0, 0, 0, .1);
+}
+
+.dark {
+    --text: #f8fafc;
+    --bg: radial-gradient(circle at top left, #0f172a, #020617);
+    --glass-bg: rgba(15, 23, 42, .85);
+    --glass-border: rgba(255, 255, 255, .08);
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+}
+
+.accent {
+    color: var(--primary);
+} */

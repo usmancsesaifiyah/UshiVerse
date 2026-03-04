@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Academic Portal</title>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 overflow-x-hidden">
+
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Theme Palette Sidebar -->
+    <div id="themePalette" class="fixed right-[-300px] top-24 z-40 transition-all duration-300">
+        <div class="glass p-4 flex flex-col gap-3 shadow-2xl mr-4 border-white/10">
+            <h3 class="text-xs uppercase font-bold opacity-60 mb-2 px-1">Accent Colors</h3>
+            <div class="grid grid-cols-5 gap-2" id="colorPicker"></div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="app" class="pt-28 pb-12 px-4 max-w-5xl mx-auto min-h-screen">
+        <div id="pageContentContainer"></div>
+    </main>
+
+    <footer class="mt-auto py-10 px-4 border-t border-black/5 dark:border-white/5 bg-white/5">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 opacity-60 text-sm developer-font">
+            <div class="flex items-center gap-4">
+                <div class="w-8 h-8 glass flex items-center justify-center text-xs">U</div>
+                <p>© 2024 UshiVerse Deployment v3.0 - Hierarchical Hub</p>
+            </div>
+            <div class="flex gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div> System Status: Stable
+                </div>
+                <a href="mailto:usmancsesaifiyah@gmail.com" class="hover:text-[var(--primary)]">Developer Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const COLORS = [
+            { name: 'Blue', hex: '#3b82f6' }, { name: 'Red', hex: '#ef4444' },
+            { name: 'Emerald', hex: '#10b981' }, { name: 'Amber', hex: '#f59e0b' },
+            { name: 'Purple', hex: '#a855f7' }, { name: 'Pink', hex: '#ec4899' },
+            { name: 'Cyan', hex: '#06b6d4' }, { name: 'Orange', hex: '#f97316' },
+            { name: 'Indigo', hex: '#6366f1' }, { name: 'Slate', hex: '#64748b' }
+        ];
+
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+        let currentAccent = localStorage.getItem('accent') || '#3b82f6';
+
+        function init() {
+            document.documentElement.className = currentTheme;
+            updateAccent(currentAccent);
+            renderColorPicker();
+
+            const path = window.location.pathname;
+            const fileName = path.split('/').pop() || 'index.html';
+            renderPageContent(fileName);
+
+            document.getElementById('themeToggle').addEventListener('click', () => {
+                currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                document.documentElement.className = currentTheme;
+                localStorage.setItem('theme', currentTheme);
+            });
+            document.getElementById('settingsToggle').addEventListener('click', () => {
+                const p = document.getElementById('themePalette');
+                p.style.right = p.style.right === '0px' ? '-300px' : '0px';
+            });
+        }
+
+        function renderColorPicker() {
+            const container = document.getElementById('colorPicker');
+            container.innerHTML = COLORS.map(color => `
+                <div class="theme-dot ${currentAccent === color.hex ? 'active' : ''}" 
+                     style="background: ${color.hex}" 
+                     onclick="updateAccent('${color.hex}')">
+                </div>
+            `).join('');
+        }
+
+        function updateAccent(hex) {
+            currentAccent = hex;
+            document.documentElement.style.setProperty('--primary', hex);
+            localStorage.setItem('accent', hex);
+            renderColorPicker();
+        }
+
+        function toggleAccordion(id) {
+            const el = document.getElementById(`class-group-${id}`);
+            el.classList.toggle('active');
+        }
+
+        function renderPageContent(fileName) {
+            const container = document.getElementById('pageContentContainer');
+
+            const examTypes = [
+                // { id: 'pt1', name: 'Periodic Test 1', type: 'PT' },
+                // { id: 'pt2', name: 'Periodic Test 2', type: 'PT' },
+                // { id: 'sa1', name: 'Summative Assessment 1', type: 'SA' },
+                { id: 'sa2', name: 'Summative Assessment 2', type: 'SA' },
+                // { id: 'st1', name: 'Surprise Test 1', type: 'ST' },
+                // { id: 'st2', name: 'Surprise Test 2', type: 'ST' },
+                // { id: 'st3', name: 'Surprise Test 3', type: 'ST' },
+                // { id: 'ct1', name: 'Class Test 1', type: 'CT' },
+                // { id: 'ct2', name: 'Class Test 2', type: 'CT' },
+                // { id: 'ct3', name: 'Class Test 3', type: 'CT' },
+                // { id: 'ct4', name: 'Class Test 4', type: 'CT' },
+                // { id: 'ct5', name: 'Class Test 5', type: 'CT' },
+                // { id: 'final', name: 'Pre-Board/Final', type: 'Final' }
+            ];
+
+            // DASHBOARD / INDEX
+            if (fileName === 'index.html' || fileName === '') {
+                container.innerHTML = `
+                    <div class="page-content space-y-8">
+                        <header class="text-center mb-12">
+                            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Academic <span class="text-[var(--primary)]">Vault</span></h1>
+                            <p class="opacity-60 max-w-xl mx-auto">Select a class to access the specialized examination resources for Computer Science.</p>
+                        </header>
+                        
+                        <div class="space-y-3">
+                            ${Array.from({ length: 8 }, (_, i) => {
+                    const classNum = i + 1;
+                    return `
+                                    <div class="accordion-item glass glass-card overflow-hidden" id="class-group-${classNum}">
+                                        <div class="p-5 flex items-center justify-between cursor-pointer select-none" onclick="toggleAccordion(${classNum})">
+                                            <div class="flex items-center gap-4">
+                                                <div class="w-12 h-12 glass bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center font-black text-xl rounded-lg">
+                                                    ${classNum}
+                                                </div>
+                                                <div>
+                                                    <h3 class="font-bold text-lg">Class ${classNum}</h3>
+                                                    <p class="text-xs opacity-50 uppercase tracking-widest font-bold">Examination Modules</p>
+                                                </div>
+                                            </div>
+                                            <i class="fas fa-chevron-down chevron transition-transform duration-300 opacity-30"></i>
+                                        </div>
+                                        <div class="accordion-content px-5">
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-2">
+                                                ${examTypes.map(exam => `
+                                                    <a href="class${classNum}_${exam.id}.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--primary)]/5 border border-transparent hover:border-[var(--primary)]/20 transition-all group">
+                                                        <div class="w-8 h-8 rounded flex items-center justify-center bg-black/5 dark:bg-white/5 text-[10px] font-black group-hover:text-[var(--primary)] transition-colors">${exam.type}</div>
+                                                        <span class="text-sm font-medium opacity-80 group-hover:opacity-100">${exam.name}</span>
+                                                    </a>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                }).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            // ABOUT PAGE
+            else if (fileName === 'about.html') {
+                container.innerHTML = `
+                    <div class="page-content space-y-12">
+                        <div class="max-w-3xl mx-auto space-y-6">
+                            <h1 class="text-4xl font-black">About <span class="text-[var(--primary)]">UshiVerse</span></h1>
+                            <div class="glass p-8 space-y-6 leading-relaxed opacity-90">
+                                <p>UshiVerse is a specialized digital ecosystem designed to bridge the gap between traditional teaching and modern technical delivery. Built with a "Developer-First" aesthetic, it provides a clean, focused, and high-performance environment for academic resource management.</p>
+                                <div class="grid md:grid-cols-2 gap-8 py-4">
+                                    <div>
+                                        <h4 class="font-bold mb-2 text-[var(--primary)]">Vision</h4>
+                                        <p class="text-sm">To centralize academic data in a way that is accessible, aesthetically pleasing, and technically robust.</p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-2 text-[var(--primary)]">Architecture</h4>
+                                        <p class="text-sm">Utilizing a Multi-Page Application (MPA) structure to ensure maximum compatibility and clean URL management.</p>
+                                    </div>
+                                </div>
+                                <div class="border-t border-white/10 pt-6">
+                                    <h4 class="font-bold mb-4">Core Technology Stack</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 glass text-xs font-mono">TailwindCSS</span>
+                                        <span class="px-3 py-1 glass text-xs font-mono">Vanilla JS</span>
+                                        <span class="px-3 py-1 glass text-xs font-mono">Local Persistence</span>
+                                        <span class="px-3 py-1 glass text-xs font-mono">FontAwesome 6.4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            // CONTACT PAGE
+            else if (fileName === 'contact.html') {
+                container.innerHTML = `
+                    <div class="page-content max-w-4xl mx-auto">
+                        <div class="text-center mb-12">
+                            <h1 class="text-4xl font-black">Contact <span class="text-[var(--primary)]">Developer</span></h1>
+                            <p class="opacity-60 mt-2">Get in touch for technical support or implementation queries.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="glass p-8 space-y-6">
+                                <h3 class="text-xl font-bold border-b border-white/5 pb-4">Send a Message</h3>
+                                <form class="space-y-4">
+                                    <div class="space-y-2">
+                                        <label class="text-xs uppercase font-bold opacity-50 ml-1">Full Name</label>
+                                        <input type="text" class="w-full bg-black/10 dark:bg-white/5 border border-white/10 p-3 rounded-lg focus:outline-none focus:border-[var(--primary)] transition dark:text-white" placeholder="John Doe">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-xs uppercase font-bold opacity-50 ml-1">Email Address</label>
+                                        <input type="email" class="w-full bg-black/10 dark:bg-white/5 border border-white/10 p-3 rounded-lg focus:outline-none focus:border-[var(--primary)] transition dark:text-white" placeholder="john@example.com">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-xs uppercase font-bold opacity-50 ml-1">Message</label>
+                                        <textarea rows="4" class="w-full bg-black/10 dark:bg-white/5 border border-white/10 p-3 rounded-lg focus:outline-none focus:border-[var(--primary)] transition dark:text-white" placeholder="How can we help?"></textarea>
+                                    </div>
+                                    <button type="button" class="w-full bg-[var(--primary)] text-white font-bold py-3 rounded-lg shadow-lg shadow-[var(--primary)]/20 hover:opacity-90 transition">Initialize Transmission</button>
+                                </form>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="glass p-6 flex items-center gap-6 glass-card">
+                                    <div class="w-14 h-14 bg-green-500/20 text-green-500 rounded-2xl flex items-center justify-center text-2xl shadow-inner"><i class="fab fa-whatsapp"></i></div>
+                                    <div>
+                                        <h4 class="font-bold">WhatsApp Direct</h4>
+                                        <p class="text-sm opacity-60">+91 99291 14267</p>
+                                    </div>
+                                </div>
+                                <div class="glass p-6 flex items-center gap-6 glass-card">
+                                    <div class="w-14 h-14 bg-red-500/20 text-red-500 rounded-2xl flex items-center justify-center text-2xl shadow-inner"><i class="fas fa-envelope"></i></div>
+                                    <div>
+                                        <h4 class="font-bold">Email Support</h4>
+                                        <p class="text-sm opacity-60">usmancsesaifiyah@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="glass p-6 flex items-center gap-6 glass-card">
+                                    <div class="w-14 h-14 bg-blue-500/20 text-blue-500 rounded-2xl flex items-center justify-center text-2xl shadow-inner"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div>
+                                        <h4 class="font-bold">Office Hours</h4>
+                                        <p class="text-sm opacity-60">09:00 AM - 05:00 PM IST</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            // INDIVIDUAL EXAM PAGE (Matches the class_exam pattern)
+            else {
+                const match = fileName.match(/class(\d+)_(\w+)\.html/);
+                if (match) {
+                    const classNum = match[1];
+                    const examId = match[2];
+                    const exam = examTypes.find(e => e.id === examId);
+
+                    container.innerHTML = `
+                        <div class="page-content space-y-8">
+                            <a href="index.html" class="flex items-center gap-2 opacity-50 hover:opacity-100 transition">
+                                <i class="fas fa-arrow-left"></i> Back to Dashboard
+                            </a>
+                            <div class="glass p-8">
+                                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                                    <div>
+                                        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--primary)]">
+                                            <span>CLASS ${classNum}</span>
+                                            <span>•</span>
+                                            <span>${exam.type} MODULE</span>
+                                        </div>
+                                        <h2 class="text-4xl font-black mt-2">${exam.name}</h2>
+                                    </div>
+                                    <button class="bg-[var(--primary)] text-white px-6 py-2 rounded-lg font-bold hover:opacity-90 transition shadow-lg shadow-[var(--primary)]/20">Download Full Repository</button>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <h4 class="developer-font text-xs uppercase font-bold opacity-30 border-b border-black/5 dark:border-white/5 pb-2">Technical Documentation</h4>
+                                        <div class="glass bg-white/5 p-4 flex justify-between items-center group cursor-pointer hover:bg-white/10 transition">
+                                            <span class="text-sm font-medium">Question Paper Set A</span>
+                                            <i class="fas fa-file-pdf text-red-500 opacity-60 group-hover:opacity-100"></i>
+                                        </div>
+                                        <div class="glass bg-white/5 p-4 flex justify-between items-center group cursor-pointer hover:bg-white/10 transition">
+                                            <span class="text-sm font-medium">Question Paper Set B</span>
+                                            <i class="fas fa-file-pdf text-red-500 opacity-60 group-hover:opacity-100"></i>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <h4 class="developer-font text-xs uppercase font-bold opacity-30 border-b border-black/5 dark:border-white/5 pb-2">Deployment & Validation</h4>
+                                        <div class="glass bg-white/5 p-4 flex justify-between items-center group cursor-pointer hover:bg-white/10 transition">
+                                            <span class="text-sm font-medium">Verified Answer Key</span>
+                                            <i class="fas fa-check-circle text-emerald-500 opacity-60 group-hover:opacity-100"></i>
+                                        </div>
+                                        <div class="glass bg-white/5 p-4 flex justify-between items-center group cursor-pointer hover:bg-white/10 transition">
+                                            <span class="text-sm font-medium">Marking & Scoring Logic</span>
+                                            <i class="fas fa-code text-blue-500 opacity-60 group-hover:opacity-100"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    container.innerHTML = `<div class="text-center py-20"><h1 class="text-2xl font-bold">404 - Request Terminated</h1><p class="opacity-50 mt-2 mb-8">The requested academic module does not exist.</p><a href="index.html" class="bg-[var(--primary)] text-white px-8 py-3 rounded-xl font-bold">Reboot Dashboard</a></div>`;
+                }
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+
+</html>

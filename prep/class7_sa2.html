@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 7 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --primary: #ec4899;
+            --glass-bg: rgba(10, 10, 15, 0.95);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --glass-blur: blur(24px);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #020617;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(236, 72, 153, 0.15) 0, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0, transparent 50%);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .developer-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.25rem;
+        }
+
+        .accent-text {
+            color: var(--primary);
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.6);
+            border-left: 3px solid var(--primary);
+            padding: 1.25rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            border-radius: 0.75rem;
+            color: #e2e8f0;
+        }
+
+        .step-pill {
+            background: rgba(236, 72, 153, 0.1);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            padding: 0.25rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #f472b6;
+            text-transform: uppercase;
+        }
+
+        .section-header {
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+    <!-- <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-2xl">
+            <a href="#" class="flex items-center gap-2">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-pink-600 to-rose-400 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg">
+                    7</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="accent-text">.dev</span></span>
+            </a>
+            <div class="flex gap-4 items-center">
+                <span class="text-[10px] developer-font opacity-40 uppercase tracking-widest">Level 7 Development
+                    Systems</span>
+                <div class="h-4 w-px bg-white/10"></div>
+                <button class="glass px-4 py-1 text-xs font-bold hover:bg-white/5 transition border-pink-500/30">SA-2
+                    Final</button>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="accent-text">.edu</span></span>
+            </a>
+            <div class="flex gap-4">
+                <a href="../index.html" class="glass p-2 px-4 text-sm font-bold hover:bg-white/10 transition">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="max-w-7xl mx-auto space-y-8">
+
+        <!-- Module Header -->
+        <div class="glass p-10 border-b-4 border-pink-500 shadow-pink-500/10 shadow-2xl">
+            <header>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="step-pill">LEVEL 07</span>
+                    <span class="step-pill">WEB ARCHITECTURE</span>
+                    <span class="step-pill">CSS SYNTAX</span>
+                    <span class="step-pill">UI/UX LOGIC</span>
+                </div>
+                <h1 class="text-6xl font-black tracking-tight mb-4">Modern Web <span
+                        class="accent-text">Engineering</span></h1>
+                <p class="opacity-60 max-w-3xl text-xl leading-relaxed">Advanced study of career paths, CSS styling
+                    systems, and the structural lifecycle of application development for Grade 7.</p>
+            </header>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Section 1: CS Careers & Misconceptions -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 01: Careers & Interdisciplinary Links</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-pink-500/5 rounded-xl border border-pink-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Beyond "Fixing Computers"</h4>
+                            <p class="text-xs opacity-70 leading-relaxed">
+                                Computer Science is about <strong>problem-solving</strong> and
+                                <strong>creativity</strong>. It integrates with Maths (Algorithms), Science (Data
+                                Experiments), and Engineering (Building Robots).
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="code-block text-[11px]">
+                                <div class="text-pink-400 font-bold mb-1">// Career Paths</div>
+                                1. <span class="text-yellow-400">Game Developer:</span> Creativity & Code.<br>
+                                2. <span class="text-yellow-400">Cybersecurity:</span> Defense against Hackers.<br>
+                                3. <span class="text-yellow-400">Data Analyst:</span> Identifying patterns.
+                            </div>
+                            <div class="code-block text-[11px]">
+                                <div class="text-pink-400 font-bold mb-1">// Debunking Myths</div>
+                                - Not just for "Maths Geniuses".<br>
+                                - Collaborative (Teams), not lonely.<br>
+                                - Software Creation > Hardware Repair.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: CSS - Styling the Web -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 02: CSS Architecture (Syntax)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-xs opacity-70">CSS controls layout, colors, and fonts across multiple pages
+                            efficiently.</p>
+                        <div class="code-block">
+                            <div class="text-pink-400 mb-2">// CSS Declaration Block</div>
+                            <span class="text-blue-400">h1</span> { <br>
+                            &nbsp;&nbsp;<span class="text-emerald-400">background-color</span>: <span
+                                class="text-yellow-400">lightblue</span>; <br>
+                            &nbsp;&nbsp;<span class="text-emerald-400">color</span>: <span
+                                class="text-yellow-400">darkblue</span>; <br>
+                            &nbsp;&nbsp;<span class="text-emerald-400">font-size</span>: <span
+                                class="text-yellow-400">30px</span>; <br>
+                            }
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl text-xs space-y-2">
+                            <p><strong>HOTS: Why use CSS?</strong> Consistency (one file styles the whole site),
+                                Efficiency (updates are instant), and Responsiveness (works on mobile/tablets).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: App Development Roles -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 03: The Development Lifecycle</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="glass p-5 bg-white/5">
+                            <h4 class="text-sm font-bold mb-3 border-b border-white/10 pb-2">Wireframing & Storyboarding
+                            </h4>
+                            <p class="text-xs opacity-70 mb-3"><strong>Wireframing</strong> is the blueprint of a
+                                webpage. <strong>Storyboarding</strong> uses frames and captions to visualize the flow
+                                before a single line of code is written.</p>
+                            <div class="p-3 bg-red-500/10 border border-red-500/20 rounded text-[10px]">
+                                <i class="fas fa-exclamation-circle text-red-400 mr-1"></i> <strong>Skipping
+                                    Storyboards:</strong> Leads to wasted time, confused UI/UX, and expensive coding
+                                errors.
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 glass bg-pink-500/10">
+                                <h5 class="text-[10px] font-bold uppercase mb-1">Designer</h5>
+                                <p class="text-[10px] opacity-60">Creates the visual look, UI elements, and overall UX
+                                    feel.</p>
+                            </div>
+                            <div class="p-4 glass bg-blue-500/10">
+                                <h5 class="text-[10px] font-bold uppercase mb-1">Front-End Dev</h5>
+                                <p class="text-[10px] opacity-60">Uses HTML/CSS/JS to build the part users see and
+                                    touch.</p>
+                            </div>
+                            <div class="p-4 glass bg-emerald-500/10">
+                                <h5 class="text-[10px] font-bold uppercase mb-1">Back-End Dev</h5>
+                                <p class="text-[10px] opacity-60">Works with servers and databases (the "hidden" logic).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest flex justify-between items-center">
+                        Level 7 Glossary <i class="fas fa-terminal"></i>
+                    </h4>
+                    <div id="glossary-list" class="space-y-5">
+                        <!-- Content via Script -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass p-6 border-l-4 border-pink-500 bg-pink-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">CSS Selector</h5>
+                <p class="text-[10px] opacity-60">Targets specific HTML elements (like p, h1, or div) to apply design
+                    rules.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Native vs Web App</h5>
+                <p class="text-[10px] opacity-60"><strong>Native:</strong> Built for one OS (iOS/Android).
+                    <strong>Web:</strong> Runs in a browser (Chrome/Safari).</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">HTML Tags</h5>
+                <p class="text-[10px] opacity-60">Special words in &lt;brackets&gt; like &lt;h1&gt; (headings) or
+                    &lt;p&gt; (paragraphs).</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-yellow-500 bg-yellow-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Logical Thinking</h5>
+                <p class="text-[10px] opacity-60">The systematic reasoning used to solve code bugs and engineering
+                    problems.</p>
+            </div>
+        </div>
+
+        <!-- Question Paper Header Simulation -->
+        <div class="glass p-8 bg-white/5 border-dashed border-2 border-white/20">
+            <div class="text-center space-y-2 mb-6">
+                <h2 class="text-sm font-bold uppercase tracking-widest underline">SA-2 Assessment: Computer Science</h2>
+                <div class="flex justify-between text-[10px] px-20">
+                    <span>Grade: 07</span>
+                    <span>Time: 2 Hours</span>
+                    <span>Max Marks: 50</span>
+                </div>
+            </div>
+            <div class="text-[10px] opacity-70 grid grid-cols-2 gap-4">
+                <p><strong>Section A:</strong> Define UI/UX role in Storyboarding.</p>
+                <p><strong>Section B:</strong> Explain Front-End vs Back-End Development.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // LEVEL 07 DEPLOYMENT // SYSTEM STABLE
+    </footer>
+
+    <script>
+        const glossaryData = [
+            { t: "CSS", d: "Cascading Style Sheets: Styles webpages, layout, and fonts." },
+            { t: "Selector", d: "The part of CSS that targets which HTML element to style." },
+            { t: "Declaration", d: "The combination of a property and a value (e.g. color: red)." },
+            { t: "Logical Thinking", d: "系统地推理问题的能力." },
+            { t: "Native App", d: "An app built specifically for one operating system." },
+            { t: "Web App", d: "An app that runs entirely within a web browser." },
+            { t: "UI", d: "User Interface: The visual parts users interact with." },
+            { t: "UX", d: "User Experience: The overall ease of using an app." },
+            { t: "Storyboard", d: "A visual representation of ideas using frames." },
+            { t: "Data Analysis", d: "Studying data to identify important patterns." }
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group border-l-2 border-transparent hover:border-pink-500 pl-3 transition-all">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[10px] opacity-50 mt-1 leading-relaxed group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+</body>
+
+</html>

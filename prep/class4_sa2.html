@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 4 SA-2 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --primary: #3b82f6;
+            --glass-bg: rgba(15, 23, 42, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-blur: blur(20px);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #0f172a, #020617);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .developer-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+        }
+
+        .accent-text {
+            color: var(--primary);
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border-left: 3px solid var(--primary);
+            padding: 1rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            border-radius: 0.5rem;
+        }
+
+        .step-pill {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+    </style>
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+
+    <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="accent-text">.edu</span></span>
+            </a>
+            <div class="flex gap-4">
+                <a href="../index.html" class="glass p-2 px-4 text-sm font-bold hover:bg-white/10 transition">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto space-y-8">
+
+        <!-- Module Header -->
+        <div class="glass p-8 border-b-4 border-blue-500">
+            <header>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="step-pill">LEVEL 4</span>
+                    <span class="step-pill">COMP-SCI</span>
+                    <span class="step-pill">SA-2 PREP</span>
+                </div>
+                <h1 class="text-5xl font-black tracking-tight mb-4">Computer Science <span
+                        class="accent-text">Masterclass</span></h1>
+                <p class="opacity-50 max-w-2xl text-lg">Detailed analysis of Internet architecture, software logic, and
+                    the ethics of digital citizenship for Grade 4.</p>
+            </header>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Section 1: Internet Architecture -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-network-wired accent-text"></i> The Global Network
+                    </h3>
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            The <strong>Internet</strong> is a global network of computers. When you request data, the
+                            following interaction occurs in the background:
+                        </p>
+                        <div class="code-block space-y-2">
+                            <div><span class="text-blue-400">1. REQUEST:</span> User clicks video link.</div>
+                            <div><span class="text-blue-400">2. ADDRESS:</span> Computer finds the <span
+                                    class="text-yellow-400">IP Address</span> of the server.</div>
+                            <div><span class="text-blue-400">3. FETCH:</span> <span
+                                    class="text-purple-400">Server</span> finds the file and sends it back.</div>
+                            <div><span class="text-blue-400">4. RENDER:</span> Your device displays the data.</div>
+                        </div>
+                        <div class="p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-red-400 uppercase mb-1">Error Analysis: "Server Not Found"
+                            </h4>
+                            <p class="text-[11px] opacity-70">Common causes: No internet connection, wrong URL, or the
+                                remote server is offline. Fixes: Check Wi-Fi, refresh, or verify the IP path.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Online Safety & Citizenship -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-user-shield accent-text"></i> Digital Citizenship
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Cyberbullying Protocol</h4>
+                            <p class="text-xs opacity-60">Bullying online can hurt just as much as real life. The
+                                <strong>UshiVerse Safety Loop</strong>:</p>
+                            <ul class="text-[11px] space-y-1 opacity-80 list-disc pl-4">
+                                <li><strong>TELL:</strong> Speak to a trusted adult immediately.</li>
+                                <li><strong>BLOCK:</strong> Use app tools to stop the bully.</li>
+                                <li><strong>REPORT:</strong> Inform the platform about the behavior.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Privacy Logic</h4>
+                            <p class="text-xs opacity-60">Making smart choices about <strong>PII</strong> (Personal
+                                Identifiable Information):</p>
+                            <div class="p-3 bg-blue-500/5 rounded border border-blue-500/20 text-[10px]">
+                                <i class="fas fa-exclamation-triangle accent-text mr-1"></i> Never share school name,
+                                home address, or birthdays with strangers.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Logic & Data -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-chart-pie accent-text"></i> Data Analysis & Game Design
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 flex-wrap">
+                            <div class="flex-1 min-w-[200px] glass bg-white/5 p-4">
+                                <h4 class="text-xs font-bold uppercase mb-2">Quiz Game Architecture</h4>
+                                <p class="text-[11px] opacity-60">Planning before coding is critical to ensure the game
+                                    has <strong>Rules, Goals, and Challenges</strong>. Without a plan, debugging becomes
+                                    impossible.</p>
+                            </div>
+                            <div class="flex-1 min-w-[200px] glass bg-white/5 p-4">
+                                <h4 class="text-xs font-bold uppercase mb-2">Data Representation</h4>
+                                <p class="text-[11px] opacity-60">We collect data via <strong>Surveys</strong>, organize
+                                    it into <strong>Tables</strong>, and represent it using <strong>Bar Graphs</strong>
+                                    to make better decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest">
+                        Technical Glossary
+                    </h4>
+                    <div id="glossary-list" class="space-y-4">
+                        <!-- Dynamic Content -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Hardware & Software</h5>
+                <p class="text-[11px] opacity-60"><strong>Hardware</strong> is the body (touchable),
+                    <strong>Software</strong> is the mind (instructions). They must work together to run tasks like
+                    Scratch.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Bugs & Debugging</h5>
+                <p class="text-[11px] opacity-60">A <strong>Bug</strong> is a mistake in code.
+                    <strong>Debugging</strong> is the detective process of finding and fixing that mistake to solve the
+                    problem.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-purple-500 bg-purple-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Digital Art Tools</h5>
+                <p class="text-[11px] opacity-60">Computers allow for <strong>Digital Art</strong> using special tools
+                    (software) and input devices like tablets (hardware) to create without paper.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // GRADE 4 REVISION DEPLOYMENT // v4.0.0
+    </footer>
+
+    <script>
+        const glossaryData = [
+            { t: "Internet", d: "Global network connecting computers to share info." },
+            { t: "Server", d: "A powerful computer that stores and sends data." },
+            { t: "IP Address", d: "A special ID number for every computer on the net." },
+            { t: "Network", d: "System of connected computers and pathways." },
+            { t: "Cyberbullying", d: "Using the internet to be mean or hurtful." },
+            { t: "Privacy", d: "Keeping personal info safe from strangers." },
+            { t: "Data", d: "Facts, numbers, and observations collected." },
+            { t: "Organize", d: "Arranging data into an understandable form." },
+            { t: "Analyze", d: "Interpreting data to find useful info for decisions." },
+            { t: "Pictograph", d: "Representing data using pictures or symbols." }
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[11px] opacity-50 mt-1 leading-snug group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+</body>
+
+</html>

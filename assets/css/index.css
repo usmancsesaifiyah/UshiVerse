@@ -1,0 +1,117 @@
+     @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700&display=swap');
+
+     :root {
+         --primary: #3b82f6;
+         --glass-bg: rgba(255, 255, 255, 0.7);
+         --glass-border: rgba(0, 0, 0, 0.1);
+         --glass-blur: blur(16px);
+         --bg-gradient: radial-gradient(circle at top left, #e2e8f0, #f8fafc);
+     }
+
+     .dark {
+         --glass-bg: rgba(15, 23, 42, 0.8);
+         --glass-border: rgba(255, 255, 255, 0.08);
+         --bg-gradient: radial-gradient(circle at top left, #0f172a, #020617);
+     }
+
+     body {
+         font-family: 'Inter', sans-serif;
+         transition: background-color 0.3s ease, color 0.3s ease;
+         min-height: 100vh;
+         background: var(--bg-gradient);
+         background-attachment: fixed;
+     }
+
+     /* Specific Dark Theme Font Color Corrections */
+     .dark body {
+         color: #f8fafc;
+     }
+
+     .dark .text-slate-900 {
+         color: #f1f5f9;
+     }
+
+     .developer-font {
+         font-family: 'Fira Code', monospace;
+     }
+
+     .glass {
+         background: var(--glass-bg);
+         backdrop-filter: var(--glass-blur);
+         -webkit-backdrop-filter: var(--glass-blur);
+         border: 1px solid var(--glass-border);
+         border-radius: 1rem;
+     }
+
+     .glass-card {
+         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     }
+
+     .glass-card:hover {
+         transform: translateY(-2px);
+         background: rgba(255, 255, 255, 0.05);
+         border-color: var(--primary);
+     }
+
+     .theme-dot {
+         width: 24px;
+         height: 24px;
+         border-radius: 50%;
+         cursor: pointer;
+         border: 2px solid transparent;
+         transition: transform 0.2s;
+     }
+
+     .theme-dot:hover {
+         transform: scale(1.2);
+     }
+
+     .theme-dot.active {
+         border-color: white;
+         transform: scale(1.1);
+     }
+
+     .page-content {
+         animation: fadeIn 0.4s ease-out forwards;
+     }
+
+     @keyframes fadeIn {
+         from {
+             opacity: 0;
+             transform: translateY(10px);
+         }
+
+         to {
+             opacity: 1;
+             transform: translateY(0);
+         }
+     }
+
+     /* Accordion custom styling */
+     .accordion-content {
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.3s ease-out, padding 0.3s ease;
+     }
+
+     .accordion-item.active .accordion-content {
+         max-height: 1000px;
+         padding-bottom: 1rem;
+     }
+
+     .accordion-item.active .chevron {
+         transform: rotate(180deg);
+     }
+
+     ::-webkit-scrollbar {
+         width: 8px;
+     }
+
+     ::-webkit-scrollbar-track {
+         background: transparent;
+     }
+
+     ::-webkit-scrollbar-thumb {
+         background: var(--primary);
+         border-radius: 10px;
+     }

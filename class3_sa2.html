@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 3 Revision Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --primary: #3b82f6;
+            --glass-bg: rgba(15, 23, 42, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-blur: blur(20px);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #0f172a, #020617);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .developer-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.25rem;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Interactive Timeline Styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.9rem;
+            top: 0;
+            bottom: -2rem;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: #1e293b;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        /* Pictograph Preview */
+        .picto-bar {
+            height: 24px;
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+    </style> -->
+    <link rel="stylesheet" href="./assets/css/themes.css">
+
+</head>
+
+<body class="pt-24 pb-12 px-4">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-4 flex items-center justify-between shadow-2xl">
+            <div class="flex items-center gap-3">
+
+
+                <a href="index.html" class="flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                        U</div>
+                    <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                            class="accent-text">.edu</span></span>
+                </a>
+
+            </div>
+            <div class="hidden md:flex gap-12 text-[11px] font-bold uppercase tracking-widest opacity-60">
+                <a href="#plan" class="hover:text-blue-400">Class Plan</a>
+                <a href="#story" class="hover:text-blue-400">Storytelling</a>
+                <a href="#data" class="hover:text-blue-400">Data Visualization</a>
+                <a href="#safety" class="hover:text-blue-400">Safety</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+
+            <a href="index.html" class="flex items-center gap-2 opacity-50 hover:opacity-100 transition text-sm">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+    <main class="max-w-7xl mx-auto space-y-12">
+
+        <!-- CLASS ROADMAP: THE 4-CLASS PLAN -->
+        <section id="plan" class="glass p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-5">
+                <i class="fas fa-calendar-alt text-9xl"></i>
+            </div>
+            <h2 class="text-3xl font-black mb-10 flex items-center gap-4 accent-text">
+                <i class="fas fa-route text-blue-500 "></i> Revision Roadmap
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Class 1 -->
+                <div
+                    class="glass bg-blue-500/5 p-6 border-t-4 border-blue-500 hover:bg-blue-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-blue-400">S01 // VISUAL LOGIC</span>
+                    <h3 class="text-xl font-black mt-2 ">Digital Storytelling</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Storyboard & Scene creation</li>
+                        <li>• Adding Actions & Dialogue</li>
+                        <li>• Mastering Slide Transitions</li>
+                    </ul>
+                </div>
+                <!-- Class 2 -->
+                <div
+                    class="glass bg-emerald-500/5 p-6 border-t-4 border-emerald-500 hover:bg-emerald-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-emerald-400">S02 // ANALYTICS</span>
+                    <h3 class="text-xl font-black mt-2">Data Handling</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Facts vs. Observations</li>
+                        <li>• Tables vs. Pictographs</li>
+                        <li>• Pattern Recognition logic</li>
+                    </ul>
+                </div>
+                <!-- Class 3 -->
+                <div
+                    class="glass bg-amber-500/5 p-6 border-t-4 border-amber-500 hover:bg-amber-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-amber-400">S03 // CITIZENSHIP</span>
+                    <h3 class="text-xl font-black mt-2">Online Safety</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Identifying Suspicious Links</li>
+                        <li>• Protecting Personal Info</li>
+                        <li>• Digital Footprint Ethics</li>
+                    </ul>
+                </div>
+                <!-- Class 4 -->
+                <div
+                    class="glass bg-purple-500/5 p-6 border-t-4 border-purple-500 hover:bg-purple-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-purple-400">S04 // EXECUTION</span>
+                    <h3 class="text-xl font-black mt-2">Debugging & Events</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Identifying Code Bugs</li>
+                        <li>• Sequence Testing</li>
+                        <li>• Triggering Actions via Events</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: DEEP DIVES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Storytelling Deep Dive -->
+                <section id="story" class="glass p-8">
+                    <h3 class="text-2xl font-black mb-6 flex items-center gap-3 accent-text">
+                        <i class="fas fa-photo-video text-blue-400  "></i> The Art of Picture Stories
+                    </h3>
+                    <p class="text-sm opacity-70 mb-8 leading-relaxed">
+                        A story isn't just a list of sentences; it is a <strong>Sequence</strong>. In Grade 3, we use
+                        digital tools to turn simple ideas into interactive experiences. Transitions bridge the gap
+                        between scenes, making the story flow smoothly.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-4 glass bg-white/5 border-l-2 border-blue-500">
+                            <h4 class="text-xs font-bold uppercase mb-2">The Storyboard Matrix</h4>
+                            <p class="text-[11px] opacity-60">Visualizing scenes before coding them prevents bugs in the
+                                narrative flow. Each scene needs a clear beginning, action, and end.</p>
+                        </div>
+                        <div class="p-4 glass bg-white/5 border-l-2 border-blue-500">
+                            <h4 class="text-xs font-bold uppercase mb-2">Transition Logic</h4>
+                            <p class="text-[11px] opacity-60">Transitions aren't just for looks—they signal a change in
+                                <strong>Time</strong> or <strong>Location</strong> to the viewer.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Data Deep Dive -->
+                <section id="data" class="glass p-8">
+                    <h3 class="text-2xl font-black mb-6 flex items-center gap-3 accent-text">
+                        <i class="fas fa-chart-bar text-emerald-400"></i> Information Architecture
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="flex-1 space-y-4">
+                                <p class="text-sm opacity-70">We collect <strong>Data</strong> (facts/numbers) to make
+                                    decisions. While tables are precise, Pictographs use <strong>Symbols</strong> to
+                                    help us compare data at a glance.</p>
+                                <div
+                                    class="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20 text-[11px] italic">
+                                    "It's easier to count pictures than to read a long list of numbers!"
+                                </div>
+                            </div>
+                            <div class="w-full md:w-64 glass p-4 space-y-3">
+                                <div class="text-[10px] font-bold opacity-40 uppercase">Favorite Fruit Pictograph</div>
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-10 text-[9px]">🍎</div>
+                                        <div class="picto-bar bg-red-500/40 w-full" style="width: 80%"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-10 text-[9px]">🍌</div>
+                                        <div class="picto-bar bg-yellow-500/40 w-full" style="width: 40%"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-10 text-[9px]">🍇</div>
+                                        <div class="picto-bar bg-purple-500/40 w-full" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Safety Protocol -->
+                <section id="safety" class="glass p-8 border-t-4 border-red-500/30 ">
+                    <h3 class="text-2xl font-black mb-6 flex items-center gap-3 accent-text">
+                        <i class="fas fa-shield-virus text-red-400"></i> Safety Protocols & Ethics
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="glass p-4 bg-red-500/5 group">
+                            <i class="fas fa-link text-red-400 mb-2"></i>
+                            <h4 class="font-bold text-sm">Suspicious Links</h4>
+                            <p class="text-xs opacity-60 mt-2">These are harmful signals. If a link promises "free
+                                prizes" or asks for your name, <strong>Stop and Report</strong>.</p>
+                        </div>
+                        <div class="glass p-4 bg-green-500/5 group">
+                            <i class="fas fa-user-check text-green-400 mb-2"></i>
+                            <h4 class="font-bold text-sm">The Trusted Adult</h4>
+                            <p class="text-xs opacity-60 mt-2">Before sharing a birthday photo, ask a trusted adult.
+                                Once it's online, it's part of your <strong>Permanent Trace</strong>.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: GLOSSARY & FAST FACTS -->
+            <div class="space-y-8">
+
+                <!-- Quick Glossary -->
+                <section class="glass p-6">
+                    <h4
+                        class="developer-font text-[10px] font-black uppercase text-blue-400 mb-6 border-b border-white/10 pb-2 tracking-widest">
+                        Revision Glossary</h4>
+                    <div id="glossary-list" class="space-y-6">
+                        <!-- Dynamic Content from JS -->
+                    </div>
+                </section>
+
+                <!-- Debugging Checklist -->
+                <section class="glass p-6 bg-amber-500/5 border border-amber-500/20">
+                    <h4 class="text-xs font-black uppercase mb-4 text-amber-500">Debug Checklist</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Check Sequence Order</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Identify the 'Bug' Step</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Test one fix at a time</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Verify Action via Trigger</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer Summary Block -->
+                <section class="glass p-6 bg-purple-500/5 border border-purple-500/20">
+                    <h4 class="text-xs font-black uppercase mb-4 text-purple-400">Block 20 Insight</h4>
+                    <p class="text-[11px] opacity-60 italic leading-relaxed">
+                        "Without events, programs wouldn't know when to do something. Clicking, tapping, and pressing
+                        keys are the heartbeats of every app you use."
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Added Starts -->
+
+        <section class="glass p-8 space-y-10">
+
+            <h2 class="text-3xl font-black accent-text">Grade 03 - Interactive Revision</h2>
+
+            <!-- STORYBOARD FLOW -->
+            <div class="section-card">
+                <h3 class="text-xl font-bold mb-4 accent-text">📖 Storyboard & Picture Story Flow</h3>
+
+                <div class="flow-wrap">
+                    <div class="flow-box">Idea</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Scenes</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Pictures</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Dialogue</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Sequence</div>
+                </div>
+
+                <p class="mt-4 text-sm opacity-80">
+                    A storyboard uses pictures and text. It is divided into scenes.
+                    Events happen in a sequence (correct order).
+                </p>
+            </div>
+
+            <!-- Online safety -->
+            <div class="section-card">
+                <h3 class="text-xl font-bold mb-4 accent-text">🛡 Online Safety Flow</h3>
+
+                <div class="flow-wrap">
+                    <div class="flow-box">Think Before Posting</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Check Personal Info</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Avoid Suspicious Links</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Tell Trusted Adult</div>
+                </div>
+
+                <p class="mt-4 text-sm opacity-80">
+                    Never share personal information. Avoid suspicious links.
+                    Talk to a trusted adult if something feels wrong.
+                </p>
+            </div>
+
+            <!-- Scratch Event and Action -->
+            <div class="section-card">
+                <h3 class="text-xl font-bold mb-4 accent-text">🎮 Scratch Event & Action</h3>
+
+                <div class="flow-wrap">
+                    <div class="flow-box">Event (Green Flag)</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Trigger</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Action (Move / Speak)</div>
+                </div>
+
+                <p class="mt-4 text-sm opacity-80">
+                    Events are signals.
+                    Clicking or pressing keys can trigger actions.
+                    Without events, nothing happens.
+                </p>
+            </div>
+
+            <!-- Pictographs -->
+            <div class="section-card">
+                <h3 class="text-xl font-bold mb-4 accent-text">📊 Interactive Pictograph</h3>
+
+                <p>Example: Favourite Fruit Survey (Apples)</p>
+
+                <div class="increment-box">
+                    <button class="inc-btn" onclick="increaseCount()">+ Add Apple</button>
+                    <div class="counter" id="appleCount">0</div>
+                </div>
+
+                <div id="appleIcons" class="mt-4 text-center"></div>
+
+                <script>
+                    let apple = 0;
+
+                    function increaseCount() {
+                        apple++;
+                        document.getElementById("appleCount").innerText = apple;
+                        renderIcons();
+                    }
+
+                    function renderIcons() {
+                        let icons = "";
+                        for (let i = 0; i < apple; i++) {
+                            icons += "🍎 ";
+                        }
+                        document.getElementById("appleIcons").innerHTML = icons;
+                    }
+                </script>
+
+                <p class="mt-4 text-sm opacity-80">
+                    Each 🍎 represents one vote. Counting pictures makes data easier to understand.
+                </p>
+            </div>
+
+            <!-- NEW  -->
+            <div id="pictographContainer"
+                style="max-width:900px;margin:40px auto;padding:20px;border:1px solid #4f46e5;border-radius:12px;">
+
+                <h2 style="text-align:center;">Pictograph Demo</h2>
+
+                <div id="pictographArea" style="font-size:32px;text-align:center;margin:20px 0;"></div>
+
+                <p style="text-align:center;font-weight:bold;">
+                    Total Fruits: <span id="fruitNumber">0</span>
+                </p>
+
+                <div style="text-align:center;">
+                    <button onclick="addFruit()" style="background:#4f46e5;color:white;padding:10px 20px;
+                        border:none;border-radius:8px;cursor:pointer;">
+                        Add Fruit
+                    </button>
+
+                    <button onclick="resetFruit()" style="background:#dc2626;color:white;padding:10px 20px;
+                        border:none;border-radius:8px;cursor:pointer;margin-left:10px;">
+                        Reset
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div id="quizContainer" style="max-width:900px;margin:40px auto;">
+
+                <div style="text-align:center;">
+                    <button onclick="toggleQuiz()" style="padding:12px 25px;
+                border:none;border-radius:8px;font-weight:bold;cursor:pointer;"
+                        class="submit-btn bg-primary accent-text">
+                        Show Quiz
+                    </button>
+                </div>
+
+                <div id="quizWrapper" style="display:none;margin-top:30px;">
+                    <div id="quizSection"></div>
+                    <div id="resultBox" style="margin-top:20px;"></div>
+                </div>
+
+            </div>
+            <!-- Added Ends -->
+    </main>
+
+
+    <footer class="mt-24 py-12 text-center opacity-20 border-t border-white/5">
+        <p class="developer-font text-[10px] tracking-[0.5em]">SYSTEM INTEGRITY VERIFIED // USHIVERSE 3.0 // REVISION
+            REPOSITORY</p>
+    </footer>
+
+    <script>
+        const revisionVocab = [
+            { t: "Digital Tool", d: "A computer program (like a browser or Scratch) used to finish tasks." },
+            { t: "Data Visualization", d: "Turning numbers into pictures like charts and pictographs." },
+            { t: "Scene", d: "A specific part of a storyboard that shows one part of the story." },
+            { t: "Interactive", d: "A program that 'talks back' or reacts when you click/tap." },
+            { t: "Suspicious Link", d: "A dangerous path on the internet that aims to steal information." },
+            { t: "Trigger", d: "The 'START' button of an action—like a key press or a mouse click." },
+            { t: "Debugging", d: "The detective work of finding and fixing mistakes in instructions." }
+        ];
+
+        const glossaryContainer = document.getElementById('glossary-list');
+
+        glossaryContainer.innerHTML = revisionVocab.map(item => `
+            <div class="group">
+                <div class="text-[11px] font-black uppercase accent-gradient tracking-wider">${item.t}</div>
+                <div class="text-[11px] opacity-50 mt-1 leading-relaxed group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+
+        // Simple animation trigger for pictograph bars
+        window.addEventListener('load', () => {
+            const bars = document.querySelectorAll('.picto-bar');
+            bars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 500);
+            });
+        });
+    </script>
+
+    <!-- SCRIPT -->
+    <script src="./assets/js/theme.js"></script>
+
+    <script>
+
+        /* ===========================
+           QUESTIONS ARRAY
+        =========================== */
+
+        const questions = [
+
+            { q: "Why do we use a storyboard?", options: ["To delete slides", "To plan a story", "To add bugs", "To stop sequence"], answer: 1 },
+
+            { q: "A mistake in a program is called a __________.", options: ["Bug", "Loop", "Event", "Scene"], answer: 0 },
+
+            { q: "Block coding helps beginners because it is ______.", options: ["Complex", "Visual and simple", "Hidden", "Secret"], answer: 1 },
+
+            { q: "Data arranged in rows and columns is called a __________.", options: ["Table", "Loop", "Event", "Game"], answer: 0 },
+
+            { q: "Green flag in Scratch is an example of ______.", options: ["Action", "Event", "Bug", "Table"], answer: 1 },
+
+            { q: "Sharing personal information with strangers can:", options: ["Keep you safe", "Cause problems", "Improve grades", "Fix bugs"], answer: 1 },
+
+            { q: "Slide __________ make presentations more interesting.", options: ["Transitions", "Bugs", "Errors", "Passwords"], answer: 0 },
+
+            { q: "A safe person we can talk to is a trusted __________.", options: ["Adult", "Stranger", "Robot", "Gamer"], answer: 0 },
+
+            { q: "Without events, programs would not know when to __________.", options: ["Start", "Delete", "Break", "Hide"], answer: 0 },
+
+            { q: "If Sarah wants to post a birthday photo, she should:", options: ["Share everything", "Check if it is safe to post", "Add her address", "Ignore privacy"], answer: 1 },
+
+            { q: "Scratch uses ______ coding.", options: ["Text", "Block", "Binary", "Number"], answer: 1 },
+
+            { q: "A collection of facts and numbers is called __________.", options: ["Data", "Bug", "Sprite", "Backdrop"], answer: 0 },
+
+            { q: "Sequence in coding means ______.", options: ["Correct order of steps", "Random blocks", "Deleting blocks", "Music"], answer: 0 },
+
+            { q: "Never share your password with ______.", options: ["Trusted adult", "Stranger", "Teacher", "Parent"], answer: 1 },
+
+            { q: "Representing data using charts and graphs is called data __________.", options: ["Visualization", "Deleting", "Gaming", "Drawing"], answer: 0 },
+
+            { q: "A storyboard is divided into different __________.", options: ["Scenes", "Bugs", "Tables", "Passwords"], answer: 0 },
+
+            { q: "Strong password should include ______.", options: ["Only numbers", "Mix of letters and numbers", "Only name", "Only birthday"], answer: 1 },
+
+            { q: "Clicking a button in a game is an example of:", options: ["Bug", "Trigger", "Table", "Sequence"], answer: 1 },
+
+            { q: "In Scratch, blocks snap together like ______.", options: ["Paper", "Puzzle pieces", "Books", "Chalk"], answer: 1 },
+
+            { q: "What makes a project interactive?", options: ["It reacts to user actions", "It has no events", "It has only text", "It never changes"], answer: 0 },
+
+            { q: "Testing a project helps to:", options: ["Add errors", "Find what is wrong", "Stop events", "Remove data"], answer: 1 },
+
+            { q: "Why is data important?", options: ["To confuse us", "To decorate slides", "To help us learn and make decisions", "To create bugs"], answer: 2 },
+
+            { q: "Harmful web addresses are called __________ links.", options: ["Unsafe", "Puzzle", "Happy", "Drawing"], answer: 0 },
+
+            { q: "Which is easier to quickly compare data?", options: ["Long paragraph", "Table", "Pictograph", "Storyboard"], answer: 1 },
+
+            { q: "Finding and fixing mistakes is called __________.", options: ["Debugging", "Gaming", "Deleting", "Drawing"], answer: 0 },
+
+            { q: "Digital citizenship means ______.", options: ["Being responsible online", "Breaking rules", "Hacking", "Ignoring safety"], answer: 0 },
+
+            { q: "Cyberbullying can hurt like ______.", options: ["Game", "Real-life bullying", "Music", "Drawing"], answer: 1 },
+
+            { q: "The result of an event is called an __________.", options: ["Action", "Bug", "Pattern", "Sprite"], answer: 0 },
+
+            { q: "When would you use a slide transition?", options: ["To change from one slide to another smoothly", "To delete text", "To remove pictures", "To close presentation"], answer: 0 },
+
+            { q: "A graph that uses pictures to show information is called a __________.", options: ["Pictograph", "Bug", "Sequence", "Password"], answer: 0 },
+
+            { q: "An event is also called a __________ or signal.", options: ["Trigger", "Bug", "Table", "Loop"], answer: 0 },
+
+            { q: "Keeping software updated improves ______.", options: ["Security", "Noise", "Size", "Color"], answer: 0 },
+
+            { q: "Programs that react when we click or press are called __________.", options: ["Interactive", "Broken", "Offline", "Silent"], answer: 0 },
+
+            { q: "If you see something unsafe online, you should ______.", options: ["Ignore", "Tell trusted adult", "Share it", "Like it"], answer: 1 },
+
+            { q: "A loop repeats ______.", options: ["Once", "Steps again and again", "Nothing", "Sound"], answer: 1 },
+
+            { q: "What should you do first while debugging?", options: ["Delete project", "Find the problem", "Add more code", "Close program"], answer: 1 },
+
+            { q: "Before posting a photo online, we should think and be __________.", options: ["Careful", "Angry", "Fast", "Careless"], answer: 0 },
+
+            { q: "A computer program or application is a digital __________.", options: ["Tool", "Bug", "Virus", "Keyboard"], answer: 0 },
+
+            { q: "The order in which events happen is called __________.", options: ["Sequence", "Pattern", "Bug", "Table"], answer: 0 },
+
+            { q: "Which is an input device?", options: ["Monitor", "Keyboard", "Speaker", "Printer"], answer: 1 }
+
+        ];
+
+
+        /* ===========================
+           TOGGLE FUNCTION
+        =========================== */
+
+        function toggleQuiz() {
+
+            const wrapper = document.getElementById("quizWrapper");
+            const btn = document.querySelector("#quizContainer button");
+
+            if (wrapper.style.display === "none") {
+                wrapper.style.display = "block";
+                btn.innerText = "Hide Quiz";
+                loadQuiz();
+            } else {
+                wrapper.style.display = "none";
+                btn.innerText = "Show Quiz";
+            }
+
+        }
+
+
+        /* ===========================
+           LOAD QUIZ
+        =========================== */
+
+        function loadQuiz() {
+
+            let section = document.getElementById("quizSection");
+            section.innerHTML = "";
+
+            questions.forEach((item, index) => {
+
+                let card = document.createElement("div");
+                card.style.background = "rgba(255,255,255,0.05)";
+                card.style.padding = "20px";
+                card.style.borderRadius = "12px";
+                card.style.marginBottom = "20px";
+
+                let html = `<h3>${index + 1}. ${item.q}</h3>`;
+
+                item.options.forEach((opt, i) => {
+                    html += `
+<label style="display:block;margin:8px 0;cursor:pointer;">
+<input type="radio" name="q${index}" value="${i}">
+${opt}
+</label>`;
+                });
+
+                card.innerHTML = html;
+                section.appendChild(card);
+
+            });
+
+            section.innerHTML += `
+<div style="text-align:center;margin-top:20px;">
+<button onclick="gradeQuiz()" 
+style="background:#4f46e5;color:white;padding:12px 25px;
+border:none;border-radius:8px;font-weight:bold;cursor:pointer;">
+Submit Quiz
+</button>
+</div>`;
+
+        }
+
+
+        /* ===========================
+           GRADE SYSTEM
+        =========================== */
+
+        function gradeQuiz() {
+
+            let score = 0;
+
+            questions.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === item.answer) {
+                    score++;
+                }
+            });
+
+            let percentage = Math.round((score / questions.length) * 100);
+            let grade = "";
+
+            if (percentage >= 90) grade = "A+ 🌟";
+            else if (percentage >= 80) grade = "A";
+            else if (percentage >= 70) grade = "B";
+            else if (percentage >= 50) grade = "C";
+            else grade = "Needs Revision";
+
+            document.getElementById("resultBox").innerHTML =
+                `<div style="padding:20px;border:2px solid #4f46e5;border-radius:12px;text-align:center;">
+<h2>Score: ${score}/${questions.length}</h2>
+<h3>Percentage: ${percentage}%</h3>
+<h2>Grade: ${grade}</h2>
+</div>`;
+
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+
+        }
+
+        /* ===========================
+       PICTOGRAPH INCREMENTOR
+    =========================== */
+
+        let fruitCount = 0;
+
+        function addFruit() {
+
+            const area = document.getElementById("pictographArea");
+            const counter = document.getElementById("fruitNumber");
+
+            if (!area || !counter) {
+                console.error("Pictograph elements not found.");
+                return;
+            }
+
+            fruitCount++;
+
+            const fruit = document.createElement("span");
+            fruit.textContent = "🍎 ";
+            fruit.style.transition = "0.3s";
+            fruit.style.opacity = "0";
+
+            area.appendChild(fruit);
+
+            // Small animation effect
+            setTimeout(() => {
+                fruit.style.opacity = "1";
+            }, 50);
+
+            counter.innerText = fruitCount;
+        }
+
+        function resetFruit() {
+            fruitCount = 0;
+            document.getElementById("pictographArea").innerHTML = "";
+            document.getElementById("fruitNumber").innerText = "0";
+        }
+
+    </script>
+
+
+</body>
+
+</html>

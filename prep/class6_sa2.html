@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 6 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --primary: #8b5cf6;
+            --glass-bg: rgba(10, 10, 15, 0.95);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --glass-blur: blur(24px);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #020617;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0, transparent 50%);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .developer-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.25rem;
+        }
+
+        .accent-text {
+            color: var(--primary);
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.6);
+            border-left: 3px solid var(--primary);
+            padding: 1.25rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            border-radius: 0.75rem;
+            color: #e2e8f0;
+        }
+
+        .step-pill {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 0.25rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #a78bfa;
+            text-transform: uppercase;
+        }
+
+        .section-header {
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+    <!-- <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-2xl">
+            <a href="#" class="flex items-center gap-2">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-purple-600 to-indigo-400 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg">
+                    6</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="accent-text">.core</span></span>
+            </a>
+            <div class="flex gap-4 items-center">
+                <span class="text-[10px] developer-font opacity-40 uppercase tracking-widest">Level 6 Advanced
+                    Systems</span>
+                <div class="h-4 w-px bg-white/10"></div>
+                <button
+                    class="glass px-4 py-1 text-xs font-bold hover:bg-white/5 transition border-purple-500/30">System
+                    v6.2</button>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="../index.html" class="flex items-center gap-2">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="accent-text">.edu</span></span>
+            </a>
+            <div class="flex gap-4">
+                <a href="../index.html" class="glass p-2 px-4 text-sm font-bold hover:bg-white/10 transition">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto space-y-8">
+
+        <!-- Module Header -->
+        <div class="glass p-10 border-b-4 border-purple-500 shadow-purple-500/10 shadow-2xl">
+            <header>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="step-pill">LEVEL 06</span>
+                    <span class="step-pill">NETWORKING</span>
+                    <span class="step-pill">PYTHON LOGIC</span>
+                    <span class="step-pill">CINEMATICS</span>
+                </div>
+                <h1 class="text-6xl font-black tracking-tight mb-4">Full Stack <span class="accent-text">Knowledge
+                        Base</span></h1>
+                <p class="opacity-60 max-w-3xl text-xl leading-relaxed">Integrated study of Data Transmission,
+                    Programming Structures, and Digital Filmmaking. Grade 6 Core Revision.</p>
+            </header>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Section 1: Networking & The DNS Loop -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 01: Data Transmission Logic</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-purple-500/5 rounded-xl border border-purple-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Website vs. Email: The HOTS
+                                Comparison</h4>
+                            <p class="text-xs opacity-70 leading-relaxed">
+                                Both rely on <strong>IP Addresses</strong> and <strong>Routers</strong> to guide data.
+                                However, visiting a website is a "Pull" request (you ask the server to show you its
+                                content), whereas Email is a "Push" message through special servers to a private inbox.
+                            </p>
+                        </div>
+                        <div class="code-block">
+                            <div class="text-purple-400 mb-2">// DNS & Packet Protocol</div>
+                            <div>1. <span class="text-yellow-400">DNS:</span> Resolves website name to IP Address.</div>
+                            <div>2. <span class="text-yellow-400">Packets:</span> Data is broken into small pieces for
+                                speed.</div>
+                            <div>3. <span class="text-yellow-400">Routing:</span> Routers direct packets via the fastest
+                                "clean" path.</div>
+                            <div>4. <span class="text-yellow-400">Assembly:</span> Receiver reorders packets using
+                                sequence numbers.</div>
+                        </div>
+                        <p class="text-xs italic opacity-50">Note: We use sequence numbers because packets take
+                            different paths to avoid digital traffic jams.</p>
+                    </div>
+                </section>
+
+                <!-- Section 2: Programming - The Power of Loops -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 02: Computational Efficiency</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Loop Structures</h4>
+                            <div class="space-y-4">
+                                <div class="p-3 bg-white/5 rounded">
+                                    <span class="text-blue-400 text-xs font-bold">for loop:</span>
+                                    <p class="text-[11px] opacity-60">Repeats a specific number of times. Perfect for
+                                        drawing shapes (e.g., 4 sides of a square).</p>
+                                </div>
+                                <div class="p-3 bg-white/5 rounded">
+                                    <span class="text-emerald-400 text-xs font-bold">while loop:</span>
+                                    <p class="text-[11px] opacity-60">Continues as long as a condition is <code
+                                            class="bg-black px-1 text-emerald-400">True</code>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Python Syntax & Indentation</h4>
+                            <p class="text-xs opacity-60 italic">"Why does the space at the start of a line matter?"</p>
+                            <p class="text-[11px] opacity-70"><strong>Indentation</strong> tells Python which code
+                                belongs inside the loop. Without correct syntax and spacing, the program won't know when
+                                to stop or what to repeat.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-blue-500/5 border border-blue-500/20 rounded-xl text-xs">
+                        <strong>HOTS:</strong> Loops simplify tasks by reducing repetitive commands into a single set of
+                        instructions, making code shorter, cleaner, and less prone to errors.
+                    </div>
+                </section>
+
+                <!-- Section 3: Filmmaking & Programming Crossover -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 03: Art & Technology</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex-1 min-w-[250px] p-4 bg-white/5 rounded-xl">
+                                <h4 class="text-xs font-bold accent-text mb-2">THE 5-STEP PROCESS</h4>
+                                <ol class="text-[11px] space-y-2 opacity-80 list-decimal pl-4">
+                                    <li><strong>Idea:</strong> Choosing the story.</li>
+                                    <li><strong>Planning:</strong> Storyboarding the scenes.</li>
+                                    <li><strong>Recording:</strong> Filming the action.</li>
+                                    <li><strong>Editing:</strong> Refining the flow (Finalizing).</li>
+                                    <li><strong>Finishing:</strong> Adding music/SFX.</li>
+                                </ol>
+                            </div>
+                            <div
+                                class="flex-1 min-w-[250px] p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                                <h4 class="text-xs font-bold accent-text mb-2">PROGRAMMING IN FILM</h4>
+                                <p class="text-[11px] opacity-70 leading-relaxed">
+                                    Programming is the engine behind <strong>Animations</strong> and <strong>Special
+                                        Effects</strong>. Code moves characters, generates realistic graphics, and
+                                    triggers sound effects in modern cinema.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest flex justify-between items-center">
+                        Knowledge Glossary <i class="fas fa-book-open"></i>
+                    </h4>
+                    <div id="glossary-list" class="space-y-5">
+                        <!-- Content via Script -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass p-6 border-l-4 border-purple-500 bg-purple-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">UI vs UX</h5>
+                <p class="text-[10px] opacity-60"><strong>UI</strong> is the visual buttons/text. <strong>UX</strong> is
+                    how easy and enjoyable the experience is.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Data Packets</h5>
+                <p class="text-[10px] opacity-60">Small pieces of data sent over the net. Resent if lost to complete the
+                    message.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Debugging Logic</h5>
+                <p class="text-[10px] opacity-60">Finding/fixing bugs helps you think step-by-step and stay calm—useful
+                    in sports, school, and life.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-yellow-500 bg-yellow-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Cloud Storage</h5>
+                <p class="text-[10px] opacity-60">A service that lets you store files online and access them from any
+                    device anywhere.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // LEVEL 06 DEPLOYMENT // SYSTEM STABLE
+    </footer>
+
+    <script>
+        const glossaryData = [
+            { t: "DNS", d: "Domain Name System: Finds the IP address of a website name." },
+            { t: "Router", d: "A device that directs data between devices on a network." },
+            { t: "IP Address", d: "A unique number identifying each device on the Internet." },
+            { t: "Data Transmission", d: "The process of sending data from one device to another." },
+            { t: "Loop", d: "A programming structure that repeats set instructions." },
+            { t: "Indentation", d: "Space at the start of code indicating a block structure." },
+            { t: "Syntax", d: "Rules defining how code must be written." },
+            { t: "Graphics", d: "Pictures or designs created on a computer screen." },
+            { t: "Storyboard", d: "A visual plan showing scenes for a movie." },
+            { t: "Editing", d: "Modifying scenes to create the final video flow." }
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group border-l-2 border-transparent hover:border-purple-500 pl-3 transition-all">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[10px] opacity-50 mt-1 leading-relaxed group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 4 SA-2 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/themes.css">
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+    <main class="max-w-7xl mx-auto space-y-8">
+
+        <!-- Module Header -->
+        <div class="glass p-8 border-b-4 border-blue-500">
+            <header>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="step-pill">LEVEL 4</span>
+                    <span class="step-pill">COMP-SCI</span>
+                    <span class="step-pill">SA-2 PREP</span>
+                </div>
+                <h1 class="text-5xl font-black tracking-tight mb-4">Computer Science <span
+                        class="accent-text">Masterclass</span></h1>
+                <p class="opacity-50 max-w-2xl text-lg">Detailed analysis of Internet architecture, software logic, and
+                    the ethics of digital citizenship for Grade 4.</p>
+            </header>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Section 1: Internet Architecture -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-network-wired accent-text"></i> The Global Network
+                    </h3>
+                    <div class="space-y-4">
+                        <p class="text-sm opacity-70 leading-relaxed">
+                            The <strong>Internet</strong> is a global network of computers. When you request data, the
+                            following interaction occurs in the background:
+                        </p>
+                        <div class="code-block space-y-2">
+                            <div><span class="text-blue-400">1. REQUEST:</span> User clicks video link.</div>
+                            <div><span class="text-blue-400">2. ADDRESS:</span> Computer finds the <span
+                                    class="text-yellow-400">IP Address</span> of the server.</div>
+                            <div><span class="text-blue-400">3. FETCH:</span> <span
+                                    class="text-purple-400">Server</span> finds the file and sends it back.</div>
+                            <div><span class="text-blue-400">4. RENDER:</span> Your device displays the data.</div>
+                        </div>
+                        <div class="p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                            <h4 class="text-xs font-bold text-red-400 uppercase mb-1">Error Analysis: "Server Not Found"
+                            </h4>
+                            <p class="text-[11px] opacity-70">Common causes: No internet connection, wrong URL, or the
+                                remote server is offline. Fixes: Check Wi-Fi, refresh, or verify the IP path.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Online Safety & Citizenship -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-user-shield accent-text"></i> Digital Citizenship
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Cyberbullying Protocol</h4>
+                            <p class="text-xs opacity-60">Bullying online can hurt just as much as real life. The
+                                <strong>UshiVerse Safety Loop</strong>:
+                            </p>
+                            <ul class="text-[11px] space-y-1 opacity-80 list-disc pl-4">
+                                <li><strong>TELL:</strong> Speak to a trusted adult immediately.</li>
+                                <li><strong>BLOCK:</strong> Use app tools to stop the bully.</li>
+                                <li><strong>REPORT:</strong> Inform the platform about the behavior.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Privacy Logic</h4>
+                            <p class="text-xs opacity-60">Making smart choices about <strong>PII</strong> (Personal
+                                Identifiable Information):</p>
+                            <div class="p-3 bg-blue-500/5 rounded border border-blue-500/20 text-[10px]">
+                                <i class="fas fa-exclamation-triangle accent-text mr-1"></i> Never share school name,
+                                home address, or birthdays with strangers.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Logic & Data -->
+                <section class="glass p-8 space-y-6">
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <i class="fas fa-chart-pie accent-text"></i> Data Analysis & Game Design
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 flex-wrap">
+                            <div class="flex-1 min-w-[200px] glass bg-white/5 p-4">
+                                <h4 class="text-xs font-bold uppercase mb-2">Quiz Game Architecture</h4>
+                                <p class="text-[11px] opacity-60">Planning before coding is critical to ensure the game
+                                    has <strong>Rules, Goals, and Challenges</strong>. Without a plan, debugging becomes
+                                    impossible.</p>
+                            </div>
+                            <div class="flex-1 min-w-[200px] glass bg-white/5 p-4">
+                                <h4 class="text-xs font-bold uppercase mb-2">Data Representation</h4>
+                                <p class="text-[11px] opacity-60">We collect data via <strong>Surveys</strong>, organize
+                                    it into <strong>Tables</strong>, and represent it using <strong>Bar Graphs</strong>
+                                    to make better decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest">
+                        Technical Glossary
+                    </h4>
+                    <div id="glossary-list" class="space-y-4">
+                        <!-- Dynamic Content -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- Added Starts  -->
+        <section class="glass p-8 space-y-10">
+
+            <h2 class="text-3xl font-black accent-text">Grade 04 Revision - Interactive Master Module</h2>
+
+            <!-- ========================================== -->
+            <!-- QUIZ GAME STRUCTURE -->
+            <!-- ========================================== -->
+
+            <div class="space-y-5">
+                <h3 class="text-xl font-bold accent-text">🎮 Planning a Quiz Game</h3>
+
+                <div class="diagram-card">
+                    Planning means deciding <strong>Rules, Goals, and Challenges</strong> before coding.
+                    Without planning, bugs increase and the game becomes confusing.
+                </div>
+
+                <div class="flow-container">
+                    <div class="flow-box">Game Idea</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Rules</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Goals</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Challenges</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Coding</div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- INTERNET WORKING -->
+            <!-- ========================================== -->
+
+            <div class="space-y-5">
+                <h3 class="text-xl font-bold accent-text">🌍 How Internet Works</h3>
+
+                <div class="diagram-card">
+                    The Internet is a global network. When you send an email or click a video:
+                </div>
+
+                <div class="flow-container">
+                    <div class="flow-box">User Sends Request</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Server Receives</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">IP Address Directs</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Data Returns</div>
+                </div>
+
+                <div class="diagram-card">
+                    If you see <strong>"Server Not Found"</strong>, it may mean:
+                    • No internet connection
+                    • Server offline
+                    • Wrong URL
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- ONLINE SAFETY -->
+            <!-- ========================================== -->
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold">🛡 Online Safety</h3>
+
+                <div class="diagram-card">
+                    Cyberbullying means being mean online. We must:
+                </div>
+
+                <div class="flow-container">
+                    <div class="flow-box">TELL Adult</div>
+                    <div class="flow-box">BLOCK Person</div>
+                    <div class="flow-box">REPORT Behaviour</div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- DATA PROCESS -->
+            <!-- ========================================== -->
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold">📊 Data Collection & Analysis</h3>
+
+                <div class="flow-container">
+                    <div class="flow-box">Survey</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Organize</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Bar Graph</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Analyze</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Decision</div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- HARDWARE & SOFTWARE -->
+            <!-- ========================================== -->
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold accent-text">💻 Hardware & Software</h3>
+
+                <div class="flow-container">
+                    <div class="flow-box">Hardware (Physical)</div>
+                    <div class="arrow">↔</div>
+                    <div class="flow-box">Software (Instructions)</div>
+                </div>
+
+                <div class="diagram-card">
+                    Hardware needs software. Software needs hardware. Both must work together.
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- BUGS & DEBUGGING -->
+            <!-- ========================================== -->
+
+            <div class="space-y-5 accent-text">
+                <h3 class="text-xl font-bold">🐞 Bugs & Debugging</h3>
+
+                <div class="flow-container">
+                    <div class="flow-box">Bug (Error)</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Debug</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-box">Fix</div>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- TOGGLE QUESTION SECTION -->
+            <!-- ========================================== -->
+
+            <div class="space-y-5">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold accent-text ">📝 Practice Assessment</h3>
+                    <button class="toggle-btn" onclick="toggleQuiz()">Show / Hide Quiz</button>
+                </div>
+
+                <div id="quizSection" style="display:none;"></div>
+
+                <div id="resultBox"></div>
+
+            </div>
+
+        </section>
+        <!-- Added Ends -->
+
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2 accent-text">Hardware & Software</h5>
+                <p class="text-[11px] opacity-60"><strong>Hardware</strong> is the body (touchable),
+                    <strong>Software</strong> is the mind (instructions). They must work together to run tasks like
+                    Scratch.
+                </p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2 accent-text">Bugs & Debugging</h5>
+                <p class="text-[11px] opacity-60">A <strong>Bug</strong> is a mistake in code.
+                    <strong>Debugging</strong> is the detective process of finding and fixing that mistake to solve the
+                    problem.
+                </p>
+            </div>
+            <div class="glass p-6 border-l-4 border-purple-500 bg-purple-500/5">
+                <h5 class="font-black text-xs uppercase mb-2 accent-text">Digital Art Tools</h5>
+                <p class="text-[11px] opacity-60">Computers allow for <strong>Digital Art</strong> using special tools
+                    (software) and input devices like tablets (hardware) to create without paper.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // GRADE 4 REVISION DEPLOYMENT // v4.0.0
+    </footer>
+
+    <script>
+        const glossaryData = [
+            { t: "Internet", d: "Global network connecting computers to share info." },
+            { t: "Server", d: "A powerful computer that stores and sends data." },
+            { t: "IP Address", d: "A special ID number for every computer on the net." },
+            { t: "Network", d: "System of connected computers and pathways." },
+            { t: "Cyberbullying", d: "Using the internet to be mean or hurtful." },
+            { t: "Privacy", d: "Keeping personal info safe from strangers." },
+            { t: "Data", d: "Facts, numbers, and observations collected." },
+            { t: "Organize", d: "Arranging data into an understandable form." },
+            { t: "Analyze", d: "Interpreting data to find useful info for decisions." },
+            { t: "Pictograph", d: "Representing data using pictures or symbols." }
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[11px] opacity-50 mt-1 leading-snug group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+
+    <!-- SCRIPT -->
+    <script src="./assets/js/theme.js"></script>
+
+    <script>
+        const questions = [
+
+           {
+                q: "Each device on the Internet has a special number called an __________.",
+                options: ["IP address", "Password", "Server", "Browser"],
+                answer: 0
+            },
+            {
+                q: "What is a server?",
+                options: ["Special address", "Large computer that stores data", "A cable", "A mouse"],
+                answer: 1
+            },
+            {
+                q: "What is cyberbullying?",
+                options: ["Helping online", "Being mean online", "Gaming", "Coding"],
+                answer: 1
+            },
+            {
+                q: "If Internet connection is down, you may see:",
+                options: ["Game Over", "Server Not Found", "Slide Show", "Bar Graph"],
+                answer: 1
+            },
+            {
+                q: "Understanding data to make decisions is called __________.",
+                options: ["Analysis", "Drawing", "Deleting", "Gaming"],
+                answer: 0
+            },
+            {
+                q: "Without software, hardware cannot ______.",
+                options: ["Sleep", "Work properly", "Shine", "Break"],
+                answer: 1
+            },
+            {
+                q: "Digital tools help us to ______.",
+                options: ["Cook food", "Draw and design", "Repair cars", "Plant trees"],
+                answer: 1
+            },
+            {
+                q: "Why is planning before coding important?",
+                options: ["It reduces confusion and bugs", "It makes computer slow", "It deletes data", "It removes hardware"],
+                answer: 0
+            },
+            {
+                q: "Hardware and software work ______.",
+                options: ["Separately", "Together", "Against each other", "Never"],
+                answer: 1
+            },
+            {
+                q: "What does 'block' mean?",
+                options: ["Stop someone from contacting you", "Build wall", "Delete computer", "Change password"],
+                answer: 0
+            },
+            {
+                q: "Information like videos and websites is called __________.",
+                options: ["Data", "Hardware", "Mouse", "Keyboard"],
+                answer: 0
+            },
+            {
+                q: "What is a network?",
+                options: ["A single computer", "A type of virus", "System of connected computers", "A software tool"],
+                answer: 2
+            },
+            {
+                q: "When you send an email, it first goes to a ______.",
+                options: ["Printer", "Server", "Keyboard", "Speaker"],
+                answer: 1
+            },
+            {
+                q: "What makes games fun?",
+                options: ["Rules & Goals", "Errors", "No plan", "No rules"],
+                answer: 0
+            },
+            {
+                q: "Testing a Scratch project using the green flag helps in __________.",
+                options: ["Testing", "Deleting", "Sleeping", "Drawing"],
+                answer: 0
+            },
+            {
+                q: "Hardware includes ______.",
+                options: ["Monitor and keyboard", "Games only", "Apps only", "Internet only"],
+                answer: 0
+            },
+            {
+                q: "Data can be shown using a ______.",
+                options: ["Bar graph", "Television", "Keyboard", "Gamepad"],
+                answer: 0
+            },
+            {
+                q: "What does 'report' mean?",
+                options: ["Play music", "Inform adult or website", "Draw picture", "Download file"],
+                answer: 1
+            },
+            {
+                q: "What makes quiz games interesting?",
+                options: ["No rules", "Goals and challenges", "Only pictures", "No scoring"],
+                answer: 1
+            },
+            {
+                q: "Software gives ______ to hardware.",
+                options: ["Food", "Instructions", "Damage", "Noise"],
+                answer: 1
+            },
+            {
+                q: "A problem in a program is called a __________.",
+                options: ["Bug", "Loop", "Server", "Network"],
+                answer: 0
+            },
+            {
+                q: "We collect data using a ______.",
+                options: ["Survey", "Keyboard", "Speaker", "Printer"],
+                answer: 0
+            },
+            {
+                q: "Finding and fixing mistakes is called __________.",
+                options: ["Debugging", "Gaming", "Deleting", "Drawing"],
+                answer: 0
+            },
+            {
+                q: "Privacy means ______.",
+                options: ["Sharing secrets", "Keeping personal information safe", "Posting address", "Sharing password"],
+                answer: 1
+            },
+            {
+                q: "What is software?",
+                options: ["Monitor", "Instructions", "Keyboard", "CPU"],
+                answer: 1
+            },
+            {
+                q: "One reason for 'Server Not Found' error is ______.",
+                options: ["Broken pencil", "No Internet connection", "Blue screen", "Keyboard missing"],
+                answer: 1
+            },
+            {
+                q: "In Scratch, we test projects using the ______.",
+                options: ["Red button", "Green flag", "Blue button", "Power button"],
+                answer: 1
+            },
+            {
+                q: "Goals in games give players ______.",
+                options: ["Confusion", "Direction and purpose", "Errors", "Noise"],
+                answer: 1
+            },
+            {
+                q: "A graph used to compare data is called a __________ graph.",
+                options: ["Bar", "Circle", "Line", "Picture"],
+                answer: 0
+            },
+            {
+                q: "Online safety means ______.",
+                options: ["Sharing everything", "Making smart choices online", "Playing games all day", "Ignoring rules"],
+                answer: 1
+            },
+            {
+                q: "What is data?",
+                options: ["Games", "Facts and information", "Hardware", "Error"],
+                answer: 1
+            },
+            {
+                q: "IP address helps to ______.",
+                options: ["Play games", "Identify devices", "Store food", "Turn off computer"],
+                answer: 1
+            },
+            {
+                q: "The Internet is a global __________ connecting computers.",
+                options: ["Network", "Game", "Device", "Cable"],
+                answer: 0
+            },
+            {
+                q: "Why is planning important before coding a quiz game?",
+                options: ["To waste time", "To organize rules and goals", "To add bugs", "To stop the game"],
+                answer: 1
+            },
+            {
+                q: "What is hardware?",
+                options: ["Physical parts", "Instructions", "Internet", "Data"],
+                answer: 0
+            },
+            {
+                q: "We make decisions based on ______.",
+                options: ["Random guess", "Bar graph analysis", "Broken screen", "Noise"],
+                answer: 1
+            },
+            {
+                q: "Organize means to ______.",
+                options: ["Delete data", "Arrange data properly", "Hide data", "Break data"],
+                answer: 1
+            },
+            {
+                q: "What is the Internet?",
+                options: ["A type of computer", "Global network of computers", "A game", "A software"],
+                answer: 1
+            },
+            {
+                q: "Which three elements make a game interesting?",
+                options: ["Rules, Goals, Challenges", "Monitor, Mouse, CPU", "Internet, Server, IP", "Bug, Error, Debug"],
+                answer: 0
+            },
+            {
+                q: "Servers send information when we ______.",
+                options: ["Sleep", "Request it", "Delete it", "Print it"],
+                answer: 1
+            },
+            {
+                q: "Cyberbullying is ______.",
+                options: ["Helping online", "Being kind online", "Being mean online", "Learning online"],
+                answer: 2
+            },
+            {
+                q: "What is an IP address?",
+                options: ["A password", "A special number for device", "A website", "A virus"],
+                answer: 1
+            },
+            {
+                q: "Digital art is made using ______.",
+                options: ["Paper only", "Computers and tablets", "Chalk only", "Stone"],
+                answer: 1
+            },
+            {
+                q: "If someone bullies you online, first you should ______.",
+                options: ["Reply angrily", "Tell trusted adult", "Ignore forever", "Delete account"],
+                answer: 1
+            },
+            {
+                q: "Pictograph uses ______ to represent data.",
+                options: ["Words only", "Pictures or symbols", "Sound", "Lights"],
+                answer: 1
+            },
+            {
+                q: "An error is a ______.",
+                options: ["Correct answer", "Mistake in program", "Hardware", "Network cable"],
+                answer: 1
+            },
+            {
+                q: "How can we fix 'Server Not Found'?",
+                options: ["Restart TV", "Check Internet connection", "Break computer", "Delete file"],
+                answer: 1
+            },
+            {
+                q: "Email travels through the ______.",
+                options: ["Mouse", "Internet", "Table", "Book"],
+                answer: 1
+            },
+            {
+                q: "We can block and __________ harmful behaviour online.",
+                options: ["Report", "Like", "Share", "Ignore"],
+                answer: 0
+            },
+            {
+                q: "What does a server do?",
+                options: ["Deletes data", "Stores and sends information", "Breaks networks", "Blocks users"],
+                answer: 1
+            },
+            {
+                q: "What is a network?",
+                options: ["A single computer", "A type of virus", "System of connected computers", "A software tool"],
+                answer: 2
+            },
+            {
+                q: "Keeping personal information safe is called online __________.",
+                options: ["Safety", "Gaming", "Coding", "Drawing"],
+                answer: 0
+            },
+            {
+                q: "What is debugging?",
+                options: ["Adding music", "Finding and fixing mistakes", "Deleting file", "Drawing"],
+                answer: 1
+            },
+            {
+                q: "Data is a collection of facts and __________.",
+                options: ["Numbers", "Bugs", "Errors", "Games"],
+                answer: 0
+            },
+            {
+                q: "Challenges in games make them ______.",
+                options: ["Boring", "Exciting", "Silent", "Short"],
+                answer: 1
+            },
+            {
+                q: "Analyze means to ______.",
+                options: ["Ignore information", "Interpret data to make decisions", "Delete files", "Restart computer"],
+                answer: 1
+            },
+            {
+                q: "Planning before coding helps us set rules and __________.",
+                options: ["Goals", "Bugs", "Errors", "Viruses"],
+                answer: 0
+            }
+        ];
+
+        function toggleQuiz() {
+            const section = document.getElementById("quizSection");
+            section.style.display = section.style.display === "none" ? "block" : "none";
+            if (section.innerHTML === "") loadQuiz();
+        }
+        function loadQuiz() {
+            const section = document.getElementById("quizSection");
+            section.innerHTML = ""; // Clear before loading
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "quiz-wrapper";
+
+            questions.forEach((item, index) => {
+
+                const card = document.createElement("div");
+                card.className = "quiz-card";
+
+                let html = `<h4>${index + 1}. ${item.q}</h4>`;
+
+                item.options.forEach((opt, i) => {
+                    html += `
+            <label class="option">
+                <input type="radio" name="q${index}" value="${i}">
+                ${opt}
+            </label>`;
+                });
+
+                card.innerHTML = html;
+                wrapper.appendChild(card);
+            });
+
+            // Submit Button Centered
+            const submitContainer = document.createElement("div");
+            submitContainer.className = "submit-container";
+            submitContainer.innerHTML = `
+        <button class="submit-btn bg-primary accent-text" onclick="gradeQuiz()">Submit Quiz</button>
+    `;
+
+            wrapper.appendChild(submitContainer);
+            section.appendChild(wrapper);
+        }
+
+        function gradeQuiz() {
+            let score = 0;
+
+            questions.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === item.answer) {
+                    score++;
+                }
+            });
+
+            const percentage = Math.round((score / questions.length) * 100);
+
+            let grade = "";
+            if (percentage >= 90) grade = "A+ 🌟";
+            else if (percentage >= 80) grade = "A";
+            else if (percentage >= 70) grade = "B";
+            else if (percentage >= 50) grade = "C";
+            else grade = "Needs Revision";
+
+            document.getElementById("resultBox").innerHTML =
+                `<div class="grade-box">
+            Score: ${score} / ${questions.length} <br>
+            Percentage: ${percentage}% <br>
+            Grade: ${grade}
+        </div>`;
+
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+    </script>
+</body>
+
+</html>

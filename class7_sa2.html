@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 7 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/themes.css">
+
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+    <main class="max-w-7xl mx-auto space-y-8">
+
+        <!-- Module Header -->
+        <div class="glass p-10 border-b-4 border-pink-500 shadow-pink-500/10 shadow-2xl">
+            <header>
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="step-pill">LEVEL 07</span>
+                    <span class="step-pill">WEB ARCHITECTURE</span>
+                    <span class="step-pill">CSS SYNTAX</span>
+                    <span class="step-pill">UI/UX LOGIC</span>
+                </div>
+                <h1 class="text-6xl font-black tracking-tight mb-4">Modern Web <span
+                        class="accent-text">Engineering</span></h1>
+                <p class="opacity-60 max-w-3xl text-xl leading-relaxed">Advanced study of career paths, CSS styling
+                    systems, and the structural lifecycle of application development for Grade 7.</p>
+            </header>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Section 1: CS Careers & Misconceptions -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 01: Careers & Interdisciplinary Links</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-pink-500/5 rounded-xl border border-pink-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Beyond "Fixing Computers"</h4>
+                            <p class="text-xs opacity-70 leading-relaxed">
+                                Computer Science is about <strong>problem-solving</strong> and
+                                <strong>creativity</strong>. It integrates with Maths (Algorithms), Science (Data
+                                Experiments), and Engineering (Building Robots).
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="code-block text-[11px]">
+                                <div class="text-pink-400 font-bold mb-1">// Career Paths</div>
+                                1. <span class="text-yellow-400">Game Developer:</span> Creativity & Code.<br>
+                                2. <span class="text-yellow-400">Cybersecurity:</span> Defense against Hackers.<br>
+                                3. <span class="text-yellow-400">Data Analyst:</span> Identifying patterns.
+                            </div>
+                            <div class="code-block text-[11px]">
+                                <div class="text-pink-400 font-bold mb-1">// Debunking Myths</div>
+                                - Not just for "Maths Geniuses".<br>
+                                - Collaborative (Teams), not lonely.<br>
+                                - Software Creation > Hardware Repair.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: CSS - Styling the Web -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 02: CSS Architecture (Syntax)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-xs opacity-70">CSS controls layout, colors, and fonts across multiple pages
+                            efficiently.</p>
+                        <div class="code-block">
+                            <div class="text-pink-400 mb-2">// CSS Declaration Block</div>
+                            <span class="text-blue-400">h1</span> { <br>
+                            &nbsp;&nbsp;<span class="text-emerald-400">background-color</span>: <span
+                                class="text-yellow-400">lightblue</span>; <br>
+                            &nbsp;&nbsp;<span class="text-emerald-400">color</span>: <span
+                                class="text-yellow-400">darkblue</span>; <br>
+                            &nbsp;&nbsp;<span class="text-emerald-400">font-size</span>: <span
+                                class="text-yellow-400">30px</span>; <br>
+                            }
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl text-xs space-y-2">
+                            <p><strong>HOTS: Why use CSS?</strong> Consistency (one file styles the whole site),
+                                Efficiency (updates are instant), and Responsiveness (works on mobile/tablets).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: App Development Roles -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 03: The Development Lifecycle</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="glass p-5 bg-white/5">
+                            <h4 class="text-sm font-bold mb-3 border-b border-white/10 pb-2">Wireframing & Storyboarding
+                            </h4>
+                            <p class="text-xs opacity-70 mb-3"><strong>Wireframing</strong> is the blueprint of a
+                                webpage. <strong>Storyboarding</strong> uses frames and captions to visualize the flow
+                                before a single line of code is written.</p>
+                            <div class="p-3 bg-red-500/10 border border-red-500/20 rounded text-[10px]">
+                                <i class="fas fa-exclamation-circle text-red-400 mr-1"></i> <strong>Skipping
+                                    Storyboards:</strong> Leads to wasted time, confused UI/UX, and expensive coding
+                                errors.
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 glass bg-pink-500/10">
+                                <h5 class="text-[10px] font-bold uppercase mb-1">Designer</h5>
+                                <p class="text-[10px] opacity-60">Creates the visual look, UI elements, and overall UX
+                                    feel.</p>
+                            </div>
+                            <div class="p-4 glass bg-blue-500/10">
+                                <h5 class="text-[10px] font-bold uppercase mb-1">Front-End Dev</h5>
+                                <p class="text-[10px] opacity-60">Uses HTML/CSS/JS to build the part users see and
+                                    touch.</p>
+                            </div>
+                            <div class="p-4 glass bg-emerald-500/10">
+                                <h5 class="text-[10px] font-bold uppercase mb-1">Back-End Dev</h5>
+                                <p class="text-[10px] opacity-60">Works with servers and databases (the "hidden" logic).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest flex justify-between items-center">
+                        Level 7 Glossary <i class="fas fa-terminal"></i>
+                    </h4>
+                    <div id="glossary-list" class="space-y-5">
+                        <!-- Content via Script -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ADD : Starts  -->
+        <!-- <section class="max-w-6xl mx-auto p-8 space-y-10">
+
+            <h1 class="text-3xl font-bold text-center">Grade 7 – Computer Science Masterclass</h1>
+
+            <div class="card-theme p-6 animate-box"></div>
+            <h2 class="font-bold text-xl">📊 Data Analysis</h2>
+            <p>Studying data to identify patterns and trends that help make decisions.</p>
+            <p class="mt-2"><b>Logical Thinking:</b> Reasoning step-by-step to solve problems systematically.</p>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-xl border animate-box">
+                <h2 class="font-bold text-xl">💼 CS Careers</h2>
+                <ul class="list-disc ml-6">
+                    <li>Game Developer – Creates interactive games.</li>
+                    <li>Cybersecurity Specialist – Protects systems from hackers.</li>
+                    <li>Data Analyst – Finds patterns in data to guide decisions.</li>
+                </ul>
+            </div>
+
+            <div class="bg-yellow-50 p-6 rounded-xl border animate-box">
+                <h2 class="font-bold text-xl">❌ Misconceptions</h2>
+                <p>Computer Science is not just fixing computers.</p>
+                <p>You don’t need to be a maths genius — logical thinking matters more.</p>
+                <p>CS professionals work in teams, not alone.</p>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-xl border animate-box">
+                <h2 class="font-bold text-xl">🔗 Connection with Subjects</h2>
+                <p><b>Maths:</b> Algorithms & data analysis</p>
+                <p><b>Science:</b> Experiments & simulations</p>
+                <p><b>Engineering:</b> Building apps & machines</p>
+            </div>
+
+        </section>
+        <section class="max-w-6xl mx-auto p-8 space-y-6">
+            <h2 class="text-2xl font-bold">🎨 CSS Explained</h2>
+
+            <div class="bg-indigo-50 p-6 rounded-xl border animate-box">
+                <p><b>Selector:</b> Targets element (example: h1)</p>
+                <p><b>Property:</b> Style type (color)</p>
+                <p><b>Value:</b> New style (red)</p>
+                <p><b>Declaration:</b> color: red;</p>
+            </div>
+
+            <pre class="code-block p-6 text-sm">
+        h1 {
+          background-color: lightblue;
+          color: darkblue;
+          font-size: 30px;
+          font-family: Arial;
+        }
+        </pre>
+        </section>
+        <section class="max-w-6xl mx-auto p-8">
+            <h2 class="text-2xl font-bold">📝 What is Wireframing?</h2>
+            <p>A wireframe is a basic visual layout of a website or app before design begins.</p>
+            <p>It shows placement of buttons, images, menus and content structure.</p>
+            <p><b>Why important?</b> Saves time, improves UI/UX planning, avoids confusion.</p>
+        </section>
+        <section class="max-w-6xl mx-auto p-8 grid md:grid-cols-3 gap-6">
+            <div class="card-theme p-6 role-card">
+                <h3 class="font-bold">🎨 Designer</h3>
+                <p>Creates layout, colors, and visual style.</p>
+            </div>
+            <div class="card-theme p-6 role-card">
+                <h3 class="font-bold">💻 Front-End Developer</h3>
+                <p>Builds UI using HTML, CSS, JavaScript.</p>
+            </div>
+            <div class="card-theme p-6 role-card">
+                <h3 class="font-bold">⚙ Back-End Developer</h3>
+                <p>Handles server, database, and logic.</p>
+            </div>
+
+        </section>
+        <section class="max-w-6xl mx-auto p-8 space-y-4">
+            <h2 class="text-2xl font-bold">🎬 Storyboarding</h2>
+            <p><b>Storyboard:</b> Visual plan of ideas</p>
+            <p><b>Frames:</b> Individual scenes</p>
+            <p><b>Captions:</b> Description of actions</p>
+
+            <p class="mt-4"><b>Need:</b> Helps visualize ideas, saves time, avoids confusion.</p>
+            <p><b>If skipped:</b> Poor planning, wasted time, inconsistent UI/UX.</p>
+        </section>
+        <section class="max-w-6xl mx-auto p-8">
+            <h2 class="text-2xl font-bold">📄 Question Paper Header (HTML Example)</h2>
+
+            <pre class="bg-slate-900 text-white p-6 rounded-xl text-sm">
+        &lt;header&gt;
+          &lt;h1&gt;Grade 7 Computer Science Examination&lt;/h1&gt;
+          &lt;p&gt;Story Boarding | UI | UX | Front End Developer | BackEnd Developer&lt;/p&gt;
+        &lt;/header&gt;
+        </pre>
+
+        </section>
+        <section class="max-w-6xl mx-auto p-8 card-theme mt-10">
+
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold">Grade 7 Final Assessment</h2>
+                <button onclick="toggleG7Quiz()" id="g7Toggle" class="px-4 py-2 bg-indigo-600 text-white rounded-lg">
+                    Hide Quiz 🔼
+                </button>
+            </div>
+
+            <div id="g7Wrapper" class="mt-6">
+                <div id="g7Quiz" class="space-y-4"></div>
+
+                <button onclick="gradeG7Quiz()" class="mt-6 w-full py-4 bg-indigo-600 text-white rounded-xl font-bold">
+                    Submit Quiz
+                </button>
+
+                <div id="g7Result" class="mt-6 text-center font-bold text-lg"></div>
+            </div>
+
+        </section> -->
+        <!-- Add - Ends -->
+
+        <section class="max-w-6xl mx-auto p-8 card-theme mt-10">
+
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold">Grade 7 Final Assessment</h2>
+                <button onclick="toggleG7Quiz()" id="g7Toggle" class="px-4 py-2 bg-indigo-600 text-white rounded-lg">
+                    Hide Quiz 🔼
+                </button>
+            </div>
+
+            <div id="g7Wrapper" class="mt-6">
+                <div id="g7Quiz" class="space-y-4"></div>
+
+                <button onclick="gradeG7Quiz()" class="mt-6 w-full py-4 bg-indigo-600 text-white rounded-xl font-bold">
+                    Submit Quiz
+                </button>
+
+                <div id="g7Result" class="mt-6 text-center font-bold text-lg"></div>
+            </div>
+
+        </section>
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass p-6 border-l-4 border-pink-500 bg-pink-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">CSS Selector</h5>
+                <p class="text-[10px] opacity-60">Targets specific HTML elements (like p, h1, or div) to apply design
+                    rules.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Native vs Web App</h5>
+                <p class="text-[10px] opacity-60"><strong>Native:</strong> Built for one OS (iOS/Android).
+                    <strong>Web:</strong> Runs in a browser (Chrome/Safari).
+                </p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">HTML Tags</h5>
+                <p class="text-[10px] opacity-60">Special words in &lt;brackets&gt; like &lt;h1&gt; (headings) or
+                    &lt;p&gt; (paragraphs).</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-yellow-500 bg-yellow-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Logical Thinking</h5>
+                <p class="text-[10px] opacity-60">The systematic reasoning used to solve code bugs and engineering
+                    problems.</p>
+            </div>
+        </div>
+
+        <!-- Question Paper Header Simulation -->
+        <div class="glass p-8  border-dashed border-2 border-white/20">
+            <div class="text-center space-y-2 mb-6">
+                <h2 class="text-sm font-bold uppercase tracking-widest underline">SA-2 Assessment: Computer Science</h2>
+                <div class="flex justify-between text-[10px] px-20">
+                    <span>Grade: 07</span>
+                    <span>Time: 2 Hours</span>
+                    <span>Max Marks: 50</span>
+                </div>
+            </div>
+            <div class="text-[10px] opacity-70 grid grid-cols-2 gap-4">
+                <p><strong>Section A:</strong> Define UI/UX role in Storyboarding.</p>
+                <p><strong>Section B:</strong> Explain Front-End vs Back-End Development.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // LEVEL 07 DEPLOYMENT // SYSTEM STABLE
+    </footer>
+
+    <script>
+        const glossaryData = [
+            { t: "CSS", d: "Cascading Style Sheets: Styles webpages, layout, and fonts." },
+            { t: "Selector", d: "The part of CSS that targets which HTML element to style." },
+            { t: "Declaration", d: "The combination of a property and a value (e.g. color: red)." },
+            { t: "Logical Thinking", d: "系统地推理问题的能力." },
+            { t: "Native App", d: "An app built specifically for one operating system." },
+            { t: "Web App", d: "An app that runs entirely within a web browser." },
+            { t: "UI", d: "User Interface: The visual parts users interact with." },
+            { t: "UX", d: "User Experience: The overall ease of using an app." },
+            { t: "Storyboard", d: "A visual representation of ideas using frames." },
+            { t: "Data Analysis", d: "Studying data to identify important patterns." }
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group border-l-2 border-transparent hover:border-pink-500 pl-3 transition-all">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[10px] opacity-50 mt-1 leading-relaxed group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+
+    <script src="./assets/js/theme.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const g7Questions = [
+                {
+                    q: "1. Why is planning before coding important?",
+                    o: ["It reduces confusion and bugs", "It makes computer slow", "It deletes data", "It removes hardware"],
+                    a: 0
+                },
+                {
+                    q: "2. Which three elements make a game interesting?",
+                    o: ["Rules, Goals, Challenges", "Monitor, Mouse, CPU", "Internet, Server, IP", "Bug, Error, Debug"],
+                    a: 0
+                },
+                {
+                    q: "3. What is a network?",
+                    o: ["A single computer", "A type of virus", "System of connected computers", "A software tool"],
+                    a: 2
+                },
+                {
+                    q: "4. What does the Internet connect?",
+                    o: ["Only phones", "Only schools", "Computers around the world", "Only games"],
+                    a: 2
+                },
+                {
+                    q: "5. Where is information stored on the Internet?",
+                    o: ["Keyboard", "Server", "Mouse", "Monitor"],
+                    a: 1
+                },
+                {
+                    q: "6. Servers send information when we ______.",
+                    o: ["Sleep", "Request it", "Delete it", "Print it"],
+                    a: 1
+                },
+                {
+                    q: "7. IP address helps to ______.",
+                    o: ["Play games", "Store food", "Identify devices", "Turn off computer"],
+                    a: 2
+                },
+                {
+                    q: "8. When you send an email, it first goes to a ______.",
+                    o: ["Printer", "Server", "Keyboard", "Speaker"],
+                    a: 1
+                },
+                {
+                    q: "9. Email travels through the ______.",
+                    o: ["Mouse", "Internet", "Table", "Book"],
+                    a: 1
+                },
+                {
+                    q: "10. What does 'Server Not Found' mean?",
+                    o: ["Game over", "No connection to server", "Battery low", "Monitor broken"],
+                    a: 1
+                },
+                {
+                    q: "11. One reason for 'Server Not Found' error is ______.",
+                    o: ["Broken pencil", "No Internet connection", "Blue screen", "Keyboard missing"],
+                    a: 1
+                },
+                {
+                    q: "12. How can we fix 'Server Not Found'?",
+                    o: ["Restart TV", "Check Internet connection", "Break computer", "Delete file"],
+                    a: 1
+                },
+                {
+                    q: "13. Online safety means ______.",
+                    o: ["Sharing everything", "Making smart choices online", "Playing games all day", "Ignoring rules"],
+                    a: 1
+                },
+                {
+                    q: "14. Cyberbullying is ______.",
+                    o: ["Helping online", "Being kind online", "Being mean online", "Learning online"],
+                    a: 2
+                },
+                {
+                    q: "15. If someone bullies you online, first you should ______.",
+                    o: ["Reply angrily", "Tell trusted adult", "Ignore forever", "Delete account"],
+                    a: 1
+                },
+                {
+                    q: "16. What does 'block' mean?",
+                    o: ["Stop someone from contacting you", "Build wall", "Delete computer", "Change password"],
+                    a: 0
+                },
+                {
+                    q: "17. What does 'report' mean?",
+                    o: ["Play music", "Inform adult or website", "Draw picture", "Download file"],
+                    a: 1
+                },
+                {
+                    q: "18. Privacy means ______.",
+                    o: ["Sharing secrets", "Keeping personal information safe", "Posting address", "Sharing password"],
+                    a: 1
+                },
+                {
+                    q: "19. Digital art is made using ______.",
+                    o: ["Paper only", "Computers and tablets", "Chalk only", "Stone"],
+                    a: 1
+                },
+                {
+                    q: "20. Digital tools help us to ______.",
+                    o: ["Cook food", "Draw and design", "Repair cars", "Plant trees"],
+                    a: 1
+                },
+                {
+                    q: "21. What is data?",
+                    o: ["Only numbers", "Collection of useful information", "Only pictures", "Only videos"],
+                    a: 1
+                },
+                {
+                    q: "22. We collect data using a ______.",
+                    o: ["Survey", "Keyboard", "Speaker", "Printer"],
+                    a: 0
+                },
+                {
+                    q: "23. Data can be shown using a ______.",
+                    o: ["Bar graph", "Television", "Keyboard", "Gamepad"],
+                    a: 0
+                },
+                {
+                    q: "24. Pictograph uses ______ to represent data.",
+                    o: ["Words only", "Pictures or symbols", "Sound", "Lights"],
+                    a: 1
+                },
+                {
+                    q: "25. Organize means to ______.",
+                    o: ["Delete data", "Arrange data properly", "Hide data", "Break data"],
+                    a: 1
+                },
+                {
+                    q: "26. Analyze means to ______.",
+                    o: ["Ignore information", "Interpret data to make decisions", "Delete files", "Restart computer"],
+                    a: 1
+                },
+                {
+                    q: "27. We make decisions based on ______.",
+                    o: ["Random guess", "Bar graph analysis", "Broken screen", "Noise"],
+                    a: 1
+                },
+                {
+                    q: "28. Hardware includes ______.",
+                    o: ["Monitor and keyboard", "Games only", "Apps only", "Internet only"],
+                    a: 0
+                },
+                {
+                    q: "29. Software gives ______ to hardware.",
+                    o: ["Food", "Instructions", "Damage", "Noise"],
+                    a: 1
+                },
+                {
+                    q: "30. Without software, hardware cannot ______.",
+                    o: ["Sleep", "Work properly", "Shine", "Break"],
+                    a: 1
+                },
+                {
+                    q: "31. Without hardware, software cannot ______.",
+                    o: ["Run", "Talk", "Print", "Break"],
+                    a: 0
+                },
+                {
+                    q: "32. Hardware and software work ______.",
+                    o: ["Separately", "Together", "Against each other", "Never"],
+                    a: 1
+                },
+                {
+                    q: "33. A bug is a ______.",
+                    o: ["Insect", "Program error", "Game level", "Monitor"],
+                    a: 1
+                },
+                {
+                    q: "34. Debugging means ______.",
+                    o: ["Adding music", "Fixing mistakes", "Deleting app", "Drawing"],
+                    a: 1
+                },
+                {
+                    q: "35. An error is a ______.",
+                    o: ["Correct a", "Mistake in program", "Hardware", "Network cable"],
+                    a: 1
+                },
+                {
+                    q: "36. Debugging helps in ______.",
+                    o: ["Creating bugs", "Solving problems", "Breaking code", "Deleting data"],
+                    a: 1
+                },
+                {
+                    q: "37. In Scratch, we test projects using the ______.",
+                    o: ["Red button", "Green flag", "Blue button", "Power button"],
+                    a: 1
+                },
+                {
+                    q: "38. Games need rules because ______.",
+                    o: ["They create purpose", "They slow game", "They remove goals", "They break code"],
+                    a: 0
+                },
+                {
+                    q: "39. Goals in games give players ______.",
+                    o: ["Confusion", "Direction and purpose", "Errors", "Noise"],
+                    a: 1
+                },
+                {
+                    q: "40. Challenges in games make them ______.",
+                    o: ["Boring", "Exciting", "Silent", "Short"],
+                    a: 1
+                },
+                {
+                    q: "41. What is the Internet?",
+                    o: ["A type of computer", "Global network of computers", "A game", "A software"],
+                    a: 1
+                },
+                {
+                    q: "42. What is a server?",
+                    o: ["Special address", "Large computer that stores data", "A cable", "A mouse"],
+                    a: 1
+                },
+                {
+                    q: "43. What is an IP address?",
+                    o: ["A password", "A special number for device", "A website", "A virus"],
+                    a: 1
+                },
+                {
+                    q: "44. What is cyberbullying?",
+                    o: ["Helping online", "Being mean online", "Gaming", "Coding"],
+                    a: 1
+                },
+                {
+                    q: "45. What is hardware?",
+                    o: ["Physical parts", "Instructions", "Internet", "Data"],
+                    a: 0
+                },
+                {
+                    q: "46. What is software?",
+                    o: ["Monitor", "Instructions", "Keyboard", "CPU"],
+                    a: 1
+                },
+                {
+                    q: "47. What is debugging?",
+                    o: ["Adding music", "Finding and fixing mistakes", "Deleting file", "Drawing"],
+                    a: 1
+                },
+                {
+                    q: "48. What is data?",
+                    o: ["Games", "Facts and information", "Hardware", "Error"],
+                    a: 1
+                },
+                {
+                    q: "49. How do we collect data?",
+                    o: ["Survey", "Delete", "Ignore", "Format"],
+                    a: 0
+                },
+                {
+                    q: "50. What makes games fun?",
+                    o: ["Rules & Goals", "Errors", "No plan", "No rules"],
+                    a: 0
+                },
+                {
+                    q: "51. A programming structure that repeats instructions is called a ______.",
+                    o: ["Loop", "Server", "Router"],
+                    a: 0
+                },
+                {
+                    q: "52. What is UX?",
+                    o: ["Programming code", "Design color", "User experience of app"],
+                    a: 2
+                },
+                {
+                    q: "53. A device that directs data between networks is called a ______.",
+                    o: ["Server", "Router", "Loop"],
+                    a: 1
+                },
+                {
+                    q: "54. What makes quiz games interesting?",
+                    o: ["No rules", "Goals and challenges", "Only pictures"],
+                    a: 1
+                },
+                {
+                    q: "55. A coding error in a program is called a ______.",
+                    o: ["Bug", "Loop", "Packet"],
+                    a: 0
+                },
+                {
+                    q: "56. DNS finds?",
+                    o: ["Password", "IP from website name", "WiFi speed"],
+                    a: 1
+                },
+                {
+                    q: "57. A visual plan of movie scenes is known as a ______.",
+                    o: ["Storyboard", "Loop", "Router"],
+                    a: 0
+                },
+                {
+                    q: "58. What does a server do?",
+                    o: ["Deletes data", "Stores and sends information", "Breaks networks"],
+                    a: 1
+                },
+                {
+                    q: "59. IP address is?",
+                    o: ["Design layout", "App name", "Unique number of device"],
+                    a: 2
+                },
+                {
+                    q: "60. The process of fixing coding errors is called ______.",
+                    o: ["Debugging", "Editing", "Rendering"],
+                    a: 0
+                },
+                {
+                    q: "61. For loop repeats?",
+                    o: ["Forever", "Specific number", "Never"],
+                    a: 1
+                },
+                {
+                    q: "62. While loop runs?",
+                    o: ["Once", "Fixed times", "While condition true"],
+                    a: 2
+                },
+                {
+                    q: "63. Indentation shows?",
+                    o: ["Block structure", "Font style", "Internet speed"],
+                    a: 0
+                },
+                {
+                    q: "64. Cloud storage is?",
+                    o: ["Weather system", "Online storage", "Cable"],
+                    a: 1
+                },
+                {
+                    q: "65. Data packets are?",
+                    o: ["Small pieces of data", "Big files", "Routers"],
+                    a: 0
+                },
+                {
+                    q: "66. Packets travel through the internet using?",
+                    o: ["Different paths", "One road only", "Offline mode"],
+                    a: 0
+                },
+                {
+                    q: "67. range(4) means?",
+                    o: ["Infinite", "IP address", "0 to 3"],
+                    a: 2
+                },
+                {
+                    q: "68. Editing in filmmaking means?",
+                    o: ["Drawing scenes", "Arrange scenes", "Delete movie"],
+                    a: 1
+                },
+                {
+                    q: "69. Without loops, code becomes?",
+                    o: ["Short", "Clean", "Long & repetitive"],
+                    a: 2
+                },
+                {
+                    q: "70. What is UI?",
+                    o: ["Internet speed", "Visual elements like buttons", "Server storage"],
+                    a: 1
+                },
+                {
+                    q: "71. Website request goes to?",
+                    o: ["User", "Server", "Router only"],
+                    a: 1
+                },
+                {
+                    q: "72. DNS is like a?",
+                    o: ["Phonebook", "Loop", "Bug"],
+                    a: 0
+                },
+                {
+                    q: "73. Why number packets?",
+                    o: ["Decoration", "Reorder correctly", "Slow internet"],
+                    a: 1
+                },
+                {
+                    q: "74. If packet lost?",
+                    o: ["Resent", "Deleted forever", "Router breaks"],
+                    a: 0
+                },
+                {
+                    q: "75. What helps servers know where to send data?",
+                    o: ["Password", "IP address", "Mouse"],
+                    a: 1
+                },
+                {
+                    q: "76. Programming in movies helps?",
+                    o: ["Slow internet", "Animations & effects", "Delete scenes"],
+                    a: 1
+                },
+                {
+                    q: "77. Technology in movies helps?",
+                    o: ["Create graphics", "Delete story", "Block scenes"],
+                    a: 0
+                },
+                {
+                    q: "78. Router directs?",
+                    o: ["Data between devices", "Passwords", "Loops"],
+                    a: 0
+                },
+                {
+                    q: "79. Packets reassembled by?",
+                    o: ["Numbers", "Colors", "Router speed"],
+                    a: 0
+                },
+                {
+                    q: "80. Syntax means?",
+                    o: ["Decoration", "Rules of code", "Music"],
+                    a: 1
+                },
+                {
+                    q: "81. Why is planning important before coding a quiz game?",
+                    o: ["To waste time", "To organize rules and goals", "To add bugs"],
+                    a: 1
+                },
+                {
+                    q: "82. Server stores?",
+                    o: ["Games", "Website data", "Router cables"],
+                    a: 1
+                },
+                {
+                    q: "83. Five filmmaking steps start with?",
+                    o: ["Editing", "Debugging", "Idea"],
+                    a: 2
+                },
+                {
+                    q: "84. Loops make code?",
+                    o: ["Long", "Short & efficient", "Broken"],
+                    a: 1
+                },
+                {
+                    q: "85. Syntax important because?",
+                    o: ["Decoration", "Music", "Rules must be followed"],
+                    a: 2
+                },
+                {
+                    q: "86. Cloud allows access from?",
+                    o: ["One PC", "Router only", "Any device"],
+                    a: 2
+                },
+                {
+                    q: "87. What makes a project interactive?",
+                    o: ["It reacts to user actions", "It has no events", "Only text"],
+                    a: 0
+                },
+                {
+                    q: "88. Email & Website similarity?",
+                    o: ["Both use servers", "Both public", "Both games"],
+                    a: 0
+                },
+                {
+                    q: "89. Data transmission means?",
+                    o: ["Editing", "Drawing", "Sending data"],
+                    a: 2
+                },
+                {
+                    q: "90. For loop uses?",
+                    o: ["Server", "range()", "DNS"],
+                    a: 1
+                },
+                {
+                    q: "91. What does CSS mainly control?",
+                    o: ["Hardware", "Styling and layout of webpages", "Internet speed", "Data storage"],
+                    a: 1
+                },
+                {
+                    q: "92. Frames are?",
+                    o: ["Loops", "Storyboard segments", "CSS files"],
+                    a: 1
+                },
+                {
+                    q: "93. Studying data to identify patterns is called __________.",
+                    o: ["Fixing computers", "Studying data patterns", "Gaming"],
+                    a: 1
+                },
+                {
+                    q: "94. Which career protects systems from hackers?",
+                    o: ["Game Developer", "Data Analyst", "Cybersecurity Specialist", "Teacher"],
+                    a: 2
+                },
+                {
+                    q: "95. UI means?",
+                    o: ["Server logic", "Database", "User Interface"],
+                    a: 2
+                },
+                {
+                    q: "96. Logical thinking is?",
+                    o: ["Step-by-step reasoning", "Guessing", "Memorizing"],
+                    a: 0
+                },
+                {
+                    q: "97. A web app runs on:",
+                    o: ["Only Android", "Only Windows", "A web browser", "Television"],
+                    a: 2
+                },
+                {
+                    q: "98. Selector does what?",
+                    o: ["Stores data", "Targets element", "Creates server"],
+                    a: 1
+                },
+                {
+                    q: "99. Skipping storyboard causes?",
+                    o: ["Faster work", "Better design", "Confusion"],
+                    a: 2
+                },
+                {
+                    q: "100. CSS stands for?",
+                    o: ["Creative Style Sheet", "Computer Style System", "Cascading Style Sheets"],
+                    a: 2
+                },
+                {
+                    q: "101. The visual part of an app that users interact with is called __________.",
+                    o: ["Server logic", "Database", "User Interface"],
+                    a: 2
+                },
+                {
+                    q: "102. Wireframe helps?",
+                    o: ["Gaming", "Music", "Plan layout"],
+                    a: 2
+                },
+                {
+                    q: "103. Game Developer creates?",
+                    o: ["Video games", "Emails", "Servers"],
+                    a: 0
+                },
+                {
+                    q: "104. Property defines?",
+                    o: ["Style feature", "Device", "Loop"],
+                    a: 0
+                },
+                {
+                    q: "105. Which skill is most important in computer science?",
+                    o: ["Memorization", "Logical thinking", "Guessing", "Drawing"],
+                    a: 1
+                },
+                {
+                    q: "106. Data Analyst works with?",
+                    o: ["Routers", "Data patterns", "Loops only"],
+                    a: 1
+                },
+                {
+                    q: "107. A software program designed to perform specific tasks is called an __________.",
+                    o: ["Application", "Router", "Loop"],
+                    a: 0
+                },
+                {
+                    q: "108. UX means?",
+                    o: ["Coding", "User Experience", "Cloud"],
+                    a: 1
+                },
+                {
+                    q: "109. Caption in storyboard?",
+                    o: ["Picture", "Description", "Router"],
+                    a: 1
+                },
+                {
+                    q: "110. CSS improves?",
+                    o: ["Consistency", "Errors", "Viruses"],
+                    a: 0
+                },
+                {
+                    q: "111. Native app built for?",
+                    o: ["Any device", "Specific OS", "Cloud only"],
+                    a: 1
+                },
+                {
+                    q: "112. HTML is used for?",
+                    o: ["Structure web pages", "Styling only", "Gaming"],
+                    a: 0
+                },
+                {
+                    q: "113. Background color property?",
+                    o: ["font-size", "background-color", "loop"],
+                    a: 1
+                },
+                {
+                    q: "114. Cybersecurity protects?",
+                    o: ["Design", "UI", "Systems from hackers"],
+                    a: 2
+                },
+                {
+                    q: "115. Tags are?",
+                    o: ["Errors", "Special words in <>", "Servers"],
+                    a: 1
+                },
+                {
+                    q: "116. Declaration example?",
+                    o: ["color", "red", "color: red;"],
+                    a: 2
+                },
+                {
+                    q: "117. The overall experience of using an app is called __________.",
+                    o: ["User Interface", "User Experience", "Wireframe"],
+                    a: 1
+                },
+                {
+                    q: "118. Storyboard is?",
+                    o: ["Visual plan", "Router", "Bug"],
+                    a: 0
+                },
+                {
+                    q: "119. Web app runs on?",
+                    o: ["Browser", "Router", "Cable"],
+                    a: 0
+                },
+                {
+                    q: "120. Font size property?",
+                    o: ["color", "router", "font-size"],
+                    a: 2
+                },
+                {
+                    q: "121. Editing means?",
+                    o: ["Refining scenes", "Coding", "DNS"],
+                    a: 0
+                },
+                {
+                    q: "122. Engineering link?",
+                    o: ["Sports", "Building machines", "Music"],
+                    a: 1
+                },
+                {
+                    q: "123. Maths link?",
+                    o: ["Drawing", "Gaming", "Algorithms"],
+                    a: 2
+                },
+                {
+                    q: "124. Front-End builds?",
+                    o: ["Database", "Visible UI", "Router"],
+                    a: 1
+                },
+                {
+                    q: "125. Back-End handles?",
+                    o: ["Server logic", "Colors", "Fonts"],
+                    a: 0
+                },
+                {
+                    q: "126. Misconception: CS is only?",
+                    o: ["Creative", "Teamwork", "Fixing computers"],
+                    a: 2
+                },
+                {
+                    q: "127. CSS makes website?",
+                    o: ["Consistent", "Slower", "Broken"],
+                    a: 0
+                },
+                {
+                    q: "128. Individual segments of a storyboard are called __________.",
+                    o: ["Loops", "Storyboard segments", "CSS files"],
+                    a: 1
+                }
+            ];
+
+            const container = document.getElementById("g7Quiz");
+
+            // 🔥 Render Questions
+            g7Questions.forEach((item, index) => {
+                const div = document.createElement("div");
+                div.className = "card-theme p-4";
+
+                div.innerHTML = `
+            <p class="font-semibold mb-2">${item.q}</p>
+            ${item.o.map((opt, i) => {
+                    const letter = String.fromCharCode(97 + i);
+                    return `
+                    <label class="block cursor-pointer mb-1">
+                        <input type="radio" name="g7q${index}" value="${letter}" class="mr-2">
+                        ${opt}
+                    </label>
+                `;
+                }).join("")}
+        `;
+
+                container.appendChild(div);
+            });
+
+            // 🔥 Grade Function
+            window.gradeG7Quiz = function () {
+                let score = 0;
+
+                g7Questions.forEach((item, index) => {
+                    const selected = document.querySelector(`input[name="g7q${index}"]:checked`);
+                    if (selected && selected.value === item.a) score++;
+                });
+
+                let grade = "", color = "", msg = "";
+
+                if (score >= 27) { grade = "A+"; color = "text-green-600"; msg = "Outstanding 🚀"; }
+                else if (score >= 24) { grade = "A"; color = "text-green-500"; msg = "Excellent 🎯"; }
+                else if (score >= 20) { grade = "B"; color = "text-blue-500"; msg = "Very Good 👍"; }
+                else if (score >= 15) { grade = "C"; color = "text-yellow-500"; msg = "Keep Practicing 💡"; }
+                else { grade = "D"; color = "text-red-500"; msg = "Revise Again 📘"; }
+
+                const result = document.getElementById("g7Result");
+                result.className = "mt-6 text-center font-bold text-lg " + color;
+                result.innerHTML = `Score: ${score}/30 <br> Grade: ${grade} <br> ${msg}`;
+            };
+
+            // 🔥 Toggle Function
+            window.toggleG7Quiz = function () {
+                const wrap = document.getElementById("g7Wrapper");
+                const btn = document.getElementById("g7Toggle");
+
+                if (wrap.style.display === "none") {
+                    wrap.style.display = "block";
+                    btn.innerHTML = "Hide Quiz 🔼";
+                } else {
+                    wrap.style.display = "none";
+                    btn.innerHTML = "Show Quiz 🔽";
+                }
+            };
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 3 Revision Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --primary: #3b82f6;
+            --glass-bg: rgba(15, 23, 42, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-blur: blur(20px);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #0f172a, #020617);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .developer-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.25rem;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Interactive Timeline Styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.9rem;
+            top: 0;
+            bottom: -2rem;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: #1e293b;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        /* Pictograph Preview */
+        .picto-bar {
+            height: 24px;
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+    </style>
+</head>
+
+<body class="pt-24 pb-12 px-4">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3 left-0">
+        <div class="max-w-7xl mx-auto glass px-6 py-4 flex items-center justify-between shadow-2xl">
+            <div class="flex items-center gap-3">
+                
+
+                <a href="../index.html" class="flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                        U</div>
+                    <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                            class="accent-text">.edu</span></span>
+                </a>
+                
+            </div>
+            <div class="hidden md:flex gap-12 text-[11px] font-bold uppercase tracking-widest opacity-60">
+                <a href="#plan" class="hover:text-blue-400">Class Plan</a>
+                <a href="#story" class="hover:text-blue-400">Storytelling</a>
+                <a href="#data" class="hover:text-blue-400">Data Visualization</a>
+                <a href="#safety" class="hover:text-blue-400">Safety</a>
+            </div>
+            <a href="../index.html" class="flex items-center gap-2 opacity-50 hover:opacity-100 transition text-sm">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto space-y-12">
+
+
+
+        <!-- CLASS ROADMAP: THE 4-CLASS PLAN -->
+        <section id="plan" class="glass p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-5">
+                <i class="fas fa-calendar-alt text-9xl"></i>
+            </div>
+            <h2 class="text-3xl font-black mb-10 flex items-center gap-4">
+                <i class="fas fa-route text-blue-500"></i> Revision Roadmap
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Class 1 -->
+                <div
+                    class="glass bg-blue-500/5 p-6 border-t-4 border-blue-500 hover:bg-blue-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-blue-400">S01 // VISUAL LOGIC</span>
+                    <h3 class="text-xl font-black mt-2">Digital Storytelling</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Storyboard & Scene creation</li>
+                        <li>• Adding Actions & Dialogue</li>
+                        <li>• Mastering Slide Transitions</li>
+                    </ul>
+                </div>
+                <!-- Class 2 -->
+                <div
+                    class="glass bg-emerald-500/5 p-6 border-t-4 border-emerald-500 hover:bg-emerald-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-emerald-400">S02 // ANALYTICS</span>
+                    <h3 class="text-xl font-black mt-2">Data Handling</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Facts vs. Observations</li>
+                        <li>• Tables vs. Pictographs</li>
+                        <li>• Pattern Recognition logic</li>
+                    </ul>
+                </div>
+                <!-- Class 3 -->
+                <div
+                    class="glass bg-amber-500/5 p-6 border-t-4 border-amber-500 hover:bg-amber-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-amber-400">S03 // CITIZENSHIP</span>
+                    <h3 class="text-xl font-black mt-2">Online Safety</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Identifying Suspicious Links</li>
+                        <li>• Protecting Personal Info</li>
+                        <li>• Digital Footprint Ethics</li>
+                    </ul>
+                </div>
+                <!-- Class 4 -->
+                <div
+                    class="glass bg-purple-500/5 p-6 border-t-4 border-purple-500 hover:bg-purple-500/10 transition cursor-default group">
+                    <span class="developer-font text-[10px] font-bold text-purple-400">S04 // EXECUTION</span>
+                    <h3 class="text-xl font-black mt-2">Debugging & Events</h3>
+                    <ul class="mt-4 text-xs opacity-60 space-y-2 group-hover:opacity-100 transition">
+                        <li>• Identifying Code Bugs</li>
+                        <li>• Sequence Testing</li>
+                        <li>• Triggering Actions via Events</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: DEEP DIVES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Storytelling Deep Dive -->
+                <section id="story" class="glass p-8">
+                    <h3 class="text-2xl font-black mb-6 flex items-center gap-3">
+                        <i class="fas fa-photo-video text-blue-400"></i> The Art of Picture Stories
+                    </h3>
+                    <p class="text-sm opacity-70 mb-8 leading-relaxed">
+                        A story isn't just a list of sentences; it is a <strong>Sequence</strong>. In Grade 3, we use
+                        digital tools to turn simple ideas into interactive experiences. Transitions bridge the gap
+                        between scenes, making the story flow smoothly.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-4 glass bg-white/5 border-l-2 border-blue-500">
+                            <h4 class="text-xs font-bold uppercase mb-2">The Storyboard Matrix</h4>
+                            <p class="text-[11px] opacity-60">Visualizing scenes before coding them prevents bugs in the
+                                narrative flow. Each scene needs a clear beginning, action, and end.</p>
+                        </div>
+                        <div class="p-4 glass bg-white/5 border-l-2 border-blue-500">
+                            <h4 class="text-xs font-bold uppercase mb-2">Transition Logic</h4>
+                            <p class="text-[11px] opacity-60">Transitions aren't just for looks—they signal a change in
+                                <strong>Time</strong> or <strong>Location</strong> to the viewer.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Data Deep Dive -->
+                <section id="data" class="glass p-8">
+                    <h3 class="text-2xl font-black mb-6 flex items-center gap-3">
+                        <i class="fas fa-chart-bar text-emerald-400"></i> Information Architecture
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <div class="flex-1 space-y-4">
+                                <p class="text-sm opacity-70">We collect <strong>Data</strong> (facts/numbers) to make
+                                    decisions. While tables are precise, Pictographs use <strong>Symbols</strong> to
+                                    help us compare data at a glance.</p>
+                                <div
+                                    class="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20 text-[11px] italic">
+                                    "It's easier to count pictures than to read a long list of numbers!"
+                                </div>
+                            </div>
+                            <div class="w-full md:w-64 glass p-4 space-y-3">
+                                <div class="text-[10px] font-bold opacity-40 uppercase">Favorite Fruit Pictograph</div>
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-10 text-[9px]">🍎</div>
+                                        <div class="picto-bar bg-red-500/40 w-full" style="width: 80%"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-10 text-[9px]">🍌</div>
+                                        <div class="picto-bar bg-yellow-500/40 w-full" style="width: 40%"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-10 text-[9px]">🍇</div>
+                                        <div class="picto-bar bg-purple-500/40 w-full" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Safety Protocol -->
+                <section id="safety" class="glass p-8 border-t-4 border-red-500/30">
+                    <h3 class="text-2xl font-black mb-6 flex items-center gap-3">
+                        <i class="fas fa-shield-virus text-red-400"></i> Safety Protocols & Ethics
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="glass p-4 bg-red-500/5 group">
+                            <i class="fas fa-link text-red-400 mb-2"></i>
+                            <h4 class="font-bold text-sm">Suspicious Links</h4>
+                            <p class="text-xs opacity-60 mt-2">These are harmful signals. If a link promises "free
+                                prizes" or asks for your name, <strong>Stop and Report</strong>.</p>
+                        </div>
+                        <div class="glass p-4 bg-green-500/5 group">
+                            <i class="fas fa-user-check text-green-400 mb-2"></i>
+                            <h4 class="font-bold text-sm">The Trusted Adult</h4>
+                            <p class="text-xs opacity-60 mt-2">Before sharing a birthday photo, ask a trusted adult.
+                                Once it's online, it's part of your <strong>Permanent Trace</strong>.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: GLOSSARY & FAST FACTS -->
+            <div class="space-y-8">
+
+                <!-- Quick Glossary -->
+                <section class="glass p-6">
+                    <h4
+                        class="developer-font text-[10px] font-black uppercase text-blue-400 mb-6 border-b border-white/10 pb-2 tracking-widest">
+                        Revision Glossary</h4>
+                    <div id="glossary-list" class="space-y-6">
+                        <!-- Dynamic Content from JS -->
+                    </div>
+                </section>
+
+                <!-- Debugging Checklist -->
+                <section class="glass p-6 bg-amber-500/5 border border-amber-500/20">
+                    <h4 class="text-xs font-black uppercase mb-4 text-amber-500">Debug Checklist</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Check Sequence Order</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Identify the 'Bug' Step</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Test one fix at a time</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs">
+                            <i class="far fa-square text-amber-500"></i>
+                            <span class="opacity-70">Verify Action via Trigger</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer Summary Block -->
+                <section class="glass p-6 bg-purple-500/5 border border-purple-500/20">
+                    <h4 class="text-xs font-black uppercase mb-4 text-purple-400">Block 20 Insight</h4>
+                    <p class="text-[11px] opacity-60 italic leading-relaxed">
+                        "Without events, programs wouldn't know when to do something. Clicking, tapping, and pressing
+                        keys are the heartbeats of every app you use."
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-24 py-12 text-center opacity-20 border-t border-white/5">
+        <p class="developer-font text-[10px] tracking-[0.5em]">SYSTEM INTEGRITY VERIFIED // USHIVERSE 3.0 // REVISION
+            REPOSITORY</p>
+    </footer>
+
+    <script>
+        const revisionVocab = [
+            { t: "Digital Tool", d: "A computer program (like a browser or Scratch) used to finish tasks." },
+            { t: "Data Visualization", d: "Turning numbers into pictures like charts and pictographs." },
+            { t: "Scene", d: "A specific part of a storyboard that shows one part of the story." },
+            { t: "Interactive", d: "A program that 'talks back' or reacts when you click/tap." },
+            { t: "Suspicious Link", d: "A dangerous path on the internet that aims to steal information." },
+            { t: "Trigger", d: "The 'START' button of an action—like a key press or a mouse click." },
+            { t: "Debugging", d: "The detective work of finding and fixing mistakes in instructions." }
+        ];
+
+        const glossaryContainer = document.getElementById('glossary-list');
+
+        glossaryContainer.innerHTML = revisionVocab.map(item => `
+            <div class="group">
+                <div class="text-[11px] font-black uppercase accent-gradient tracking-wider">${item.t}</div>
+                <div class="text-[11px] opacity-50 mt-1 leading-relaxed group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+
+        // Simple animation trigger for pictograph bars
+        window.addEventListener('load', () => {
+            const bars = document.querySelectorAll('.picto-bar');
+            bars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

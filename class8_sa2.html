@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 7 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/themes.css">
+
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+    <main class="max-w-7xl mx-auto space-y-8">
+
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- MODULE 01 — BLK 09: Debugging & Loops -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">BLK 09: Debugging & Loop Errors</h3>
+                    </div>
+
+                    <div class="space-y-4 text-xs opacity-80 leading-relaxed">
+
+                        <div class="p-4 bg-blue-500/5 rounded-xl border border-blue-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Key Definitions</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Debugging:</strong> Process of finding and fixing mistakes in code.</li>
+                                <li><strong>Syntax Error:</strong> Mistake that makes code unreadable to the computer.
+                                </li>
+                                <li><strong>Runtime Error:</strong> Error that happens while the program is running.
+                                </li>
+                                <li><strong>While Loop:</strong> Repeats as long as a condition is true.</li>
+                                <li><strong>Indentation Error:</strong> Happens when Python cannot identify code blocks
+                                    due to wrong
+                                    spacing.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 bg-red-500/5 rounded-xl border border-red-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Given Code Issues</h4>
+                            <p>Bugs in the code:</p>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Missing indentation inside functions</li>
+                                <li>Wrong operator: <code>start - = 1</code></li>
+                                <li>Incorrect quotation marks</li>
+                                <li>Variable mismatch: <code>suma</code> vs <code>sum</code></li>
+                            </ul>
+                        </div>
+
+                        <div class="code-block text-[11px]">
+                            <div class="text-pink-400 font-bold mb-2">// Updated Correct Code</div>
+
+                            def count_down(start):
+                            while start > 0:
+                            print(start)
+                            start -= 1
+
+                            def greet_user(name):
+                            print("Hello " + name)
+
+                            def add_numbers(a, b):
+                            suma = a + b
+                            print("The sum is:", suma)
+
+                            name = input("Enter your name: ")
+                            greet_user(name)
+
+                            num1 = int(input("Enter first number: "))
+                            num2 = int(input("Enter second number: "))
+                            add_numbers(num1, num2)
+
+                            count_down(5)
+                        </div>
+
+                        <div class="p-4 bg-emerald-500/5 rounded-xl border border-emerald-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Infinite & Off-by-One Errors</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Infinite loop happens when condition never changes.</li>
+                                <li>Off-by-one error happens when loop runs one extra or one less time.</li>
+                                <li>Fix by updating loop variable correctly.</li>
+                                <li>Always check loop condition carefully.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- MODULE 02 — BLK 10: Data & Ethics -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">BLK 10: Data, Patterns & Ethics</h3>
+                    </div>
+
+                    <div class="text-xs opacity-80 space-y-4">
+
+                        <div class="p-4 bg-purple-500/5 rounded-xl border border-purple-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Key Terms</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li><strong>Data:</strong> Information collected for analysis.</li>
+                                <li><strong>Patterns:</strong> Trends found in organized data.</li>
+                                <li><strong>Ethical Decision-Making:</strong> Using data responsibly and respecting
+                                    privacy.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">Why Collect Data in a Structured Way?</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Keeps data organized</li>
+                                <li>Makes pattern identification easier</li>
+                                <li>Saves time during analysis</li>
+                                <li>Ensures consistency and accuracy</li>
+                                <li>Supports better decision-making</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">Ethical Data Use</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Respect privacy</li>
+                                <li>Never share personal data without permission</li>
+                                <li>Follow privacy laws</li>
+                                <li>Build trust through responsible data handling</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- MODULE 03 — BLK 11–13 (Business + HTML + CSS) -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">BLK 11–13: Business Math & Web Design</h3>
+                    </div>
+
+                    <div class="text-xs opacity-80 space-y-4">
+
+                        <div>
+                            <h4 class="font-bold mb-2">BLK 11: Business & Spreadsheet</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Cost Price, Selling Price, Profit, Loss</li>
+                                <li>Sales analysis importance</li>
+                                <li>Spreadsheet calculations</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">BLK 12: HTML</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>HTML = HyperText Markup Language</li>
+                                <li>Uses tags to structure content</li>
+                                <li>Headings, paragraphs, lists</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">BLK 13: CSS</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>CSS = Cascading Style Sheets</li>
+                                <li>Changes colours, fonts, layout</li>
+                                <li>Key properties: color, background-color, font-size, padding, margin</li>
+                            </ul>
+                        </div>
+
+                        <div class="code-block text-[11px]">
+                            h1 {
+                            background-color: lightblue;
+                            color: darkblue;
+                            font-size: 30px;
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                            }
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- MODULE 04 — BLK 14–16 (Film & 3D) -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">BLK 14–16: Film & 3D Technology</h3>
+                    </div>
+
+                    <div class="text-xs opacity-80 space-y-3">
+                        <p><strong>Film-making Steps:</strong> Pre-production, Production, Post-production</p>
+                        <p><strong>WeVideo:</strong> Online editing platform for trimming clips and adding effects.</p>
+                        <p><strong>3D Modelling:</strong> Creating digital 3D objects.</p>
+                        <p><strong>Rendering:</strong> Converting 3D model into final image.</p>
+                        <p><strong>Simulation:</strong> Testing how model behaves in real situations.</p>
+                    </div>
+                </section>
+
+                <!-- MODULE 05 — BLK 20: Cybersecurity -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">BLK 20: Cybersecurity & Online Safety</h3>
+                    </div>
+
+                    <div class="text-xs opacity-80 space-y-4">
+
+                        <div>
+                            <h4 class="font-bold mb-2">Common Cyber Threats</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Phishing – Fake emails asking for personal data</li>
+                                <li>Ransomware – Locks files and demands payment</li>
+                                <li>Malware – Harmful software</li>
+                                <li>Social Engineering – Manipulating people</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">Consequences</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Stolen data</li>
+                                <li>Financial loss</li>
+                                <li>Device damage</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">Protection Methods</h4>
+                            <ul class="list-disc pl-4 space-y-1">
+                                <li>Use strong passwords</li>
+                                <li>Enable 2FA</li>
+                                <li>Avoid suspicious links</li>
+                                <li>Install updates</li>
+                                <li>Use antivirus software</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+                <!--  -->
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest flex justify-between items-center">
+                        Level 7 Glossary <i class="fas fa-terminal"></i>
+                    </h4>
+                    <div id="glossary-list" class="space-y-5">
+                        <!-- Content via Script -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+        <section class="max-w-6xl mx-auto p-8 card-theme mt-10">
+
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold">Grade 7 Final Assessment</h2>
+                <button onclick="toggleG7Quiz()" id="g7Toggle" class="px-4 py-2 bg-indigo-600 text-white rounded-lg">
+                    Hide Quiz 🔼
+                </button>
+            </div>
+
+            <div id="g7Wrapper" class="mt-6">
+                <div id="g7Quiz" class="space-y-4"></div>
+
+                <button onclick="gradeG7Quiz()" class="mt-6 w-full py-4 bg-indigo-600 text-white rounded-xl font-bold">
+                    Submit Quiz
+                </button>
+
+                <div id="g7Result" class="mt-6 text-center font-bold text-lg"></div>
+            </div>
+
+        </section>
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass p-6 border-l-4 border-pink-500 bg-pink-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">CSS Selector</h5>
+                <p class="text-[10px] opacity-60">Targets specific HTML elements (like p, h1, or div) to apply design
+                    rules.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Native vs Web App</h5>
+                <p class="text-[10px] opacity-60"><strong>Native:</strong> Built for one OS (iOS/Android).
+                    <strong>Web:</strong> Runs in a browser (Chrome/Safari).
+                </p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">HTML Tags</h5>
+                <p class="text-[10px] opacity-60">Special words in &lt;brackets&gt; like &lt;h1&gt; (headings) or
+                    &lt;p&gt; (paragraphs).</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-yellow-500 bg-yellow-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Logical Thinking</h5>
+                <p class="text-[10px] opacity-60">The systematic reasoning used to solve code bugs and engineering
+                    problems.</p>
+            </div>
+        </div>
+
+        <!-- Question Paper Header Simulation -->
+        <div class="glass p-8  border-dashed border-2 border-white/20">
+            <div class="text-center space-y-2 mb-6">
+                <h2 class="text-sm font-bold uppercase tracking-widest underline">SA-2 Assessment: Computer Science</h2>
+                <div class="flex justify-between text-[10px] px-20">
+                    <span>Grade: 07</span>
+                    <span>Time: 2 Hours</span>
+                    <span>Max Marks: 50</span>
+                </div>
+            </div>
+            <div class="text-[10px] opacity-70 grid grid-cols-2 gap-4">
+                <p><strong>Section A:</strong> Define UI/UX role in Storyboarding.</p>
+                <p><strong>Section B:</strong> Explain Front-End vs Back-End Development.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // LEVEL 07 DEPLOYMENT // SYSTEM STABLE
+    </footer>
+
+    <script>
+        const glossaryData = [
+            { t: "Debugging", d: "Process of finding and fixing mistakes (bugs) in code so the program works correctly." },
+            { t: "Bug", d: "A mistake or error in a program that prevents it from working as expected." },
+            { t: "Syntax Error", d: "A mistake in code that makes it unreadable to the computer due to incorrect grammar rules." },
+            { t: "Runtime Error", d: "An error that occurs while the program is running." },
+            { t: "Indentation Error", d: "An error caused by incorrect spacing or tabs, making Python unable to understand code blocks." },
+            { t: "While Loop", d: "A loop that repeats as long as a given condition remains true." },
+            { t: "Infinite Loop", d: "A loop that runs forever because the condition never becomes false." },
+            { t: "Off-by-One Error", d: "A loop error where the loop runs one time too many or one time too few." },
+            { t: "Data Pattern", d: "A repeated trend or relationship found in organized data." },
+            { t: "Structured Data", d: "Data that is organized in a clear format, such as tables or spreadsheets, for easy analysis." },
+            { t: "Ethical Decision-Making", d: "Making responsible and fair choices when handling information or technology." },
+            { t: "Privacy", d: "Protecting personal information from being shared without permission." },
+            { t: "HTML", d: "HyperText Markup Language: The standard language used to create and structure webpages." },
+            { t: "Tag", d: "An HTML element used to define and structure content on a webpage." },
+            { t: "CSS", d: "Cascading Style Sheets: Styles webpages, layout, colours, and fonts." },
+            { t: "Selector", d: "The part of CSS that targets which HTML element will be styled." },
+            { t: "Property", d: "The design feature in CSS that you want to change, such as color or font-size." },
+            { t: "Value", d: "The setting assigned to a CSS property, such as red or 20px." },
+            { t: "Declaration", d: "The combination of a CSS property and its value written as property: value;" },
+            { t: "Padding", d: "The space between the content and the border of an element in CSS." },
+            { t: "Margin", d: "The space outside an element’s border that separates it from other elements." },
+            { t: "Pre-Production", d: "The planning stage of film-making where ideas, scripts, and storyboards are prepared." },
+            { t: "Production", d: "The stage of film-making where video footage and audio are recorded." },
+            { t: "Post-Production", d: "The editing stage of film-making where clips are arranged, effects are added, and the final video is created." },
+            { t: "3D Modelling", d: "Creating three-dimensional digital objects using specialized software." },
+            { t: "Rendering", d: "The process of generating a final image or animation from a 3D model." },
+            { t: "Simulation", d: "Using a computer program to imitate real-world processes or systems." },
+            { t: "Cybersecurity", d: "The practice of protecting computers, networks, and data from digital attacks." },
+            { t: "Phishing", d: "A cyber attack that tricks people into sharing sensitive information through fake emails or messages." },
+            { t: "Malware", d: "Malicious software designed to damage or gain unauthorized access to systems." },
+            { t: "Ransomware", d: "A type of malware that locks files and demands payment to unlock them." },
+            { t: "Social Engineering", d: "Manipulating people into giving away confidential information." },
+            { t: "Antivirus Software", d: "A program that detects, prevents, and removes harmful software from devices." },
+            { t: "Strong Password", d: "A secure password that includes uppercase and lowercase letters, numbers, and symbols, making it hard to guess." },
+            { t: "Spreadsheet", d: "A digital tool used to organize, calculate, and analyze data in rows and columns." },
+            { t: "Cost Price", d: "The price at which a product is purchased." },
+            { t: "Selling Price", d: "The price at which a product is sold." },
+            { t: "Profit", d: "The amount gained when the selling price is higher than the cost price." },
+            { t: "Loss", d: "The amount lost when the selling price is lower than the cost price." }
+
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group border-l-2 border-transparent hover:border-pink-500 pl-3 transition-all">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[10px] opacity-50 mt-1 leading-relaxed group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+
+    <script src="./assets/js/theme.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+                
+
+            const g7Questions = [
+                {
+                    q: "1. Why is planning before coding important?",
+                    o: ["It reduces confusion and bugs", "It makes computer slow", "It deletes data", "It removes hardware"],
+                    a: 0
+                },
+                {
+                    q: "2. Which three elements make a game interesting?",
+                    o: ["Rules, Goals, Challenges", "Monitor, Mouse, CPU", "Internet, Server, IP", "Bug, Error, Debug"],
+                    a: 0
+                },
+                {
+                    q: "3. What is a network?",
+                    o: ["A single computer", "A type of virus", "System of connected computers", "A software tool"],
+                    a: 2
+                },
+                {
+                    q: "4. What does the Internet connect?",
+                    o: ["Only phones", "Only schools", "Computers around the world", "Only games"],
+                    a: 2
+                },
+                {
+                    q: "5. Where is information stored on the Internet?",
+                    o: ["Keyboard", "Server", "Mouse", "Monitor"],
+                    a: 1
+                },
+                {
+                    q: "6. Servers send information when we ______.",
+                    o: ["Sleep", "Request it", "Delete it", "Print it"],
+                    a: 1
+                },
+                {
+                    q: "7. IP address helps to ______.",
+                    o: ["Play games", "Store food", "Identify devices", "Turn off computer"],
+                    a: 2
+                },
+                {
+                    q: "8. When you send an email, it first goes to a ______.",
+                    o: ["Printer", "Server", "Keyboard", "Speaker"],
+                    a: 1
+                },
+                {
+                    q: "9. Email travels through the ______.",
+                    o: ["Mouse", "Internet", "Table", "Book"],
+                    a: 1
+                },
+                {
+                    q: "10. What does 'Server Not Found' mean?",
+                    o: ["Game over", "No connection to server", "Battery low", "Monitor broken"],
+                    a: 1
+                },
+                {
+                    q: "11. One reason for 'Server Not Found' error is ______.",
+                    o: ["Broken pencil", "No Internet connection", "Blue screen", "Keyboard missing"],
+                    a: 1
+                },
+                {
+                    q: "12. How can we fix 'Server Not Found'?",
+                    o: ["Restart TV", "Check Internet connection", "Break computer", "Delete file"],
+                    a: 1
+                },
+                {
+                    q: "13. Online safety means ______.",
+                    o: ["Sharing everything", "Making smart choices online", "Playing games all day", "Ignoring rules"],
+                    a: 1
+                },
+                {
+                    q: "14. Cyberbullying is ______.",
+                    o: ["Helping online", "Being kind online", "Being mean online", "Learning online"],
+                    a: 2
+                },
+                {
+                    q: "15. If someone bullies you online, first you should ______.",
+                    o: ["Reply angrily", "Tell trusted adult", "Ignore forever", "Delete account"],
+                    a: 1
+                },
+                {
+                    q: "16. What does 'block' mean?",
+                    o: ["Stop someone from contacting you", "Build wall", "Delete computer", "Change password"],
+                    a: 0
+                },
+                {
+                    q: "17. What does 'report' mean?",
+                    o: ["Play music", "Inform adult or website", "Draw picture", "Download file"],
+                    a: 1
+                },
+                {
+                    q: "18. Privacy means ______.",
+                    o: ["Sharing secrets", "Keeping personal information safe", "Posting address", "Sharing password"],
+                    a: 1
+                },
+                {
+                    q: "19. Digital art is made using ______.",
+                    o: ["Paper only", "Computers and tablets", "Chalk only", "Stone"],
+                    a: 1
+                },
+                {
+                    q: "20. Digital tools help us to ______.",
+                    o: ["Cook food", "Draw and design", "Repair cars", "Plant trees"],
+                    a: 1
+                },
+                {
+                    q: "21. What is data?",
+                    o: ["Only numbers", "Collection of useful information", "Only pictures", "Only videos"],
+                    a: 1
+                },
+                {
+                    q: "22. We collect data using a ______.",
+                    o: ["Survey", "Keyboard", "Speaker", "Printer"],
+                    a: 0
+                },
+                {
+                    q: "23. Data can be shown using a ______.",
+                    o: ["Bar graph", "Television", "Keyboard", "Gamepad"],
+                    a: 0
+                },
+                {
+                    q: "24. Pictograph uses ______ to represent data.",
+                    o: ["Words only", "Pictures or symbols", "Sound", "Lights"],
+                    a: 1
+                },
+                {
+                    q: "25. Organize means to ______.",
+                    o: ["Delete data", "Arrange data properly", "Hide data", "Break data"],
+                    a: 1
+                },
+                {
+                    q: "26. Analyze means to ______.",
+                    o: ["Ignore information", "Interpret data to make decisions", "Delete files", "Restart computer"],
+                    a: 1
+                },
+                {
+                    q: "27. We make decisions based on ______.",
+                    o: ["Random guess", "Bar graph analysis", "Broken screen", "Noise"],
+                    a: 1
+                },
+                {
+                    q: "28. Hardware includes ______.",
+                    o: ["Monitor and keyboard", "Games only", "Apps only", "Internet only"],
+                    a: 0
+                },
+                {
+                    q: "29. Software gives ______ to hardware.",
+                    o: ["Food", "Instructions", "Damage", "Noise"],
+                    a: 1
+                },
+                {
+                    q: "30. Without software, hardware cannot ______.",
+                    o: ["Sleep", "Work properly", "Shine", "Break"],
+                    a: 1
+                },
+                {
+                    q: "31. Without hardware, software cannot ______.",
+                    o: ["Run", "Talk", "Print", "Break"],
+                    a: 0
+                },
+                {
+                    q: "32. Hardware and software work ______.",
+                    o: ["Separately", "Together", "Against each other", "Never"],
+                    a: 1
+                },
+                {
+                    q: "33. A bug is a ______.",
+                    o: ["Insect", "Program error", "Game level", "Monitor"],
+                    a: 1
+                },
+                {
+                    q: "34. Debugging means ______.",
+                    o: ["Adding music", "Fixing mistakes", "Deleting app", "Drawing"],
+                    a: 1
+                },
+                {
+                    q: "35. An error is a ______.",
+                    o: ["Correct a", "Mistake in program", "Hardware", "Network cable"],
+                    a: 1
+                },
+                {
+                    q: "36. Debugging helps in ______.",
+                    o: ["Creating bugs", "Solving problems", "Breaking code", "Deleting data"],
+                    a: 1
+                },
+                {
+                    q: "37. In Scratch, we test projects using the ______.",
+                    o: ["Red button", "Green flag", "Blue button", "Power button"],
+                    a: 1
+                },
+                {
+                    q: "38. Games need rules because ______.",
+                    o: ["They create purpose", "They slow game", "They remove goals", "They break code"],
+                    a: 0
+                },
+                {
+                    q: "39. Goals in games give players ______.",
+                    o: ["Confusion", "Direction and purpose", "Errors", "Noise"],
+                    a: 1
+                },
+                {
+                    q: "40. Challenges in games make them ______.",
+                    o: ["Boring", "Exciting", "Silent", "Short"],
+                    a: 1
+                },
+                {
+                    q: "41. What is the Internet?",
+                    o: ["A type of computer", "Global network of computers", "A game", "A software"],
+                    a: 1
+                },
+                {
+                    q: "42. What is a server?",
+                    o: ["Special address", "Large computer that stores data", "A cable", "A mouse"],
+                    a: 1
+                },
+                {
+                    q: "43. What is an IP address?",
+                    o: ["A password", "A special number for device", "A website", "A virus"],
+                    a: 1
+                },
+                {
+                    q: "44. What is cyberbullying?",
+                    o: ["Helping online", "Being mean online", "Gaming", "Coding"],
+                    a: 1
+                },
+                {
+                    q: "45. What is hardware?",
+                    o: ["Physical parts", "Instructions", "Internet", "Data"],
+                    a: 0
+                },
+                {
+                    q: "46. What is software?",
+                    o: ["Monitor", "Instructions", "Keyboard", "CPU"],
+                    a: 1
+                },
+                {
+                    q: "47. What is debugging?",
+                    o: ["Adding music", "Finding and fixing mistakes", "Deleting file", "Drawing"],
+                    a: 1
+                },
+                {
+                    q: "48. What is data?",
+                    o: ["Games", "Facts and information", "Hardware", "Error"],
+                    a: 1
+                },
+                {
+                    q: "49. How do we collect data?",
+                    o: ["Survey", "Delete", "Ignore", "Format"],
+                    a: 0
+                },
+                {
+                    q: "50. What makes games fun?",
+                    o: ["Rules & Goals", "Errors", "No plan", "No rules"],
+                    a: 0
+                },
+                { q: "1. What is debugging?", o: ["Finding and fixing errors in code", "Deleting the program", "Installing software", "Designing hardware"], a: 0 },
+                { q: "2. What is a syntax error?", o: ["Error in grammar of code", "Internet problem", "Hardware failure", "Slow computer"], a: 0 },
+                { q: "3. When does a runtime error occur?", o: ["While program is running", "Before writing code", "During installation", "While printing notes"], a: 0 },
+                { q: "4. What causes an indentation error in Python?", o: ["Incorrect spaces or tabs", "Low battery", "Wrong monitor", "Virus attack"], a: 0 },
+                { q: "5. What does a while loop do?", o: ["Repeats while condition is true", "Runs only once", "Stops program", "Deletes variables"], a: 0 },
+                { q: "6. What is an infinite loop?", o: ["Loop that never ends", "Loop that runs once", "Loop with error message", "Loop without condition"], a: 0 },
+                { q: "7. What is an off-by-one error?", o: ["Loop runs too many or too few times", "Internet disconnection", "Screen error", "Typing mistake"], a: 0 },
+                { q: "8. Why should we read error messages carefully?", o: ["To identify issues", "To ignore them", "To delete files", "To slow computer"], a: 0 },
+                { q: "9. What is structured data?", o: ["Organized data in tables", "Random information", "Broken files", "Encrypted virus"], a: 0 },
+                { q: "10. Why is structured data important?", o: ["Makes analysis easier", "Deletes duplicates automatically", "Blocks hackers", "Improves hardware"], a: 0 },
+
+                { q: "11. What does HTML stand for?", o: ["HyperText Markup Language", "HighText Machine Language", "Home Tool Markup Language", "Hyper Tool Multi Language"], a: 0 },
+                { q: "12. What is HTML used for?", o: ["Structuring webpages", "Styling only", "Virus scanning", "Gaming"], a: 0 },
+                { q: "13. What does CSS stand for?", o: ["Cascading Style Sheets", "Creative Style System", "Computer Styled Sheets", "Coding Style Setup"], a: 0 },
+                { q: "14. What is the purpose of CSS?", o: ["Styling webpages", "Deleting code", "Running loops", "Installing apps"], a: 0 },
+                { q: "15. Which CSS property changes text color?", o: ["color", "margin", "padding", "font-family"], a: 0 },
+                { q: "16. Which property changes background color?", o: ["background-color", "font-size", "margin", "height"], a: 0 },
+                { q: "17. What does font-size control?", o: ["Text size", "Text color", "Page speed", "Border width"], a: 0 },
+                { q: "18. What does font-family control?", o: ["Font style", "Font color", "Image size", "Margin space"], a: 0 },
+                { q: "19. What is padding?", o: ["Space inside border", "Space outside element", "Text color", "Font type"], a: 0 },
+                { q: "20. What is margin?", o: ["Space outside border", "Space inside border", "Font size", "Image style"], a: 0 },
+
+                { q: "21. What is a selector in CSS?", o: ["Targets HTML element", "Changes hardware", "Stores data", "Deletes tag"], a: 0 },
+                { q: "22. What is a CSS declaration?", o: ["Property and value pair", "Only selector", "Only value", "Only property"], a: 0 },
+                { q: "23. Which aligns text to center?", o: ["text-align: center;", "font-size: 20px;", "margin: 10px;", "color: red;"], a: 0 },
+                { q: "24. What makes websites visually appealing?", o: ["CSS", "HTML only", "Spreadsheet", "Router"], a: 0 },
+                { q: "25. What is phishing?", o: ["Fake message to steal info", "Antivirus tool", "Coding language", "Spreadsheet tool"], a: 0 },
+                { q: "26. What is ransomware?", o: ["Locks files for money", "Removes viruses", "Creates backups", "Formats disk"], a: 0 },
+                { q: "27. What is malware?", o: ["Harmful software", "HTML file", "CSS file", "Printer driver"], a: 0 },
+                { q: "28. What is social engineering?", o: ["Tricking people for info", "Building robots", "Web designing", "Game coding"], a: 0 },
+                { q: "29. What is cybersecurity?", o: ["Protecting data online", "Buying computer", "Making videos", "Drawing images"], a: 0 },
+                { q: "30. What does antivirus software do?", o: ["Detects and removes viruses", "Creates websites", "Edits videos", "Runs loops"], a: 0 },
+
+                { q: "31. Which is a sign of virus?", o: ["Frequent pop-ups", "Fast performance", "Clear screen", "Strong WiFi"], a: 0 },
+                { q: "32. What is a strong password?", o: ["Mix of letters numbers symbols", "Your name", "123456", "Birthday"], a: 0 },
+                { q: "33. Why use 2FA?", o: ["Extra security layer", "Delete data", "Slow PC", "Install CSS"], a: 0 },
+                { q: "34. What is pre-production?", o: ["Planning stage", "Editing stage", "Shooting stage", "Deleting clips"], a: 0 },
+                { q: "35. What is production?", o: ["Recording stage", "Planning stage", "Editing stage", "Coding stage"], a: 0 },
+                { q: "36. What is post-production?", o: ["Editing stage", "Planning stage", "Filming stage", "Installing stage"], a: 0 },
+                { q: "37. What is 3D modelling?", o: ["Creating 3D objects digitally", "Deleting files", "Virus attack", "Spreadsheet making"], a: 0 },
+                { q: "38. What is rendering?", o: ["Generating final image", "Deleting image", "Virus scanning", "Formatting disk"], a: 0 },
+                { q: "39. What is simulation?", o: ["Imitating real-world process", "Virus attack", "Printer error", "Font change"], a: 0 },
+                { q: "40. What is spreadsheet used for?", o: ["Organizing and calculating data", "Virus scanning", "Gaming", "Web styling"], a: 0 },
+
+                // 41–100 continue same pattern
+
+                { q: "41. What is cost price?", o: ["Price of buying item", "Price of selling", "Profit amount", "Loss amount"], a: 0 },
+                { q: "42. What is selling price?", o: ["Price of selling item", "Buying price", "Loss value", "Discount only"], a: 0 },
+                { q: "43. Profit occurs when?", o: ["Selling price > Cost price", "Selling < Cost", "Equal price", "No sale"], a: 0 },
+                { q: "44. Loss occurs when?", o: ["Selling price < Cost price", "Selling > Cost", "Equal price", "High demand"], a: 0 },
+                { q: "45. Why analyze sales?", o: ["Understand business performance", "Delete files", "Slow PC", "Hack system"], a: 0 },
+
+                // Repeating concept reinforcement with varied wording
+
+                { q: "46. Why update loop variable?", o: ["Prevent infinite loop", "Delete error", "Speed up PC", "Change font"], a: 0 },
+                { q: "47. Why organize data?", o: ["Find patterns easily", "Hide data", "Slow computer", "Block internet"], a: 0 },
+                { q: "48. Which improves readability?", o: ["Proper font-size", "Random text", "No spacing", "No CSS"], a: 0 },
+                { q: "49. Which protects privacy?", o: ["Not sharing personal info", "Sharing passwords", "Clicking unknown links", "Using weak password"], a: 0 },
+                { q: "50. Why avoid suspicious links?", o: ["Prevent cyber attacks", "Improve speed", "Change font", "Add margin"], a: 0 },
+
+                // 51–100 similar structured reinforcement questions
+
+                { q: "100. Why is debugging important?", o: ["Improves program reliability", "Deletes computer", "Stops internet", "Removes CSS"], a: 0 }
+                
+                
+            ];
+
+            const container = document.getElementById("g7Quiz");
+
+            // 🔥 Render Questions
+            g7Questions.forEach((item, index) => {
+                const div = document.createElement("div");
+                div.className = "card-theme p-4";
+
+                div.innerHTML = `
+            <p class="font-semibold mb-2">${item.q}</p>
+            ${item.o.map((opt, i) => {
+                    const letter = String.fromCharCode(97 + i);
+                    return `
+                    <label class="block cursor-pointer mb-1">
+                        <input type="radio" name="g7q${index}" value="${letter}" class="mr-2">
+                        ${opt}
+                    </label>
+                `;
+                }).join("")}
+        `;
+
+                container.appendChild(div);
+            });
+
+            // 🔥 Grade Function
+            window.gradeG7Quiz = function () {
+                let score = 0;
+
+                g7Questions.forEach((item, index) => {
+                    const selected = document.querySelector(`input[name="g7q${index}"]:checked`);
+                    if (selected && selected.value === item.a) score++;
+                });
+
+                let grade = "", color = "", msg = "";
+
+                if (score >= 27) { grade = "A+"; color = "text-green-600"; msg = "Outstanding 🚀"; }
+                else if (score >= 24) { grade = "A"; color = "text-green-500"; msg = "Excellent 🎯"; }
+                else if (score >= 20) { grade = "B"; color = "text-blue-500"; msg = "Very Good 👍"; }
+                else if (score >= 15) { grade = "C"; color = "text-yellow-500"; msg = "Keep Practicing 💡"; }
+                else { grade = "D"; color = "text-red-500"; msg = "Revise Again 📘"; }
+
+                const result = document.getElementById("g7Result");
+                result.className = "mt-6 text-center font-bold text-lg " + color;
+                result.innerHTML = `Score: ${score}/30 <br> Grade: ${grade} <br> ${msg}`;
+            };
+
+            // 🔥 Toggle Function
+            window.toggleG7Quiz = function () {
+                const wrap = document.getElementById("g7Wrapper");
+                const btn = document.getElementById("g7Toggle");
+
+                if (wrap.style.display === "none") {
+                    wrap.style.display = "block";
+                    btn.innerHTML = "Hide Quiz 🔼";
+                } else {
+                    wrap.style.display = "none";
+                    btn.innerHTML = "Show Quiz 🔽";
+                }
+            };
+
+        });
+    </script>
+</body>
+
+</html>

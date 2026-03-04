@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Grade 6 Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/themes.css">
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+    <main class="max-w-7xl mx-auto space-y-8">
+
+        <!-- Module Header -->
+        <div class="glass p-10 border-b-4 border-purple-500 shadow-purple-500/10 shadow-2xl">
+            <header>
+                <div class="flex items-center justify-between mb-4">
+
+                    <!-- Left Side Pills -->
+                    <div class="flex items-center gap-3">
+                        <span class="step-pill">LEVEL 06</span>
+                        <span class="step-pill">NETWORKING</span>
+                        <span class="step-pill">PYTHON LOGIC</span>
+                        <span class="step-pill">CINEMATICS</span>
+                    </div>
+
+
+
+                </div>
+
+                <h1 class="text-6xl font-black tracking-tight mb-4">
+                    Full Stack <span class="accent-text">Knowledge Base</span>
+                </h1>
+
+                <p class="opacity-60 max-w-3xl text-xl leading-relaxed">
+                    Integrated study of Data Transmission,
+                    Programming Structures, and Digital Filmmaking. Grade 6 Core Revision.
+                </p>
+            </header>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN: IMPORTANT NOTES -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Section 1: Networking & The DNS Loop -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 01: Data Transmission Logic</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-purple-500/5 rounded-xl border border-purple-500/20">
+                            <h4 class="text-sm font-bold accent-text mb-2 uppercase">Website vs. Email: The HOTS
+                                Comparison</h4>
+                            <p class="text-xs opacity-70 leading-relaxed">
+                                Both rely on <strong>IP Addresses</strong> and <strong>Routers</strong> to guide data.
+                                However, visiting a website is a "Pull" request (you ask the server to show you its
+                                content), whereas Email is a "Push" message through special servers to a private inbox.
+                            </p>
+                        </div>
+                        <div class="code-block">
+                            <div class="text-purple-400 mb-2">// DNS & Packet Protocol</div>
+                            <div>1. <span class="text-yellow-400">DNS:</span> Resolves website name to IP Address.</div>
+                            <div>2. <span class="text-yellow-400">Packets:</span> Data is broken into small pieces for
+                                speed.</div>
+                            <div>3. <span class="text-yellow-400">Routing:</span> Routers direct packets via the fastest
+                                "clean" path.</div>
+                            <div>4. <span class="text-yellow-400">Assembly:</span> Receiver reorders packets using
+                                sequence numbers.</div>
+                        </div>
+                        <p class="text-xs italic opacity-50">Note: We use sequence numbers because packets take
+                            different paths to avoid digital traffic jams.</p>
+                    </div>
+                </section>
+
+                <!-- Section 2: Programming - The Power of Loops -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 02: Computational Efficiency</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Loop Structures</h4>
+                            <div class="space-y-4">
+                                <div class="p-3 bg-white/5 rounded">
+                                    <span class="text-blue-400 text-xs font-bold">for loop:</span>
+                                    <p class="text-[11px] opacity-60">Repeats a specific number of times. Perfect for
+                                        drawing shapes (e.g., 4 sides of a square).</p>
+                                </div>
+                                <div class="p-3 bg-white/5 rounded">
+                                    <span class="text-emerald-400 text-xs font-bold">while loop:</span>
+                                    <p class="text-[11px] opacity-60">Continues as long as a condition is <code
+                                            class="bg-black px-1 text-emerald-400">True</code>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-sm font-bold border-b border-white/10 pb-2">Python Syntax & Indentation</h4>
+                            <p class="text-xs opacity-60 italic">"Why does the space at the start of a line matter?"</p>
+                            <p class="text-[11px] opacity-70"><strong>Indentation</strong> tells Python which code
+                                belongs inside the loop. Without correct syntax and spacing, the program won't know when
+                                to stop or what to repeat.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-blue-500/5 border border-blue-500/20 rounded-xl text-xs">
+                        <strong>HOTS:</strong> Loops simplify tasks by reducing repetitive commands into a single set of
+                        instructions, making code shorter, cleaner, and less prone to errors.
+                    </div>
+                </section>
+
+                <!-- Section 3: Filmmaking & Programming Crossover -->
+                <section class="glass p-8 space-y-6">
+                    <div class="section-header">
+                        <h3 class="text-2xl font-bold italic">Module 03: Art & Technology</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex-1 min-w-[250px] p-4 bg-white/5 rounded-xl">
+                                <h4 class="text-xs font-bold accent-text mb-2">THE 5-STEP PROCESS</h4>
+                                <ol class="text-[11px] space-y-2 opacity-80 list-decimal pl-4">
+                                    <li><strong>Idea:</strong> Choosing the story.</li>
+                                    <li><strong>Planning:</strong> Storyboarding the scenes.</li>
+                                    <li><strong>Recording:</strong> Filming the action.</li>
+                                    <li><strong>Editing:</strong> Refining the flow (Finalizing).</li>
+                                    <li><strong>Finishing:</strong> Adding music/SFX.</li>
+                                </ol>
+                            </div>
+                            <div
+                                class="flex-1 min-w-[250px] p-4 bg-purple-500/10 rounded-xl border border-purple-500/20">
+                                <h4 class="text-xs font-bold accent-text mb-2">PROGRAMMING IN FILM</h4>
+                                <p class="text-[11px] opacity-70 leading-relaxed">
+                                    Programming is the engine behind <strong>Animations</strong> and <strong>Special
+                                        Effects</strong>. Code moves characters, generates realistic graphics, and
+                                    triggers sound effects in modern cinema.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: VOCABULARY / GLOSSARY -->
+            <div class="space-y-6">
+                <section class="glass p-6 sticky top-28">
+                    <h4
+                        class="developer-font text-xs font-black uppercase accent-text mb-6 border-b border-white/10 pb-2 tracking-widest flex justify-between items-center">
+                        Knowledge Glossary <i class="fas fa-book-open"></i>
+                    </h4>
+                    <div id="glossary-list" class="space-y-5">
+                        <!-- Content via Script -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Add - Starts -->
+
+        <!-- ]آٍ -->
+        <div class="card-theme p-4 text-sm">
+            <b>DNS Example:</b><br>
+            google.com ➜ 142.250.183.110<br>
+            DNS works like a phonebook for the Internet.
+        </div>
+
+        <!-- NETWORK DIAGRAM -->
+        <div class="card-theme p-6 space-y-6 mt-6">
+
+            <h4 class="font-bold text-lg">🌐 How The Internet Works (Live Simulation)</h4>
+
+            <div class="flex items-center justify-between text-center text-xs font-semibold">
+
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-blue-500 text-white rounded-xl flex items-center justify-center shadow-lg">
+                        💻
+                    </div>
+                    <p class="mt-2">Your Device</p>
+                    <p class="text-[10px] opacity-60">IP: 192.168.1.5</p>
+                </div>
+
+                <div class="flex-1 relative h-6 mx-2">
+                    <div id="packetA"
+                        class="absolute top-0 left-0 w-5 h-5 bg-indigo-600 text-white text-[10px] flex items-center justify-center rounded hidden">
+                        1
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 bg-purple-500 text-white rounded-xl flex items-center justify-center shadow-lg">
+                        📡
+                    </div>
+                    <p class="mt-2">Router</p>
+                </div>
+
+                <div class="flex-1 relative h-6 mx-2">
+                    <div id="packetB"
+                        class="absolute top-0 left-0 w-5 h-5 bg-indigo-600 text-white text-[10px] flex items-center justify-center rounded hidden">
+                        2
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 bg-green-600 text-white rounded-xl flex items-center justify-center shadow-lg">
+                        🏢
+                    </div>
+                    <p class="mt-2">Server</p>
+                    <p class="text-[10px] opacity-60">IP: 142.250.183.110</p>
+                </div>
+
+            </div>
+
+            <div id="networkExplanation" class="card-theme p-4 text-sm">
+                Click "Start Simulation" to see how packets travel!
+            </div>
+
+            <button onclick="startNetworkSimulation()"
+                class="w-full py-3 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700">
+                Start Simulation
+            </button>
+
+        </div>
+
+        <!-- QUIZ -->
+        <div class="card-theme p-8 mt-10">
+
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold">🎓 Grade 6 Final Knowledge Assessment</h2>
+
+                <!-- Toggle Button -->
+                <button onclick="toggleQuiz()" id="toggleBtn"
+                    class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-semibold">
+                    Hide Quiz 🔼
+                </button>
+            </div>
+
+            <div id="quizWrapper" class="mt-6">
+
+                <!-- Questions will render here -->
+                <div id="fullQuiz" class="space-y-6 text-sm"></div>
+
+                <!-- Backgrouund Ke Liye Accent-Color Change Karna hai -->
+                <!-- Submit Button -->
+                <button onclick="gradeQuiz()" class="mt-8 w-full py-4 bg-indigo-600 text-white rounded-xl font-bold">
+                    Submit Final Assessment
+                </button>
+
+                <!-- Result -->
+                <div id="quizResult" class="mt-6 text-center text-lg font-bold"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Add - Ends -->
+
+        <!-- FOOTER BLOCKS: KEY DEFINITIONS -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass p-6 border-l-4 border-purple-500 bg-purple-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">UI vs UX</h5>
+                <p class="text-[10px] opacity-60"><strong>UI</strong> is the visual buttons/text. <strong>UX</strong> is
+                    how easy and enjoyable the experience is.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-blue-500 bg-blue-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Data Packets</h5>
+                <p class="text-[10px] opacity-60">Small pieces of data sent over the net. Resent if lost to complete the
+                    message.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-emerald-500 bg-emerald-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Debugging Logic</h5>
+                <p class="text-[10px] opacity-60">Finding/fixing bugs helps you think step-by-step and stay calm—useful
+                    in sports, school, and life.</p>
+            </div>
+            <div class="glass p-6 border-l-4 border-yellow-500 bg-yellow-500/5">
+                <h5 class="font-black text-xs uppercase mb-2">Cloud Storage</h5>
+                <p class="text-[10px] opacity-60">A service that lets you store files online and access them from any
+                    device anywhere.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-[10px] tracking-[0.4em]">
+        USHIVERSE TERMINAL // LEVEL 06 DEPLOYMENT // SYSTEM STABLE
+    </footer>
+
+    <script>
+        const glossaryData = [
+            { t: "DNS", d: "Domain Name System: Finds the IP address of a website name." },
+            { t: "Router", d: "A device that directs data between devices on a network." },
+            { t: "IP Address", d: "A unique number identifying each device on the Internet." },
+            { t: "Data Transmission", d: "The process of sending data from one device to another." },
+            { t: "Loop", d: "A programming structure that repeats set instructions." },
+            { t: "Indentation", d: "Space at the start of code indicating a block structure." },
+            { t: "Syntax", d: "Rules defining how code must be written." },
+            { t: "Graphics", d: "Pictures or designs created on a computer screen." },
+            { t: "Storyboard", d: "A visual plan showing scenes for a movie." },
+            { t: "Editing", d: "Modifying scenes to create the final video flow." }
+        ];
+
+        const container = document.getElementById('glossary-list');
+        container.innerHTML = glossaryData.map(item => `
+            <div class="group border-l-2 border-transparent hover:border-purple-500 pl-3 transition-all">
+                <div class="text-[11px] font-black accent-text uppercase tracking-widest group-hover:text-white transition-colors">${item.t}</div>
+                <div class="text-[10px] opacity-50 mt-1 leading-relaxed group-hover:opacity-100 transition-opacity">${item.d}</div>
+            </div>
+        `).join('');
+    </script>
+
+    <!-- SCRIPT -->
+    <script src="./assets/js/theme.js"></script>
+
+    <script>
+        const questions = [
+
+            { q: "1. What is UI?", a: "b", o: ["Internet speed", "Visual elements like buttons", "Server storage"] },
+            { q: "2. What is UX?", a: "c", o: ["Programming code", "Design color", "User experience of app"] },
+            { q: "3. Router does what?", a: "a", o: ["Directs data", "Stores files", "Blocks users"] },
+            { q: "4. DNS finds?", a: "b", o: ["Password", "IP from website name", "WiFi speed"] },
+            { q: "5. Server is?", a: "a", o: ["Stores & sends data", "Loop", "Cable"] },
+            { q: "6. IP address is?", a: "c", o: ["Design layout", "App name", "Unique number of device"] },
+            { q: "7. Email & Website similarity?", a: "a", o: ["Both use servers", "Both public", "Both games"] },
+            { q: "8. Email is?", a: "b", o: ["Public page", "Private message", "Search engine"] },
+            { q: "9. Website is?", a: "c", o: ["Private chat", "Bug", "Public page"] },
+            { q: "10. Data packets are?", a: "a", o: ["Small pieces of data", "Big files", "Routers"] },
+
+            { q: "11. Why number packets?", a: "b", o: ["Decoration", "Reorder correctly", "Slow internet"] },
+            { q: "12. If packet lost?", a: "a", o: ["Resent", "Deleted forever", "Router breaks"] },
+            { q: "13. Data transmission means?", a: "c", o: ["Editing", "Drawing", "Sending data"] },
+            { q: "14. Cloud storage is?", a: "b", o: ["Weather", "Online storage", "Cable"] },
+            { q: "15. Packets travel?", a: "a", o: ["Different paths", "One road only", "Offline"] },
+            { q: "16. Graphics are?", a: "c", o: ["Router", "Loop", "Computer images"] },
+            { q: "17. Loop means?", a: "a", o: ["Repeat instructions", "Bug", "Server"] },
+            { q: "18. For loop repeats?", a: "b", o: ["Forever", "Specific number", "Never"] },
+            { q: "19. While loop runs?", a: "c", o: ["Once", "Fixed times", "While condition true"] },
+            { q: "20. Indentation shows?", a: "a", o: ["Block structure", "Font", "Error"] },
+
+            { q: "21. Syntax means?", a: "b", o: ["Decoration", "Rules of code", "Music"] },
+            { q: "22. range(4) means?", a: "c", o: ["Infinite", "IP", "0 to 3"] },
+            { q: "23. Bug is?", a: "a", o: ["Coding error", "Insect", "Loop"] },
+            { q: "24. Debugging is?", a: "b", o: ["Deleting code", "Finding & fixing errors", "Gaming"] },
+            { q: "25. Debugging builds?", a: "c", o: ["Speed", "Music", "Problem solving"] },
+            { q: "26. Storyboard is?", a: "a", o: ["Visual plan", "Music file", "Cable"] },
+            { q: "27. Editing means?", a: "b", o: ["Drawing", "Arrange scenes", "Delete movie"] },
+            { q: "28. Finalizing adds?", a: "c", o: ["Bug", "Loop", "Music & effects"] },
+            { q: "29. Filmmaking combines?", a: "a", o: ["Art & technology", "Sports", "DNS"] },
+            { q: "30. Programming in movies helps?", a: "b", o: ["Slow internet", "Animations & effects", "Delete scenes"] },
+
+            { q: "31. Five filmmaking steps start with?", a: "c", o: ["Editing", "Debugging", "Idea"] },
+            { q: "32. Router directs?", a: "a", o: ["Data between devices", "Passwords", "Loops"] },
+            { q: "33. Server stores?", a: "b", o: ["Games", "Website data", "Router cables"] },
+            { q: "34. IP works like?", a: "c", o: ["Font", "Button", "Home address"] },
+            { q: "35. Packets help internet be?", a: "a", o: ["Fast & reliable", "Slow", "Offline"] },
+            { q: "36. Loop reduces?", a: "b", o: ["Speed", "Repetition", "Design"] },
+            { q: "37. Without loops code is?", a: "c", o: ["Short", "Clean", "Long & repetitive"] },
+            { q: "38. While loop stops when?", a: "a", o: ["Condition false", "Router breaks", "Music ends"] },
+            { q: "39. For loop uses?", a: "b", o: ["Server", "range()", "DNS"] },
+            { q: "40. Indentation error causes?", a: "c", o: ["Music", "Design", "Syntax error"] },
+
+            { q: "41. Debugging outside coding helps?", a: "a", o: ["Think calmly", "Delete data", "Break system"] },
+            { q: "42. Editing improves?", a: "b", o: ["Router", "Flow of movie", "IP address"] },
+            { q: "43. Cloud allows access from?", a: "c", o: ["One PC", "Router only", "Any device"] },
+            { q: "44. DNS is like?", a: "a", o: ["Phonebook", "Loop", "Bug"] },
+            { q: "45. Website request goes to?", a: "b", o: ["User", "Server", "Router only"] },
+            { q: "46. Email uses?", a: "c", o: ["Public server", "Game server", "Mail server"] },
+            { q: "47. Packets reassembled by?", a: "a", o: ["Numbers", "Colors", "Router speed"] },
+            { q: "48. Loops make code?", a: "b", o: ["Long", "Short & efficient", "Broken"] },
+            { q: "49. Syntax important because?", a: "c", o: ["Decoration", "Music", "Rules must be followed"] },
+            { q: "50. Technology in movies helps?", a: "a", o: ["Create graphics", "Delete story", "Block scenes"] },
+
+            // Add Starts 
+            
+            {
+                q: "51. A programming structure that repeats instructions is called a ______.",
+                o: ["Loop", "Server", "Router"],
+                a: 0
+            },
+            {
+                q: "52. What is UX?",
+                o: ["Programming code", "Design color", "User experience of app"],
+                a: 2
+            },
+            {
+                q: "53. A device that directs data between networks is called a ______.",
+                o: ["Server", "Router", "Loop"],
+                a: 1
+            },
+            {
+                q: "54. What makes quiz games interesting?",
+                o: ["No rules", "Goals and challenges", "Only pictures"],
+                a: 1
+            },
+            {
+                q: "55. A coding error in a program is called a ______.",
+                o: ["Bug", "Loop", "Packet"],
+                a: 0
+            },
+            {
+                q: "56. DNS finds?",
+                o: ["Password", "IP from website name", "WiFi speed"],
+                a: 1
+            },
+            {
+                q: "57. A visual plan of movie scenes is known as a ______.",
+                o: ["Storyboard", "Loop", "Router"],
+                a: 0
+            },
+            {
+                q: "58. What does a server do?",
+                o: ["Deletes data", "Stores and sends information", "Breaks networks"],
+                a: 1
+            },
+            {
+                q: "59. IP address is?",
+                o: ["Design layout", "App name", "Unique number of device"],
+                a: 2
+            },
+            {
+                q: "60. The process of fixing coding errors is called ______.",
+                o: ["Debugging", "Editing", "Rendering"],
+                a: 0
+            },
+            {
+                q: "61. For loop repeats?",
+                o: ["Forever", "Specific number", "Never"],
+                a: 1
+            },
+            {
+                q: "62. While loop runs?",
+                o: ["Once", "Fixed times", "While condition true"],
+                a: 2
+            },
+            {
+                q: "63. Indentation shows?",
+                o: ["Block structure", "Font style", "Internet speed"],
+                a: 0
+            },
+            {
+                q: "64. Cloud storage is?",
+                o: ["Weather system", "Online storage", "Cable"],
+                a: 1
+            },
+            {
+                q: "65. Data packets are?",
+                o: ["Small pieces of data", "Big files", "Routers"],
+                a: 0
+            },
+            {
+                q: "66. Packets travel through the internet using?",
+                o: ["Different paths", "One road only", "Offline mode"],
+                a: 0
+            },
+            {
+                q: "67. range(4) means?",
+                o: ["Infinite", "IP address", "0 to 3"],
+                a: 2
+            },
+            {
+                q: "68. Editing in filmmaking means?",
+                o: ["Drawing scenes", "Arrange scenes", "Delete movie"],
+                a: 1
+            },
+            {
+                q: "69. Without loops, code becomes?",
+                o: ["Short", "Clean", "Long & repetitive"],
+                a: 2
+            },
+            {
+                q: "70. What is UI?",
+                o: ["Internet speed", "Visual elements like buttons", "Server storage"],
+                a: 1
+            },
+            {
+                q: "71. Website request goes to?",
+                o: ["User", "Server", "Router only"],
+                a: 1
+            },
+            {
+                q: "72. DNS is like a?",
+                o: ["Phonebook", "Loop", "Bug"],
+                a: 0
+            },
+            {
+                q: "73. Why number packets?",
+                o: ["Decoration", "Reorder correctly", "Slow internet"],
+                a: 1
+            },
+            {
+                q: "74. If packet lost?",
+                o: ["Resent", "Deleted forever", "Router breaks"],
+                a: 0
+            },
+            {
+                q: "75. What helps servers know where to send data?",
+                o: ["Password", "IP address", "Mouse"],
+                a: 1
+            },
+            {
+                q: "76. Programming in movies helps?",
+                o: ["Slow internet", "Animations & effects", "Delete scenes"],
+                a: 1
+            },
+            {
+                q: "77. Technology in movies helps?",
+                o: ["Create graphics", "Delete story", "Block scenes"],
+                a: 0
+            },
+            {
+                q: "78. Router directs?",
+                o: ["Data between devices", "Passwords", "Loops"],
+                a: 0
+            },
+            {
+                q: "79. Packets reassembled by?",
+                o: ["Numbers", "Colors", "Router speed"],
+                a: 0
+            },
+            {
+                q: "80. Syntax means?",
+                o: ["Decoration", "Rules of code", "Music"],
+                a: 1
+            },
+            {
+                q: "81. Why is planning important before coding a quiz game?",
+                o: ["To waste time", "To organize rules and goals", "To add bugs"],
+                a: 1
+            },
+            {
+                q: "82. Server stores?",
+                o: ["Games", "Website data", "Router cables"],
+                a: 1
+            },
+            {
+                q: "83. Five filmmaking steps start with?",
+                o: ["Editing", "Debugging", "Idea"],
+                a: 2
+            },
+            {
+                q: "84. Loops make code?",
+                o: ["Long", "Short & efficient", "Broken"],
+                a: 1
+            },
+            {
+                q: "85. Syntax important because?",
+                o: ["Decoration", "Music", "Rules must be followed"],
+                a: 2
+            },
+            {
+                q: "86. Cloud allows access from?",
+                o: ["One PC", "Router only", "Any device"],
+                a: 2
+            },
+            {
+                q: "87. What makes a project interactive?",
+                o: ["It reacts to user actions", "It has no events", "Only text"],
+                a: 0
+            },
+            {
+                q: "88. Email & Website similarity?",
+                o: ["Both use servers", "Both public", "Both games"],
+                a: 0
+            },
+            {
+                q: "89. Data transmission means?",
+                o: ["Editing", "Drawing", "Sending data"],
+                a: 2
+            },
+            {
+                q: "90. For loop uses?",
+                o: ["Server", "range()", "DNS"],
+                a: 1
+            }
+
+            // Add Ends
+        ];
+
+
+        /* ===============================
+        AUTO RENDER QUESTIONS
+        =============================== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const container = document.getElementById("fullQuiz");
+
+            questions.forEach((item, index) => {
+
+                const div = document.createElement("div");
+                div.className = "card-theme p-4 mb-4 p-4 rounded-xl";
+
+                div.innerHTML = `
+            <p class="font-semibold dark:text-white">${item.q}</p>
+            ${item.o.map((opt, i) => {
+                    const letter = String.fromCharCode(97 + i);
+                    return `
+                <label class="block mt-1 cursor-pointer dark:text-slate-200">
+                    <input type="radio" name="q${index}" value="${letter}" class="mr-2">
+                    ${opt}
+                </label>
+                `;
+                }).join("")}
+        `;
+
+                container.appendChild(div);
+
+            });
+
+        });
+
+
+        /* ===============================
+        GRADING LOGIC
+        =============================== */
+
+        function gradeQuiz() {
+
+            let score = 0;
+
+            questions.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && selected.value === item.a) {
+                    score++;
+                }
+            });
+
+            let grade = "", color = "", message = "";
+
+            if (score >= 45) { grade = "A+"; color = "text-green-600"; message = "Outstanding Mastery 🚀"; }
+            else if (score >= 40) { grade = "A"; color = "text-green-500"; message = "Excellent 🎯"; }
+            else if (score >= 32) { grade = "B"; color = "text-blue-500"; message = "Very Good 👍"; }
+            else if (score >= 25) { grade = "C"; color = "text-yellow-500"; message = "Keep Practicing 💡"; }
+            else { grade = "D"; color = "text-red-500"; message = "Revise Again 📘"; }
+
+            const result = document.getElementById("quizResult");
+            result.className = "mt-6 text-center text-lg font-bold " + color;
+            result.innerHTML = `
+        Score: ${score}/50 <br>
+        Grade: ${grade} <br>
+        ${message}
+    `;
+        }
+
+
+        /* ===============================
+        TOGGLE SHOW / HIDE
+        =============================== */
+
+        function toggleQuiz() {
+
+            const wrapper = document.getElementById("quizWrapper");
+            const btn = document.getElementById("toggleBtn");
+
+            wrapper.classList.toggle("hidden");
+
+            if (wrapper.classList.contains("hidden")) {
+                btn.innerHTML = "Show Quiz 🔽";
+            } else {
+                btn.innerHTML = "Hide Quiz 🔼";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

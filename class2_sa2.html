@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UshiVerse - Class 2 SA-2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="USMAN Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/themes.css">
+</head>
+
+<body class="pt-28 pb-12 px-4">
+
+    <!-- Header Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto glass px-6 py-3 flex items-center justify-between shadow-xl">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+                    U</div>
+                <span class="text-xl font-bold tracking-tighter developer-font">UshiVerse<span
+                        class="text-[var(--primary)]">.edu</span></span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-[var(--primary)] transition">Dashboard</a>
+                <a href="about.html" class="hover:text-[var(--primary)] transition">About</a>
+                <a href="contact.html" class="hover:text-[var(--primary)] transition">Contact</a>
+                <a href="check.html" class="hover:text-[var(--primary)] transition">Check</a>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="themeToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button id="settingsToggle"
+                    class="glass p-2 w-10 h-10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COLOR PANEL -->
+    <div id="themePanel" class="fixed top-20 right-6 glass p-4 hidden flex gap-3 z-50">
+        <div class="theme-dot bg-blue-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#3b82f6"></div>
+        <div class="theme-dot bg-pink-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ec4899"></div>
+        <div class="theme-dot bg-emerald-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#10b981"></div>
+        <div class="theme-dot bg-purple-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#a855f7"></div>
+        <div class="theme-dot bg-orange-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#f97316"></div>
+        <div class="theme-dot bg-red-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#ef4444"></div>
+        <div class="theme-dot bg-yellow-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#eab308"></div>
+        <div class="theme-dot bg-teal-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#14b8a6"></div>
+        <div class="theme-dot bg-indigo-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#6366f1"></div>
+        <div class="theme-dot bg-cyan-500 w-6 h-6 rounded-full cursor-pointer" data-theme="#06b6d4"></div>
+    </div>
+
+    <main class="max-w-6xl mx-auto space-y-8">
+        <a href="index.html" class="flex items-center gap-2 opacity-50 hover:opacity-100 transition text-sm">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </a>
+
+        <div class="glass p-8">
+            <header class="mb-10">
+                <div class="text-xs font-bold uppercase tracking-widest accent-text">Academic Module • Grade 2</div>
+                <h1 class="text-4xl font-black mt-2">Summative Assessment 2: Computer Science</h1>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <h4 class="developer-font text-xs uppercase font-bold accent-text border-b border-white/10 pb-2">
+                        Core Study Topics</h4>
+
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 font-bold text-lg"><i class="fas fa-bolt accent-text"></i>
+                            Events & Trigger Logic</div>
+                        <p class="text-sm opacity-80 leading-relaxed">Events are signals or triggers that make something
+                            happen.</p>
+                        <div class="glass bg-white/5 p-4 rounded-xl border-dashed border border-white/10">
+                            <p class="text-xs font-mono mb-2 accent-text">// ScratchJr Logic Example</p>
+                            <div class="flex gap-2">
+                                <div class="bg-yellow-500 text-black px-2 py-1 text-[10px] rounded font-bold">Green Flag
+                                </div>
+                                <i class="fas fa-arrow-right mt-1 opacity-50"></i>
+                                <div class="bg-blue-500 text-white px-2 py-1 text-[10px] rounded font-bold">Move Right
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 font-bold text-lg"><i
+                                class="fas fa-shield-alt accent-text"></i> Online Safety & Footprints</div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="glass bg-green-500/10 p-3 rounded-lg border border-green-500/20">
+                                <span class="text-xs font-bold text-green-400">GOOD FOOTPRINT</span>
+                                <p class="text-[11px] opacity-70 mt-1">Being kind and sharing safely.</p>
+                            </div>
+                            <div class="glass bg-red-500/10 p-3 rounded-lg border border-red-500/20">
+                                <span class="text-xs font-bold text-red-400">BAD FOOTPRINT</span>
+                                <p class="text-[11px] opacity-70 mt-1">Sharing personal info.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="space-y-4">
+                        <div class="flex items-center gap-2 font-bold text-lg"><i class="fas fa-tools accent-text"></i>
+                            The Debugging Process</div>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="step-node">
+                                <div class="step-circle"></div><span
+                                    class="text-xs font-bold uppercase accent-text">Step 1: Find</span>
+                                <p class="text-sm opacity-80">Identify the error.</p>
+                            </div>
+                            <div class="step-node">
+                                <div class="step-circle"></div><span
+                                    class="text-xs font-bold uppercase accent-text">Step 2: Fix</span>
+                                <p class="text-sm opacity-80">Correct the mistake.</p>
+                            </div>
+                            <div class="step-node">
+                                <div class="step-circle"></div><span
+                                    class="text-xs font-bold uppercase accent-text">Step 3: Test</span>
+                                <p class="text-sm opacity-80">Check if it's working.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="developer-font text-xs uppercase font-bold accent-text border-b border-white/10 pb-2">
+                        Technical Glossary</h4>
+
+                    <div id="glossary-container" class="grid grid-cols-1 gap-3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-white/5 space-y-4">
+                <h4 class="developer-font text-xs uppercase font-bold accent-text text-center mb-6">Block-Based
+                    Fundamentals</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="glass p-5 border-l-4 border-blue-500 bg-blue-500/5">
+                        <h5 class="font-bold mb-3 text-sm flex items-center gap-2"><i class="fas fa-desktop"></i>
+                            Hardware</h5>
+                        <ul class="text-[10px] opacity-70 space-y-1 font-bold uppercase tracking-tight">
+                            <li>CPU: Brain of the computer</li>
+                            <li>Monitor: Shows pictures</li>
+                        </ul>
+                    </div>
+                    <div class="glass p-5 border-l-4 border-emerald-500 bg-emerald-500/5">
+                        <h5 class="font-bold mb-3 text-sm flex items-center gap-2"><i class="fas fa-code"></i> Code</h5>
+                        <ul class="text-[10px] opacity-70 space-y-1 font-bold uppercase tracking-tight">
+                            <li>Code: Instructions</li>
+                            <li>Sequencing: Steps in order</li>
+                        </ul>
+                    </div>
+                    <div class="glass p-5 border-l-4 border-purple-500 bg-purple-500/5">
+                        <h5 class="font-bold mb-3 text-sm flex items-center gap-2"><i class="fas fa-redo"></i> Loops
+                        </h5>
+                        <ul class="text-[10px] opacity-70 space-y-1 font-bold uppercase tracking-tight">
+                            <li>Pattern: Repeats</li>
+                            <li>Loop: Repeat actions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Starts  -->
+
+        <div id="grade2Container" style="max-width:1000px;margin:40px auto;font-family:Arial;">
+
+            <h2 class="accent-text" style="text-align:center;">Grade 2 SA-2 Important Topics</h2>
+
+            <!-- Learning Section -->
+            <div id="learningSection"></div>
+
+            <!-- Password Animation -->
+            <div id="passwordDemo" style="margin-top:40px;"></div>
+
+            <!-- Network Demo -->
+            <div id="networkDemo" style="margin-top:40px;"></div>
+
+            <!-- Quiz Toggle -->
+            <div style="text-align:center;margin-top:40px;">
+                <button onclick="toggleQuiz2()" class="submit-btn bg-primary accent-text">Show Quiz</button>
+            </div>
+
+            <div id="quizWrapper2" style="display:none;margin-top:30px;">
+                <div id="quizSection2"></div>
+                <div id="resultBox2"></div>
+            </div>
+
+        </div>
+
+        <!-- Add Ends -->
+    </main>
+
+    <footer class="mt-20 py-10 opacity-30 text-center developer-font text-xs tracking-widest">
+        SYSTEM DEPLOYMENT V3.0 // GRADE 2 ACADEMIC REPOSITORY
+    </footer>
+
+    <script>
+        const vocabData = [
+            { t: "Distracted", d: "To stop paying attention to something." },
+            { t: "Bug / Error", d: "A problem or mistake in a code." },
+            { t: "Debug", d: "The process of finding and fixing mistakes." },
+            { t: "Digital Footprints", d: "Marks that show where you've been on the internet." },
+            { t: "Personal Info", d: "Special info like your full name or address." },
+            { t: "Event", d: "Something that happens that triggers an action." },
+            { t: "Command", d: "An instruction to make something happen." },
+            { t: "Sequencing", d: "Putting steps in the right order." }
+        ];
+
+        const container = document.getElementById('glossary-container');
+
+        container.innerHTML = vocabData.map(item => `
+            <div class="glass bg-white/5 p-4 rounded-xl group hover:border-blue-500 transition-all">
+                <div class="flex justify-between items-center">
+                    <span class="font-bold accent-text uppercase text-xs tracking-widest">${item.t}</span>
+                    <i class="fas fa-info-circle opacity-20 group-hover:opacity-100 transition"></i>
+                </div>
+                <p class="text-sm opacity-70 mt-1 leading-relaxed">${item.d}</p>
+            </div>
+        `).join('');
+    </script>
+
+    <!-- SCRIPT -->
+    <script src="./assets/js/theme.js"></script>
+
+
+    <script>
+
+        /* ===============================
+           GRADE 2 - 30 QUESTIONS
+        ================================ */
+
+        const questions2 = [
+
+            { q: "Information helps us ______.", options: ["Sleep", "Learn and decide", "Break things", "Hide"], answer: 1 },
+            { q: "A survey helps us ______.", options: ["Collect data", "Play games", "Draw pictures", "Delete files"], answer: 0 },
+            { q: "An event is a ______.", options: ["Signal", "Bug", "Mouse", "Screen"], answer: 0 },
+            { q: "Without events ______.", options: ["Everything works", "Nothing happens", "Games improve", "Lights blink"], answer: 1 },
+            { q: "Online safety is for your ______.", options: ["Fun", "Protection", "Noise", "Speed"], answer: 1 },
+            { q: "Never share your ______.", options: ["Password", "Smile", "Book", "Game"], answer: 0 },
+            { q: "A digital footprint is what we leave ______.", options: ["At school", "Online", "On paper", "At park"], answer: 1 },
+            { q: "Debugging means ______.", options: ["Finding mistakes", "Drawing", "Sleeping", "Playing"], answer: 0 },
+            { q: "First step in debugging is ______.", options: ["Find problem", "Delete code", "Sleep", "Ignore"], answer: 0 },
+            { q: "Monitor shows ______.", options: ["Output", "Sound only", "Nothing", "Cables"], answer: 0 },
+            { q: "CPU is the ______ of computer.", options: ["Screen", "Brain", "Mouse", "Cable"], answer: 1 },
+            { q: "Keyboard is used for ______.", options: ["Typing", "Sleeping", "Drawing", "Running"], answer: 0 },
+            { q: "Mouse is used for ______.", options: ["Typing", "Clicking", "Printing", "Saving"], answer: 1 },
+            { q: "Computer network connects computers to ______.", options: ["Share info", "Sleep", "Crash", "Paint"], answer: 0 },
+            { q: "Router directs messages to ______.", options: ["Correct computer", "Wrong place", "Game", "Teacher"], answer: 0 },
+            { q: "Wi-Fi connects without ______.", options: ["Books", "Cables", "Screen", "Keyboard"], answer: 1 },
+            { q: "Code is a set of ______.", options: ["Instructions", "Mistakes", "Games", "Pictures"], answer: 0 },
+            { q: "Sequencing means putting steps in ______ order.", options: ["Wrong", "Right", "Random", "Colorful"], answer: 1 },
+            { q: "Pattern means something that ______.", options: ["Repeats", "Stops", "Crashes", "Sleeps"], answer: 0 },
+            { q: "Loop repeats an ______.", options: ["Action", "Bug", "Cable", "Error"], answer: 0 },
+            { q: "A good digital footprint is when we are ______.", options: ["Kind", "Mean", "Rude", "Careless"], answer: 0 },
+            { q: "Personal information includes your ______.", options: ["Name", "Favorite color only", "Toy", "Cartoon"], answer: 0 },
+            { q: "Tell an adult if you feel ______ online.", options: ["Unsafe", "Happy", "Hungry", "Sleepy"], answer: 0 },
+            { q: "Bug means a ______ in code.", options: ["Problem", "Game", "Mouse", "Picture"], answer: 0 },
+            { q: "Digital means using ______.", options: ["Devices", "Paper", "Chalk", "Board"], answer: 0 },
+            { q: "Online means using a ______.", options: ["Computer or phone", "Book", "Chair", "Fan"], answer: 0 },
+            { q: "Game design includes planning ______.", options: ["Scenes", "Mistakes", "Cables", "Errors"], answer: 0 },
+            { q: "Three game scenes are ______.", options: ["Intro, Game, End", "Start only", "Middle only", "End only"], answer: 0 },
+            { q: "Emotion means ______.", options: ["How we feel", "Code", "Mouse", "WiFi"], answer: 0 },
+            { q: "When distracted we stop ______.", options: ["Paying attention", "Running", "Typing", "Sleeping"], answer: 0 },
+
+            // Starts 
+      
+            { q: "Online safety is for our __________.", options: ["Protection", "Game", "Homework", "Drawing"], answer: 0 },
+
+            { q: "A secret word to keep information safe is called a __________.", options: ["Password", "Bug", "Sprite", "Pattern"], answer: 0 },
+
+            { q: "We should never share our __________ online.", options: ["Password", "Shoes", "Books", "Pencil"], answer: 0 },
+
+            { q: "A digital footprint is what we leave behind __________.", options: ["Online", "At home", "In school bag", "On paper"], answer: 0 },
+
+            { q: "A good digital footprint means being __________ and careful.", options: ["Respectful", "Angry", "Careless", "Lazy"], answer: 0 },
+
+            { q: "An __________ is something that triggers an action.", options: ["Event", "Bug", "Loop", "Backdrop"], answer: 0 },
+
+            { q: "A __________ is a sign that something will happen.", options: ["Trigger", "Sprite", "Game", "Sound"], answer: 0 },
+
+            { q: "Clicking the Green Flag is an example of an __________.", options: ["Event", "Pattern", "Bug", "Password"], answer: 0 },
+
+            { q: "Motion blocks help the sprite __________.", options: ["Move", "Sleep", "Hide", "Stop"], answer: 0 },
+
+            { q: "A __________ is a mistake in a code.", options: ["Bug", "Loop", "Event", "Pattern"], answer: 0 },
+
+            { q: "Debugging means finding and __________ mistakes.", options: ["Fixing", "Adding", "Ignoring", "Drawing"], answer: 0 },
+
+            { q: "The first step in debugging is to __________ the problem.", options: ["Find", "Delete", "Hide", "Repeat"], answer: 0 },
+
+            { q: "In game design, we plan different __________.", options: ["Scenes", "Bugs", "Passwords", "Errors"], answer: 0 },
+
+            { q: "The three scenes in our ocean game were Introduction, Game, and __________.", options: ["End", "Bug", "Loop", "Sound"], answer: 0 },
+
+            { q: "A set of instructions that tells a computer what to do is called __________.", options: ["Program", "Bug", "Pattern", "Game"], answer: 0 },
+
+            { q: "Putting steps in the correct order is called __________.", options: ["Sequence", "Password", "Sound", "Bug"], answer: 0 },
+
+            { q: "Feeling upset when something doesn't work is called __________.", options: ["Frustration", "Happiness", "Excitement", "Sleep"], answer: 0 },
+
+            { q: "When we stop paying attention, we feel __________.", options: ["Distracted", "Focused", "Happy", "Calm"], answer: 0 },
+
+            { q: "Special information like your school name is called __________.", options: ["Personal information", "Game level", "Pattern", "Sprite"], answer: 0 },
+
+            { q: "Making good decisions online are called __________.", options: ["Digital responsibility", "Passwords", "Loops", "Scenes"], answer: 0 },
+
+            { q: "If you see a stranger asking for your password, you should:", options: ["Tell them", "Ignore and tell an adult", "Share quickly", "Post it online"], answer: 1 },
+
+            { q: "A traffic light changing color is an example of:", options: ["Bug", "Event", "Password", "Pattern"], answer: 1 },
+
+            { q: "If your sprite does not move, you should:", options: ["Close ScratchJr", "Debug the code", "Delete the sprite", "Change Wi-Fi"], answer: 1 },
+
+            { q: "Which is a good digital footprint?", options: ["Being unkind", "Sharing personal information", "Being respectful online", "Telling passwords"], answer: 2 },
+
+            { q: "The first step in debugging is to:", options: ["Delete everything", "Find the problem", "Add more bugs", "Turn off computer"], answer: 1 },
+
+            { q: "Which feeling means upset because something is not working?", options: ["Happy", "Frustrated", "Calm", "Excited"], answer: 1 },
+
+            { q: "In a game, scenes help us to:", options: ["Make it confusing", "Organize the story clearly", "Add errors", "Stop motion"], answer: 1 },
+
+            { q: "A command is:", options: ["A mistake", "A device", "An instruction to make something happen", "A feeling"], answer: 2 },
+
+            { q: "If mobile games distract you, you should:", options: ["Play more", "Throw the phone", "Take a break", "Share password"], answer: 2 },
+
+            { q: "A loop helps to:", options: ["Stop the program", "Repeat actions", "Delete scenes", "Change password"], answer: 1 },
+
+            { q: "Scene 1 - Introduction: The fish says 'Let's clean the ocean!'. Which block is used?", options: ["Say block", "Stop block", "Repeat block", "Hide block"], answer: 0 },
+
+            { q: "Scene 2 - Game: The diver moves and collects trash. Which blocks are mainly used?", options: ["Motion blocks", "Sound blocks", "Hide blocks", "Stop blocks"], answer: 0 },
+
+            { q: "Scene 3 - End: A message appears 'Great Job! Ocean is Clean!'. Which block is used?", options: ["Say block", "Delete block", "Loop block", "Speed block"], answer: 0 }
+            
+            // Ends
+        ];
+
+
+        /* ===============================
+           QUIZ FUNCTIONS
+        ================================ */
+
+        function toggleQuiz2() {
+
+            const wrapper = document.getElementById("quizWrapper2");
+            const btn = document.querySelector("#grade2Container button");
+
+            if (wrapper.style.display === "none") {
+                wrapper.style.display = "block";
+                btn.innerText = "Hide Quiz";
+                loadQuiz2();
+            } else {
+                wrapper.style.display = "none";
+                btn.innerText = "Show Quiz";
+            }
+
+        }
+
+        function loadQuiz2() {
+
+            let section = document.getElementById("quizSection2");
+            section.innerHTML = "";
+
+            questions2.forEach((item, index) => {
+
+                let card = document.createElement("div");
+                card.style.padding = "15px";
+                card.style.marginBottom = "15px";
+                card.style.border = "1px solid #4f46e5";
+                card.style.borderRadius = "10px";
+
+                let html = `<h4>${index + 1}. ${item.q}</h4>`;
+
+                item.options.forEach((opt, i) => {
+                    html += `
+<label style="display:block;margin:5px 0;">
+<input type="radio" name="q2${index}" value="${i}">
+${opt}
+</label>`;
+                });
+
+                card.innerHTML = html;
+                section.appendChild(card);
+
+            });
+
+            section.innerHTML += `
+<div style="text-align:center;margin-top:20px;">
+<button onclick="gradeQuiz2()" class="submit-btn bg-primary accent-text">Submit</button>
+</div>`;
+        }
+
+        function gradeQuiz2() {
+
+            let score = 0;
+
+            questions2.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="q2${index}"]:checked`);
+                if (selected && parseInt(selected.value) === item.answer) {
+                    score++;
+                }
+            });
+
+            let percent = Math.round((score / questions2.length) * 100);
+            let grade = "";
+
+            if (percent >= 90) grade = "A+ 🌟";
+            else if (percent >= 75) grade = "A";
+            else if (percent >= 60) grade = "B";
+            else grade = "Needs Practice";
+
+            document.getElementById("resultBox2").innerHTML =
+                `<div style="padding:20px;border:2px solid #4f46e5;border-radius:12px;text-align:center;">
+<h3>Score: ${score}/${questions2.length}</h3>
+<h3>${percent}%</h3>
+<h2>${grade}</h2>
+</div>`;
+
+        }
+
+        /* ===============================
+           PASSWORD HACKING DEMO (Educational)
+        ================================ */
+
+        let hackInterval;
+
+        function startHack() {
+
+            let display = document.getElementById("hackText");
+            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let count = 0;
+
+            hackInterval = setInterval(() => {
+                display.innerText = "";
+                for (let i = 0; i < 8; i++) {
+                    display.innerText += chars[Math.floor(Math.random() * chars.length)];
+                }
+                count++;
+                if (count > 15) {
+                    clearInterval(hackInterval);
+                    display.innerText = "PASSWORD CRACKED!";
+                }
+            }, 200);
+        }
+
+        /* ===============================
+           NETWORK WORKING DEMO
+        ================================ */
+
+        function sendData() {
+
+            const msg = document.getElementById("dataBall");
+            const container = document.getElementById("networkLine");
+
+            let maxDistance = container.offsetWidth - 30; // dynamic width
+            msg.style.left = "0px";
+
+            let pos = 0;
+
+            let interval = setInterval(() => {
+                pos += 5;
+                msg.style.left = pos + "px";
+
+                if (pos >= maxDistance) {
+                    clearInterval(interval);
+                }
+
+            }, 15);
+        }
+
+        document.getElementById("passwordDemo").innerHTML = `
+<h3>Password & Encryption Demo</h3>
+
+<p><strong>Decomposition:</strong>
+1️⃣ User creates password  
+2️⃣ System checks strength  
+3️⃣ Weak → Cracked  
+4️⃣ Strong → Encrypted</p>
+
+<p><strong>Encryption:</strong>
+Encryption converts your password into secret code that hackers cannot read.</p>
+
+<input type="text" id="userPassword"
+       placeholder="Enter Password"
+       style="
+       padding:8px;
+       border-radius:6px;
+       border:1px solid var(--accent-color);
+       background:#111827;
+       color:white;
+       transition:0.3s;
+       "
+       onfocus="this.style.boxShadow='0 0 5px var(--accent-color)'"
+       onblur="this.style.boxShadow='none'">
+
+<button onclick="analyzePassword()" 
+        class="submit-btn bg-primary accent-text" 
+        style="margin-left:10px;">
+Check Security
+</button>
+
+<div id="hackText" style="margin-top:15px;font-size:20px;"></div>
+`;
+
+        document.getElementById("networkDemo").innerHTML = `
+<h3>Network Working Demo</h3>
+
+<p><strong>Decomposition:</strong> Sending data is broken into small steps:
+1️⃣ Create message → 2️⃣ Send to Router → 3️⃣ Router forwards → 4️⃣ Reach computer</p>
+
+<p><strong>Chunking:</strong> Big data is divided into small packets (small pieces).</p>
+
+<div id="networkLine" 
+     style="position:relative;height:80px;background:#f3f4f6;
+     border-radius:8px;margin-top:15px;overflow:hidden;">
+
+    <div style="position:absolute;left:10px;top:25px;">💻</div>
+    <div style="position:absolute;left:50%;top:25px;">📡 Router</div>
+    <div style="position:absolute;right:10px;top:25px;">💻</div>
+
+    <div id="dataBall"
+         style="position:absolute;top:30px;left:0px;
+         width:20px;height:20px;
+         background:#4f46e5;border-radius:50%;"></div>
+
+</div>
+
+<button onclick="sendData()" class="submit-btn bg-primary accent-text" 
+        style="margin-top:15px;">Send Data Packet</button>
+`;
+
+        function analyzePassword() {
+
+            let input = document.getElementById("userPassword").value;
+            let result = document.getElementById("hackText");
+
+            if (input.length < 4) {
+                result.innerHTML = "❌ Too Short! Easily Cracked!";
+                return;
+            }
+
+            let onlyLetters = /^[A-Za-z]+$/.test(input);
+            let onlyNumbers = /^[0-9]+$/.test(input);
+            let hasMix = /[A-Za-z]/.test(input) && /[0-9]/.test(input);
+
+            if (input.length == 4 && (onlyLetters || onlyNumbers)) {
+                simulateHack(input);
+            } else if (hasMix && input.length >= 6) {
+                simulateEncryption(input);
+            } else {
+                simulateHack(input);
+            }
+
+        }
+
+        function simulateHack(pass) {
+
+            let display = document.getElementById("hackText");
+            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let count = 0;
+
+            let interval = setInterval(() => {
+                display.innerText = "";
+                for (let i = 0; i < pass.length; i++) {
+                    display.innerText += chars[Math.floor(Math.random() * chars.length)];
+                }
+                count++;
+
+                if (count > 15) {
+                    clearInterval(interval);
+                    display.innerHTML = "🔓 Password Cracked!";
+                }
+            }, 150);
+        }
+
+        function simulateEncryption(pass) {
+
+            let display = document.getElementById("hackText");
+
+            display.innerHTML = "🔐 Encrypting...";
+
+            setTimeout(() => {
+                display.innerHTML =
+                    "🛡 Encrypted & Safe!<br>" +
+                    "<small>Encryption converts your password into secret code.</small>";
+            }, 1500);
+        }
+
+    </script>
+</body>
+
+</html>
