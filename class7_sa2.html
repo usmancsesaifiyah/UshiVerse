@@ -1084,15 +1084,15 @@
 
                 let grade = "", color = "", msg = "";
 
-                if (score >= 27) { grade = "A+"; color = "text-green-600"; msg = "Outstanding 🚀"; }
-                else if (score >= 24) { grade = "A"; color = "text-green-500"; msg = "Excellent 🎯"; }
-                else if (score >= 20) { grade = "B"; color = "text-blue-500"; msg = "Very Good 👍"; }
-                else if (score >= 15) { grade = "C"; color = "text-yellow-500"; msg = "Keep Practicing 💡"; }
+                if (score >= 120) { grade = "A+"; color = "text-green-600"; msg = "Outstanding 🚀"; }
+                else if (score >= 100) { grade = "A"; color = "text-green-500"; msg = "Excellent 🎯"; }
+                else if (score >= 80) { grade = "B"; color = "text-blue-500"; msg = "Very Good 👍"; }
+                else if (score >= 60) { grade = "C"; color = "text-yellow-500"; msg = "Keep Practicing 💡"; }
                 else { grade = "D"; color = "text-red-500"; msg = "Revise Again 📘"; }
 
                 const result = document.getElementById("g7Result");
                 result.className = "mt-6 text-center font-bold text-lg " + color;
-                result.innerHTML = `Score: ${score}/30 <br> Grade: ${grade} <br> ${msg}`;
+                result.innerHTML = `Score: ${score}/128 <br> Grade: ${grade} <br> ${msg}`;
             };
 
             // 🔥 Toggle Function
